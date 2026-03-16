@@ -1,0 +1,72 @@
+aid: amazon-simpledb
+name: Amazon SimpleDB
+description: >-
+  Amazon SimpleDB is a highly available NoSQL data store that offloads the
+  work of database administration. It provides simple and powerful data
+  storage and querying capabilities to enable you to build web applications
+  with structured data storage without the overhead of database administration.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - NoSQL
+  - Database
+  - Data Storage
+  - Cloud Storage
+  - AWS
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/apis.yml
+created: '2026-03-16'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: amazon-simpledb:amazon-simpledb-api
+    name: Amazon SimpleDB API
+    description: >-
+      The Amazon SimpleDB API provides programmatic access to create and
+      manage domains, items, and attributes for simple NoSQL data storage
+      and querying of structured data in the cloud.
+    humanURL: https://aws.amazon.com/simpledb/
+    baseURL: https://sdb.amazonaws.com
+    tags:
+      - NoSQL
+      - Database
+      - Data Storage
+    properties:
+      - type: Documentation
+        url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+      - type: OpenAPI
+        url: https://api.apis.guru/v2/specs/amazonaws.com/sdb/2009-04-15/openapi.yaml
+      - type: Getting Started
+        url: https://aws.amazon.com/simpledb/getting-started/
+      - type: Pricing
+        url: https://aws.amazon.com/simpledb/pricing/
+      - type: FAQ
+        url: https://aws.amazon.com/simpledb/faqs/
+common:
+  - type: Portal
+    url: https://aws.amazon.com/simpledb/
+  - type: Website
+    url: https://aws.amazon.com/simpledb/
+  - type: Documentation
+    url: https://docs.aws.amazon.com/simpledb/
+  - type: Terms of Service
+    url: https://aws.amazon.com/service-terms/
+  - type: Privacy Policy
+    url: https://aws.amazon.com/privacy/
+  - type: Support
+    url: https://aws.amazon.com/premiumsupport/
+  - type: GitHub Organization
+    url: https://github.com/aws
+  - type: Console
+    url: https://console.aws.amazon.com/simpledb/
+  - type: Sign Up
+    url: https://portal.aws.amazon.com/billing/signup
+  - type: Login
+    url: https://signin.aws.amazon.com/
+  - type: Status
+    url: https://health.aws.amazon.com/health/status
+  - type: Contact
+    url: https://aws.amazon.com/contact-us/
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
