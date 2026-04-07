@@ -8,11 +8,11 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - NoSQL
-  - Database
-  - Data Storage
-  - Cloud Storage
   - AWS
+  - Cloud Storage
+  - Data Storage
+  - Database
+  - NoSQL
 url: >-
   https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -28,9 +28,9 @@ apis:
     humanURL: https://aws.amazon.com/simpledb/
     baseURL: https://sdb.amazonaws.com
     tags:
-      - NoSQL
-      - Database
       - Data Storage
+      - Database
+      - NoSQL
     properties:
       - type: Documentation
         url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
