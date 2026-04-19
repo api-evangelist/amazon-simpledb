@@ -1,0 +1,218 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon SimpleDB API
+  description: Amazon SimpleDB API for cloud resource management.
+  tags:
+  - AWS
+  - Cloud Storage
+  - Data Storage
+  - Database
+  - NoSQL
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY_ID: AWS_ACCESS_KEY_ID
+    AWS_SECRET_ACCESS_KEY: AWS_SECRET_ACCESS_KEY
+    AWS_REGION: AWS_REGION
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-simpledb
+    baseUri: https://sdb.amazonaws.com
+    description: Amazon SimpleDB REST API.
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{AWS_SIGNATURE_V4}}'
+      placement: header
+    resources:
+    - name: domains
+      path: /domains
+      description: Domains operations
+      operations:
+      - name: createdomain
+        method: POST
+        description: CreateDomain
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deletedomain
+        method: POST
+        description: DeleteDomain
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: listdomains
+        method: POST
+        description: ListDomains
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: domainmetadata
+        method: POST
+        description: DomainMetadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: items
+      path: /items
+      description: Items operations
+      operations:
+      - name: putattributes
+        method: POST
+        description: PutAttributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: getattributes
+        method: POST
+        description: GetAttributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: deleteattributes
+        method: POST
+        description: DeleteAttributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: batchputattributes
+        method: POST
+        description: BatchPutAttributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: batchdeleteattributes
+        method: POST
+        description: BatchDeleteAttributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: queries
+      path: /queries
+      description: Queries operations
+      operations:
+      - name: select
+        method: POST
+        description: Select
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: amazon-simpledb-rest
+    resources:
+    - path: /v1/domains
+      name: domains
+      description: Domains operations
+      operations:
+      - method: GET
+        name: list-domains
+        description: List Domains
+        call: amazon-simpledb.createdomain
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/items
+      name: items
+      description: Items operations
+      operations:
+      - method: GET
+        name: list-items
+        description: List Items
+        call: amazon-simpledb.putattributes
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/queries
+      name: queries
+      description: Queries operations
+      operations:
+      - method: GET
+        name: list-queries
+        description: List Queries
+        call: amazon-simpledb.select
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: amazon-simpledb-mcp
+    transport: http
+    description: MCP server for AI-assisted Amazon SimpleDB management.
+    tools:
+    - name: list-domains
+      description: List all SimpleDB domains
+      hints:
+        readOnly: true
+      call: amazon-simpledb.listdomains
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: create-domain
+      description: Create a SimpleDB domain
+      hints:
+        readOnly: false
+        idempotent: false
+      call: amazon-simpledb.createdomain
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-domain
+      description: Delete a SimpleDB domain
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: amazon-simpledb.deletedomain
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-attributes
+      description: Get item attributes
+      hints:
+        readOnly: true
+      call: amazon-simpledb.getattributes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: put-attributes
+      description: Put item attributes
+      hints:
+        readOnly: false
+        idempotent: false
+      call: amazon-simpledb.putattributes
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: select
+      description: Select items using query expression
+      hints:
+        readOnly: true
+      call: amazon-simpledb.select
+      outputParameters:
+      - type: object
+        mapping: $.

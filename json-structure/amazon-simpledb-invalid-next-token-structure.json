@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-structure/amazon-simpledb-invalid-next-token-structure.json",
+  "name": "InvalidNextToken",
+  "description": "The specified NextToken is not valid. ",
+  "properties": {
+    "BoxUsage": {
+      "$ref": "#/components/schemas/Float"
+    }
+  }
+}

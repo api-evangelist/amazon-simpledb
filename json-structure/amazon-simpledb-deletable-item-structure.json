@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-structure/amazon-simpledb-deletable-item-structure.json",
+  "name": "DeletableItem",
+  "description": "DeletableItem schema from Amazon SimpleDB API",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "ItemName"
+          }
+        }
+      ]
+    },
+    "Attributes": {
+      "$ref": "#/components/schemas/DeletableAttributeList"
+    }
+  },
+  "required": [
+    "Name"
+  ]
+}

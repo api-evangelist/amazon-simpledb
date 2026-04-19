@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-schema/amazon-simpledb-number-submitted-attributes-exceeded-schema.json",
+  "title": "NumberSubmittedAttributesExceeded",
+  "description": "Too many attributes exist in a single call.",
+  "type": "object",
+  "properties": {
+    "BoxUsage": {
+      "$ref": "#/components/schemas/Float"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-structure/amazon-simpledb-number-domain-bytes-exceeded-structure.json",
+  "name": "NumberDomainBytesExceeded",
+  "description": "Too many bytes in this domain.",
+  "properties": {
+    "BoxUsage": {
+      "$ref": "#/components/schemas/Float"
+    }
+  }
+}

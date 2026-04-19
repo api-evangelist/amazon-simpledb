@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-structure/amazon-simpledb-list-domains-request-structure.json",
+  "name": "ListDomainsRequest",
+  "description": "ListDomainsRequest schema from Amazon SimpleDB API",
+  "properties": {
+    "MaxNumberOfDomains": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The maximum number of domain names you want returned. The range is 1 to 100. The default setting is 100."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "A string informing Amazon SimpleDB where to start the next list of domain names."
+        }
+      ]
+    }
+  }
+}

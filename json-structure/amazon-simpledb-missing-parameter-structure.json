@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-structure/amazon-simpledb-missing-parameter-structure.json",
+  "name": "MissingParameter",
+  "description": "The request must contain the specified missing parameter.",
+  "properties": {
+    "BoxUsage": {
+      "$ref": "#/components/schemas/Float"
+    }
+  }
+}

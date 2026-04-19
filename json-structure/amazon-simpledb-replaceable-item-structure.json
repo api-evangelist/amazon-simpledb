@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-structure/amazon-simpledb-replaceable-item-structure.json",
+  "name": "ReplaceableItem",
+  "description": "",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "xml": {
+            "name": "ItemName"
+          },
+          "description": "The name of the replaceable item."
+        }
+      ]
+    },
+    "Attributes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ReplaceableAttributeList"
+        },
+        {
+          "description": "The list of attributes for a replaceable item."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Name",
+    "Attributes"
+  ]
+}

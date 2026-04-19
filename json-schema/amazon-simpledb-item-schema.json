@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-schema/amazon-simpledb-item-schema.json",
+  "title": "Item",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the item."
+        }
+      ]
+    },
+    "AlternateNameEncoding": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": ""
+        }
+      ]
+    },
+    "Attributes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AttributeList"
+        },
+        {
+          "description": "A list of attributes."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Name",
+    "Attributes"
+  ]
+}

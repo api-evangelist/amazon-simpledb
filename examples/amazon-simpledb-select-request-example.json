@@ -1,0 +1,5 @@
+{
+  "SelectExpression": "example-value",
+  "NextToken": "example-value",
+  "ConsistentRead": "example-value"
+}

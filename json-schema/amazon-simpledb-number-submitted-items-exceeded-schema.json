@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-schema/amazon-simpledb-number-submitted-items-exceeded-schema.json",
+  "title": "NumberSubmittedItemsExceeded",
+  "description": "Too many items exist in a single call.",
+  "type": "object",
+  "properties": {
+    "BoxUsage": {
+      "$ref": "#/components/schemas/Float"
+    }
+  }
+}

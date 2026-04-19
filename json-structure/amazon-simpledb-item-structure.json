@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-structure/amazon-simpledb-item-structure.json",
+  "name": "Item",
+  "description": "",
+  "properties": {
+    "Name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the item."
+        }
+      ]
+    },
+    "AlternateNameEncoding": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": ""
+        }
+      ]
+    },
+    "Attributes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AttributeList"
+        },
+        {
+          "description": "A list of attributes."
+        }
+      ]
+    }
+  },
+  "required": [
+    "Name",
+    "Attributes"
+  ]
+}

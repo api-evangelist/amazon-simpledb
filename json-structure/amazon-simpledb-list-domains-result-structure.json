@@ -1,0 +1,29 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-structure/amazon-simpledb-list-domains-result-structure.json",
+  "name": "ListDomainsResult",
+  "description": "ListDomainsResult schema from Amazon SimpleDB API",
+  "properties": {
+    "DomainNames": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DomainNameList"
+        },
+        {
+          "description": "A list of domain names that match the expression."
+        }
+      ]
+    },
+    "NextToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "An opaque token indicating that there are more domains than the specified <code>MaxNumberOfDomains</code> still available."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-schema/amazon-simpledb-domain-metadata-request-schema.json",
+  "title": "DomainMetadataRequest",
+  "description": "DomainMetadataRequest schema from Amazon SimpleDB API",
+  "type": "object",
+  "properties": {
+    "DomainName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the domain for which to display the metadata of."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DomainName"
+  ]
+}

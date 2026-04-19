@@ -1,0 +1,144 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aws": "https://amazonaws.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "SelectRequest": "aws:SelectRequest",
+    "InvalidNumberPredicates": "aws:InvalidNumberPredicates",
+    "InvalidQueryExpression": "aws:InvalidQueryExpression",
+    "SelectResult": "aws:SelectResult",
+    "MissingParameter": "aws:MissingParameter",
+    "AttributeDoesNotExist": "aws:AttributeDoesNotExist",
+    "BatchPutAttributesRequest": "aws:BatchPutAttributesRequest",
+    "InvalidNumberValueTests": "aws:InvalidNumberValueTests",
+    "ReplaceableItem": "aws:ReplaceableItem",
+    "Item": "aws:Item",
+    "InvalidParameterValue": "aws:InvalidParameterValue",
+    "NumberSubmittedAttributesExceeded": "aws:NumberSubmittedAttributesExceeded",
+    "DuplicateItemName": "aws:DuplicateItemName",
+    "NumberDomainsExceeded": "aws:NumberDomainsExceeded",
+    "DomainMetadataResult": "aws:DomainMetadataResult",
+    "DeletableAttribute": "aws:DeletableAttribute",
+    "NoSuchDomain": "aws:NoSuchDomain",
+    "RequestTimeout": "aws:RequestTimeout",
+    "PutAttributesRequest": "aws:PutAttributesRequest",
+    "UpdateCondition": "aws:UpdateCondition",
+    "CreateDomainRequest": "aws:CreateDomainRequest",
+    "InvalidNextToken": "aws:InvalidNextToken",
+    "ListDomainsResult": "aws:ListDomainsResult",
+    "BatchDeleteAttributesRequest": "aws:BatchDeleteAttributesRequest",
+    "NumberDomainAttributesExceeded": "aws:NumberDomainAttributesExceeded",
+    "NumberItemAttributesExceeded": "aws:NumberItemAttributesExceeded",
+    "DeleteDomainRequest": "aws:DeleteDomainRequest",
+    "ListDomainsRequest": "aws:ListDomainsRequest",
+    "DeleteAttributesRequest": "aws:DeleteAttributesRequest",
+    "NumberDomainBytesExceeded": "aws:NumberDomainBytesExceeded",
+    "DomainMetadataRequest": "aws:DomainMetadataRequest",
+    "DeletableItem": "aws:DeletableItem",
+    "GetAttributesRequest": "aws:GetAttributesRequest",
+    "ReplaceableAttribute": "aws:ReplaceableAttribute",
+    "NumberSubmittedItemsExceeded": "aws:NumberSubmittedItemsExceeded",
+    "GetAttributesResult": "aws:GetAttributesResult",
+    "TooManyRequestedAttributes": "aws:TooManyRequestedAttributes",
+    "Attribute": "aws:Attribute",
+    "SelectExpression": {
+      "@id": "aws:SelectExpression",
+      "@type": "xsd:string"
+    },
+    "NextToken": {
+      "@id": "aws:NextToken",
+      "@type": "xsd:string"
+    },
+    "ConsistentRead": {
+      "@id": "aws:ConsistentRead",
+      "@type": "xsd:string"
+    },
+    "BoxUsage": {
+      "@id": "aws:BoxUsage",
+      "@type": "xsd:string"
+    },
+    "Items": {
+      "@id": "aws:Items",
+      "@type": "xsd:string"
+    },
+    "DomainName": {
+      "@id": "aws:DomainName",
+      "@type": "xsd:string"
+    },
+    "Name": "schema:name",
+    "Attributes": {
+      "@id": "aws:Attributes",
+      "@type": "xsd:string"
+    },
+    "AlternateNameEncoding": {
+      "@id": "aws:AlternateNameEncoding",
+      "@type": "xsd:string"
+    },
+    "ItemCount": {
+      "@id": "aws:ItemCount",
+      "@type": "xsd:string"
+    },
+    "ItemNamesSizeBytes": {
+      "@id": "aws:ItemNamesSizeBytes",
+      "@type": "xsd:string"
+    },
+    "AttributeNameCount": {
+      "@id": "aws:AttributeNameCount",
+      "@type": "xsd:string"
+    },
+    "AttributeNamesSizeBytes": {
+      "@id": "aws:AttributeNamesSizeBytes",
+      "@type": "xsd:string"
+    },
+    "AttributeValueCount": {
+      "@id": "aws:AttributeValueCount",
+      "@type": "xsd:string"
+    },
+    "AttributeValuesSizeBytes": {
+      "@id": "aws:AttributeValuesSizeBytes",
+      "@type": "xsd:string"
+    },
+    "Timestamp": {
+      "@id": "aws:Timestamp",
+      "@type": "xsd:string"
+    },
+    "Value": {
+      "@id": "aws:Value",
+      "@type": "xsd:string"
+    },
+    "ItemName": {
+      "@id": "aws:ItemName",
+      "@type": "xsd:string"
+    },
+    "Expected": {
+      "@id": "aws:Expected",
+      "@type": "xsd:string"
+    },
+    "Exists": {
+      "@id": "aws:Exists",
+      "@type": "xsd:string"
+    },
+    "DomainNames": {
+      "@id": "aws:DomainNames",
+      "@type": "xsd:string"
+    },
+    "MaxNumberOfDomains": {
+      "@id": "aws:MaxNumberOfDomains",
+      "@type": "xsd:string"
+    },
+    "AttributeNames": {
+      "@id": "aws:AttributeNames",
+      "@type": "xsd:string"
+    },
+    "Replace": {
+      "@id": "aws:Replace",
+      "@type": "xsd:string"
+    },
+    "AlternateValueEncoding": {
+      "@id": "aws:AlternateValueEncoding",
+      "@type": "xsd:string"
+    }
+  }
+}

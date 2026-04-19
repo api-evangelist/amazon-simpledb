@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-schema/amazon-simpledb-domain-metadata-result-schema.json",
+  "title": "DomainMetadataResult",
+  "description": "DomainMetadataResult schema from Amazon SimpleDB API",
+  "type": "object",
+  "properties": {
+    "ItemCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The number of all items in the domain."
+        }
+      ]
+    },
+    "ItemNamesSizeBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Long"
+        },
+        {
+          "description": "The total size of all item names in the domain, in bytes."
+        }
+      ]
+    },
+    "AttributeNameCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The number of unique attribute names in the domain."
+        }
+      ]
+    },
+    "AttributeNamesSizeBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Long"
+        },
+        {
+          "description": "The total size of all unique attribute names in the domain, in bytes."
+        }
+      ]
+    },
+    "AttributeValueCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The number of all attribute name/value pairs in the domain."
+        }
+      ]
+    },
+    "AttributeValuesSizeBytes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Long"
+        },
+        {
+          "description": "The total size of all attribute values in the domain, in bytes."
+        }
+      ]
+    },
+    "Timestamp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The data and time when metadata was calculated, in Epoch (UNIX) seconds."
+        }
+      ]
+    }
+  }
+}

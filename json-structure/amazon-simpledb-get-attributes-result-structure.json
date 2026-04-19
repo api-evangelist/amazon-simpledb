@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-structure/amazon-simpledb-get-attributes-result-structure.json",
+  "name": "GetAttributesResult",
+  "description": "GetAttributesResult schema from Amazon SimpleDB API",
+  "properties": {
+    "Attributes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/AttributeList"
+        },
+        {
+          "description": "The list of attributes returned by the operation."
+        }
+      ]
+    }
+  }
+}

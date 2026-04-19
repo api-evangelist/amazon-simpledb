@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-structure/amazon-simpledb-put-attributes-request-structure.json",
+  "name": "PutAttributesRequest",
+  "description": "PutAttributesRequest schema from Amazon SimpleDB API",
+  "properties": {
+    "DomainName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the domain in which to perform the operation."
+        }
+      ]
+    },
+    "ItemName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the item."
+        }
+      ]
+    },
+    "Attributes": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ReplaceableAttributeList"
+        },
+        {
+          "description": "The list of attributes."
+        }
+      ]
+    },
+    "Expected": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UpdateCondition"
+        },
+        {
+          "description": "The update condition which, if specified, determines whether the specified attributes will be updated or not. The update condition must be satisfied in order for this request to be processed and the attributes to be updated."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DomainName",
+    "ItemName",
+    "Attributes"
+  ]
+}

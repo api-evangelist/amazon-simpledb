@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-schema/amazon-simpledb-create-domain-request-schema.json",
+  "title": "CreateDomainRequest",
+  "description": "CreateDomainRequest schema from Amazon SimpleDB API",
+  "type": "object",
+  "properties": {
+    "DomainName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the domain to create. The name can range between 3 and 255 characters and can contain the following characters: a-z, A-Z, 0-9, '_', '-', and '.'."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DomainName"
+  ]
+}

@@ -1,0 +1,140 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon SimpleDB
+  description: Vocabulary for Amazon SimpleDB covering all resources, actions, and schemas.
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: Amazon SimpleDB API
+    namespace: amazon-simpledb
+    version: '2024-01-01'
+    baseUrl: https://sdb.amazonaws.com
+    status: active
+  resources:
+  - name: Domains
+    api: amazon-simpledb
+    actions: &id001
+    - CreateDomain
+    - DeleteDomain
+    - ListDomains
+    - DomainMetadata
+  - name: Items
+    api: amazon-simpledb
+    actions: &id002
+    - PutAttributes
+    - GetAttributes
+    - DeleteAttributes
+    - BatchPutAttributes
+    - BatchDeleteAttributes
+  - name: Queries
+    api: amazon-simpledb
+    actions: &id003
+    - Select
+  actions:
+  - name: list
+    httpMethod: GET
+    pattern: read
+  - name: get
+    httpMethod: GET
+    pattern: read
+  - name: describe
+    httpMethod: GET
+    pattern: read
+  - name: create
+    httpMethod: POST
+    pattern: write
+  - name: delete
+    httpMethod: DELETE
+    pattern: destructive
+  - name: update
+    httpMethod: PUT
+    pattern: write
+  - name: start
+    httpMethod: POST
+    pattern: write
+  - name: stop
+    httpMethod: POST
+    pattern: destructive
+  schemas:
+    core:
+    - Domains
+    - Items
+    - Queries
+  parameters:
+    pagination:
+    - nextToken
+    - maxResults
+    identifiers:
+    - arn
+    - name
+    - id
+  authentication:
+    schemes:
+    - AWS Signature Version 4
+    headers:
+    - Authorization
+    - X-Amz-Date
+    - X-Amz-Security-Token
+capability:
+  workflows:
+  - name: Amazon SimpleDB Management
+    file: capabilities/shared/amazon-simpledb.yaml
+    description: Manage Amazon SimpleDB resources
+    apis:
+    - Amazon SimpleDB API
+    personas:
+    - Developer
+    - Cloud Engineer
+  personas:
+  - id: developer
+    name: Developer
+    description: Developer using the API for application integration
+    workflows:
+    - Amazon SimpleDB Management
+  - id: cloud-engineer
+    name: Cloud Engineer
+    description: Engineer managing cloud infrastructure
+    workflows:
+    - Amazon SimpleDB Management
+  domains:
+  - AWS
+  - Cloud Storage
+  - Data Storage
+  - Database
+  - NoSQL
+  namespaces:
+  - name: amazon-simpledb
+    type: consumed
+  - name: amazon-simpledb-rest
+    type: rest
+    port: 8080
+  - name: amazon-simpledb-mcp
+    type: mcp
+    port: 9090
+  binds:
+  - AWS_ACCESS_KEY_ID
+  - AWS_SECRET_ACCESS_KEY
+  - AWS_REGION
+crossReference:
+- resource: Domains
+  operations: *id001
+  workflows:
+  - Amazon SimpleDB Management
+  personas:
+  - Developer
+  - Cloud Engineer
+- resource: Items
+  operations: *id002
+  workflows:
+  - Amazon SimpleDB Management
+  personas:
+  - Developer
+  - Cloud Engineer
+- resource: Queries
+  operations: *id003
+  workflows:
+  - Amazon SimpleDB Management
+  personas:
+  - Developer
+  - Cloud Engineer

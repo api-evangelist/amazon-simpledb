@@ -1,0 +1,6 @@
+{
+  "DomainName": "MyResource",
+  "ItemName": "MyResource",
+  "AttributeNames": "MyResource",
+  "ConsistentRead": "example-value"
+}

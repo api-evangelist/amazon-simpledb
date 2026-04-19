@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-schema/amazon-simpledb-delete-domain-request-schema.json",
+  "title": "DeleteDomainRequest",
+  "description": "DeleteDomainRequest schema from Amazon SimpleDB API",
+  "type": "object",
+  "properties": {
+    "DomainName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the domain to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DomainName"
+  ]
+}

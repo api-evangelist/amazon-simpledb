@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/json-schema/amazon-simpledb-batch-put-attributes-request-schema.json",
+  "title": "BatchPutAttributesRequest",
+  "description": "BatchPutAttributesRequest schema from Amazon SimpleDB API",
+  "type": "object",
+  "properties": {
+    "DomainName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/String"
+        },
+        {
+          "description": "The name of the domain in which the attributes are being stored."
+        }
+      ]
+    },
+    "Items": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ReplaceableItemList"
+        },
+        {
+          "description": "A list of items on which to perform the operation."
+        }
+      ]
+    }
+  },
+  "required": [
+    "DomainName",
+    "Items"
+  ]
+}

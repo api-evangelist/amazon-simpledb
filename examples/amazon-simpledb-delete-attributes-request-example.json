@@ -1,0 +1,6 @@
+{
+  "DomainName": "MyResource",
+  "ItemName": "MyResource",
+  "Attributes": "example-value",
+  "Expected": "example-value"
+}
