@@ -1,0 +1,1164 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Amazon SimpleDB
+  description: 'Amazon SimpleDB. 20 operations. Lead operation: Amazon G E T_ Batch Delete Attributes. Self-contained Naftiko
+    capability covering one Amazon Simpledb business surface.'
+  tags:
+  - Amazon Simpledb
+  - Amazon SimpleDB
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    AMAZON_SIMPLEDB_API_KEY: AMAZON_SIMPLEDB_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: amazon-simpledb
+    baseUri: http://sdb.amazonaws.com
+    description: Amazon SimpleDB business capability. Self-contained, no shared references.
+    resources:
+    - name: '#Action=BatchDeleteAttributes'
+      path: /#Action=BatchDeleteAttributes
+      operations:
+      - name: getbatchdeleteattributes
+        method: GET
+        description: Amazon G E T_ Batch Delete Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: DomainName
+          in: query
+          type: string
+          description: The name of the domain in which the attributes are being deleted.
+          required: true
+        - name: Items
+          in: query
+          type: array
+          description: A list of items on which to perform the operation.
+          required: true
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+      - name: postbatchdeleteattributes
+        method: POST
+        description: Amazon P O S T_ Batch Delete Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: '#Action=BatchPutAttributes'
+      path: /#Action=BatchPutAttributes
+      operations:
+      - name: getbatchputattributes
+        method: GET
+        description: Amazon G E T_ Batch Put Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: DomainName
+          in: query
+          type: string
+          description: The name of the domain in which the attributes are being stored.
+          required: true
+        - name: Items
+          in: query
+          type: array
+          description: A list of items on which to perform the operation.
+          required: true
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+      - name: postbatchputattributes
+        method: POST
+        description: Amazon P O S T_ Batch Put Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: '#Action=CreateDomain'
+      path: /#Action=CreateDomain
+      operations:
+      - name: getcreatedomain
+        method: GET
+        description: Amazon G E T_ Create Domain
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: DomainName
+          in: query
+          type: string
+          description: 'The name of the domain to create. The name can range between 3 and 255 characters and can contain
+            the following characters: a-z, A-Z, 0-9, ''_'', ''-'', and ''.''.'
+          required: true
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+      - name: postcreatedomain
+        method: POST
+        description: Amazon P O S T_ Create Domain
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: '#Action=DeleteAttributes'
+      path: /#Action=DeleteAttributes
+      operations:
+      - name: getdeleteattributes
+        method: GET
+        description: Amazon G E T_ Delete Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: DomainName
+          in: query
+          type: string
+          description: The name of the domain in which to perform the operation.
+          required: true
+        - name: ItemName
+          in: query
+          type: string
+          description: The name of the item. Similar to rows on a spreadsheet, items represent individual objects that contain
+            one or more value-attribute pairs.
+          required: true
+        - name: Attributes
+          in: query
+          type: array
+          description: A list of Attributes. Similar to columns on a spreadsheet, attributes represent categories of data
+            that can be assigned to items.
+        - name: Expected
+          in: query
+          type: object
+          description: The update condition which, if specified, determines whether the specified attributes will be deleted
+            or not. The update condition must be satisfied in order fo
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+      - name: postdeleteattributes
+        method: POST
+        description: Amazon P O S T_ Delete Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: '#Action=DeleteDomain'
+      path: /#Action=DeleteDomain
+      operations:
+      - name: getdeletedomain
+        method: GET
+        description: Amazon G E T_ Delete Domain
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: DomainName
+          in: query
+          type: string
+          description: The name of the domain to delete.
+          required: true
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+      - name: postdeletedomain
+        method: POST
+        description: Amazon P O S T_ Delete Domain
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: '#Action=DomainMetadata'
+      path: /#Action=DomainMetadata
+      operations:
+      - name: getdomainmetadata
+        method: GET
+        description: Amazon G E T_ Domain Metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: DomainName
+          in: query
+          type: string
+          description: The name of the domain for which to display the metadata of.
+          required: true
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+      - name: postdomainmetadata
+        method: POST
+        description: Amazon P O S T_ Domain Metadata
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: '#Action=GetAttributes'
+      path: /#Action=GetAttributes
+      operations:
+      - name: getgetattributes
+        method: GET
+        description: Amazon G E T_ Get Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: DomainName
+          in: query
+          type: string
+          description: The name of the domain in which to perform the operation.
+          required: true
+        - name: ItemName
+          in: query
+          type: string
+          description: The name of the item.
+          required: true
+        - name: AttributeNames
+          in: query
+          type: array
+          description: The names of the attributes.
+        - name: ConsistentRead
+          in: query
+          type: boolean
+          description: Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If
+            <code>true</code>, any data previously written to SimpleDB w
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+      - name: postgetattributes
+        method: POST
+        description: Amazon P O S T_ Get Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: '#Action=ListDomains'
+      path: /#Action=ListDomains
+      operations:
+      - name: getlistdomains
+        method: GET
+        description: Amazon G E T_ List Domains
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxNumberOfDomains
+          in: query
+          type: integer
+          description: The maximum number of domain names you want returned. The range is 1 to 100. The default setting is
+            100.
+        - name: NextToken
+          in: query
+          type: string
+          description: A string informing Amazon SimpleDB where to start the next list of domain names.
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+      - name: postlistdomains
+        method: POST
+        description: Amazon P O S T_ List Domains
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: MaxNumberOfDomains
+          in: query
+          type: string
+          description: Pagination limit
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: '#Action=PutAttributes'
+      path: /#Action=PutAttributes
+      operations:
+      - name: getputattributes
+        method: GET
+        description: Amazon G E T_ Put Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: DomainName
+          in: query
+          type: string
+          description: The name of the domain in which to perform the operation.
+          required: true
+        - name: ItemName
+          in: query
+          type: string
+          description: The name of the item.
+          required: true
+        - name: Attributes
+          in: query
+          type: array
+          description: The list of attributes.
+          required: true
+        - name: Expected
+          in: query
+          type: object
+          description: The update condition which, if specified, determines whether the specified attributes will be updated
+            or not. The update condition must be satisfied in order fo
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+      - name: postputattributes
+        method: POST
+        description: Amazon P O S T_ Put Attributes
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: '#Action=Select'
+      path: /#Action=Select
+      operations:
+      - name: getselect
+        method: GET
+        description: Amazon G E T_ Select
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: SelectExpression
+          in: query
+          type: string
+          description: The expression used to query the domain.
+          required: true
+        - name: NextToken
+          in: query
+          type: string
+          description: A string informing Amazon SimpleDB where to start the next list of <code>ItemNames</code>.
+        - name: ConsistentRead
+          in: query
+          type: boolean
+          description: Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If
+            <code>true</code>, any data previously written to SimpleDB w
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+      - name: postselect
+        method: POST
+        description: Amazon P O S T_ Select
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: NextToken
+          in: query
+          type: string
+          description: Pagination token
+        - name: Action
+          in: query
+          type: string
+          required: true
+        - name: Version
+          in: query
+          type: string
+          required: true
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    authentication:
+      type: apikey
+      key: Authorization
+      value: '{{env.AMAZON_SIMPLEDB_API_KEY}}'
+      placement: header
+  exposes:
+  - type: rest
+    namespace: amazon-simpledb-rest
+    port: 8080
+    description: REST adapter for Amazon SimpleDB. One Spectral-compliant resource per consumed operation, prefixed with /v1.
+    resources:
+    - path: /v1/action-batchdeleteattributes
+      name: action-batchdeleteattributes
+      description: 'REST surface for #Action=BatchDeleteAttributes.'
+      operations:
+      - method: GET
+        name: getbatchdeleteattributes
+        description: Amazon G E T_ Batch Delete Attributes
+        call: amazon-simpledb.getbatchdeleteattributes
+        with:
+          DomainName: rest.DomainName
+          Items: rest.Items
+          Action: rest.Action
+          Version: rest.Version
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: postbatchdeleteattributes
+        description: Amazon P O S T_ Batch Delete Attributes
+        call: amazon-simpledb.postbatchdeleteattributes
+        with:
+          Action: rest.Action
+          Version: rest.Version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/action-batchputattributes
+      name: action-batchputattributes
+      description: 'REST surface for #Action=BatchPutAttributes.'
+      operations:
+      - method: GET
+        name: getbatchputattributes
+        description: Amazon G E T_ Batch Put Attributes
+        call: amazon-simpledb.getbatchputattributes
+        with:
+          DomainName: rest.DomainName
+          Items: rest.Items
+          Action: rest.Action
+          Version: rest.Version
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: postbatchputattributes
+        description: Amazon P O S T_ Batch Put Attributes
+        call: amazon-simpledb.postbatchputattributes
+        with:
+          Action: rest.Action
+          Version: rest.Version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/action-createdomain
+      name: action-createdomain
+      description: 'REST surface for #Action=CreateDomain.'
+      operations:
+      - method: GET
+        name: getcreatedomain
+        description: Amazon G E T_ Create Domain
+        call: amazon-simpledb.getcreatedomain
+        with:
+          DomainName: rest.DomainName
+          Action: rest.Action
+          Version: rest.Version
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: postcreatedomain
+        description: Amazon P O S T_ Create Domain
+        call: amazon-simpledb.postcreatedomain
+        with:
+          Action: rest.Action
+          Version: rest.Version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/action-deleteattributes
+      name: action-deleteattributes
+      description: 'REST surface for #Action=DeleteAttributes.'
+      operations:
+      - method: GET
+        name: getdeleteattributes
+        description: Amazon G E T_ Delete Attributes
+        call: amazon-simpledb.getdeleteattributes
+        with:
+          DomainName: rest.DomainName
+          ItemName: rest.ItemName
+          Attributes: rest.Attributes
+          Expected: rest.Expected
+          Action: rest.Action
+          Version: rest.Version
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: postdeleteattributes
+        description: Amazon P O S T_ Delete Attributes
+        call: amazon-simpledb.postdeleteattributes
+        with:
+          Action: rest.Action
+          Version: rest.Version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/action-deletedomain
+      name: action-deletedomain
+      description: 'REST surface for #Action=DeleteDomain.'
+      operations:
+      - method: GET
+        name: getdeletedomain
+        description: Amazon G E T_ Delete Domain
+        call: amazon-simpledb.getdeletedomain
+        with:
+          DomainName: rest.DomainName
+          Action: rest.Action
+          Version: rest.Version
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: postdeletedomain
+        description: Amazon P O S T_ Delete Domain
+        call: amazon-simpledb.postdeletedomain
+        with:
+          Action: rest.Action
+          Version: rest.Version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/action-domainmetadata
+      name: action-domainmetadata
+      description: 'REST surface for #Action=DomainMetadata.'
+      operations:
+      - method: GET
+        name: getdomainmetadata
+        description: Amazon G E T_ Domain Metadata
+        call: amazon-simpledb.getdomainmetadata
+        with:
+          DomainName: rest.DomainName
+          Action: rest.Action
+          Version: rest.Version
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: postdomainmetadata
+        description: Amazon P O S T_ Domain Metadata
+        call: amazon-simpledb.postdomainmetadata
+        with:
+          Action: rest.Action
+          Version: rest.Version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/action-getattributes
+      name: action-getattributes
+      description: 'REST surface for #Action=GetAttributes.'
+      operations:
+      - method: GET
+        name: getgetattributes
+        description: Amazon G E T_ Get Attributes
+        call: amazon-simpledb.getgetattributes
+        with:
+          DomainName: rest.DomainName
+          ItemName: rest.ItemName
+          AttributeNames: rest.AttributeNames
+          ConsistentRead: rest.ConsistentRead
+          Action: rest.Action
+          Version: rest.Version
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: postgetattributes
+        description: Amazon P O S T_ Get Attributes
+        call: amazon-simpledb.postgetattributes
+        with:
+          Action: rest.Action
+          Version: rest.Version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/action-listdomains
+      name: action-listdomains
+      description: 'REST surface for #Action=ListDomains.'
+      operations:
+      - method: GET
+        name: getlistdomains
+        description: Amazon G E T_ List Domains
+        call: amazon-simpledb.getlistdomains
+        with:
+          MaxNumberOfDomains: rest.MaxNumberOfDomains
+          NextToken: rest.NextToken
+          Action: rest.Action
+          Version: rest.Version
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: postlistdomains
+        description: Amazon P O S T_ List Domains
+        call: amazon-simpledb.postlistdomains
+        with:
+          MaxNumberOfDomains: rest.MaxNumberOfDomains
+          NextToken: rest.NextToken
+          Action: rest.Action
+          Version: rest.Version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/action-putattributes
+      name: action-putattributes
+      description: 'REST surface for #Action=PutAttributes.'
+      operations:
+      - method: GET
+        name: getputattributes
+        description: Amazon G E T_ Put Attributes
+        call: amazon-simpledb.getputattributes
+        with:
+          DomainName: rest.DomainName
+          ItemName: rest.ItemName
+          Attributes: rest.Attributes
+          Expected: rest.Expected
+          Action: rest.Action
+          Version: rest.Version
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: postputattributes
+        description: Amazon P O S T_ Put Attributes
+        call: amazon-simpledb.postputattributes
+        with:
+          Action: rest.Action
+          Version: rest.Version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/action-select
+      name: action-select
+      description: 'REST surface for #Action=Select.'
+      operations:
+      - method: GET
+        name: getselect
+        description: Amazon G E T_ Select
+        call: amazon-simpledb.getselect
+        with:
+          SelectExpression: rest.SelectExpression
+          NextToken: rest.NextToken
+          ConsistentRead: rest.ConsistentRead
+          Action: rest.Action
+          Version: rest.Version
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: postselect
+        description: Amazon P O S T_ Select
+        call: amazon-simpledb.postselect
+        with:
+          NextToken: rest.NextToken
+          Action: rest.Action
+          Version: rest.Version
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: amazon-simpledb-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Amazon SimpleDB. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: amazon-g-e-t-batch
+      description: Amazon G E T_ Batch Delete Attributes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-simpledb.getbatchdeleteattributes
+      with:
+        DomainName: tools.DomainName
+        Items: tools.Items
+        Action: tools.Action
+        Version: tools.Version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-p-o-s-t
+      description: Amazon P O S T_ Batch Delete Attributes
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-simpledb.postbatchdeleteattributes
+      with:
+        Action: tools.Action
+        Version: tools.Version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-g-e-t-batch-2
+      description: Amazon G E T_ Batch Put Attributes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-simpledb.getbatchputattributes
+      with:
+        DomainName: tools.DomainName
+        Items: tools.Items
+        Action: tools.Action
+        Version: tools.Version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-p-o-s-t-2
+      description: Amazon P O S T_ Batch Put Attributes
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-simpledb.postbatchputattributes
+      with:
+        Action: tools.Action
+        Version: tools.Version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-g-e-t-create
+      description: Amazon G E T_ Create Domain
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-simpledb.getcreatedomain
+      with:
+        DomainName: tools.DomainName
+        Action: tools.Action
+        Version: tools.Version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-p-o-s-t-3
+      description: Amazon P O S T_ Create Domain
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-simpledb.postcreatedomain
+      with:
+        Action: tools.Action
+        Version: tools.Version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-g-e-t-delete
+      description: Amazon G E T_ Delete Attributes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-simpledb.getdeleteattributes
+      with:
+        DomainName: tools.DomainName
+        ItemName: tools.ItemName
+        Attributes: tools.Attributes
+        Expected: tools.Expected
+        Action: tools.Action
+        Version: tools.Version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-p-o-s-t-4
+      description: Amazon P O S T_ Delete Attributes
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-simpledb.postdeleteattributes
+      with:
+        Action: tools.Action
+        Version: tools.Version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-g-e-t-delete-2
+      description: Amazon G E T_ Delete Domain
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-simpledb.getdeletedomain
+      with:
+        DomainName: tools.DomainName
+        Action: tools.Action
+        Version: tools.Version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-p-o-s-t-5
+      description: Amazon P O S T_ Delete Domain
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-simpledb.postdeletedomain
+      with:
+        Action: tools.Action
+        Version: tools.Version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-g-e-t-domain
+      description: Amazon G E T_ Domain Metadata
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-simpledb.getdomainmetadata
+      with:
+        DomainName: tools.DomainName
+        Action: tools.Action
+        Version: tools.Version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-p-o-s-t-6
+      description: Amazon P O S T_ Domain Metadata
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-simpledb.postdomainmetadata
+      with:
+        Action: tools.Action
+        Version: tools.Version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-g-e-t-get
+      description: Amazon G E T_ Get Attributes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-simpledb.getgetattributes
+      with:
+        DomainName: tools.DomainName
+        ItemName: tools.ItemName
+        AttributeNames: tools.AttributeNames
+        ConsistentRead: tools.ConsistentRead
+        Action: tools.Action
+        Version: tools.Version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-p-o-s-t-7
+      description: Amazon P O S T_ Get Attributes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-simpledb.postgetattributes
+      with:
+        Action: tools.Action
+        Version: tools.Version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-g-e-t-list
+      description: Amazon G E T_ List Domains
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-simpledb.getlistdomains
+      with:
+        MaxNumberOfDomains: tools.MaxNumberOfDomains
+        NextToken: tools.NextToken
+        Action: tools.Action
+        Version: tools.Version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-p-o-s-t-8
+      description: Amazon P O S T_ List Domains
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: false
+      call: amazon-simpledb.postlistdomains
+      with:
+        MaxNumberOfDomains: tools.MaxNumberOfDomains
+        NextToken: tools.NextToken
+        Action: tools.Action
+        Version: tools.Version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-g-e-t-put
+      description: Amazon G E T_ Put Attributes
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-simpledb.getputattributes
+      with:
+        DomainName: tools.DomainName
+        ItemName: tools.ItemName
+        Attributes: tools.Attributes
+        Expected: tools.Expected
+        Action: tools.Action
+        Version: tools.Version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-p-o-s-t-9
+      description: Amazon P O S T_ Put Attributes
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-simpledb.postputattributes
+      with:
+        Action: tools.Action
+        Version: tools.Version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-g-e-t-select
+      description: Amazon G E T_ Select
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: amazon-simpledb.getselect
+      with:
+        SelectExpression: tools.SelectExpression
+        NextToken: tools.NextToken
+        ConsistentRead: tools.ConsistentRead
+        Action: tools.Action
+        Version: tools.Version
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: amazon-p-o-s-t-10
+      description: Amazon P O S T_ Select
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: amazon-simpledb.postselect
+      with:
+        NextToken: tools.NextToken
+        Action: tools.Action
+        Version: tools.Version
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.

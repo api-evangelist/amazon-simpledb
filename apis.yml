@@ -1,10 +1,8 @@
 aid: amazon-simpledb
 name: Amazon SimpleDB
-description: >-
-  Amazon SimpleDB is a highly available NoSQL data store that offloads the
-  work of database administration. It provides simple and powerful data
-  storage and querying capabilities to enable you to build web applications
-  with structured data storage without the overhead of database administration.
+description: Amazon SimpleDB is a highly available NoSQL data store that offloads the work of database administration. It
+  provides simple and powerful data storage and querying capabilities to enable you to build web applications with structured
+  data storage without the overhead of database administration.
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
@@ -13,18 +11,15 @@ tags:
 - Data Storage
 - Database
 - NoSQL
-url: >-
-  https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/apis.yml
 created: '2026-03-16'
-modified: '2026-04-19'
+modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
 - aid: amazon-simpledb:amazon-simpledb-api
   name: Amazon SimpleDB API
-  description: >-
-    The Amazon SimpleDB API provides programmatic access to create and
-    manage domains, items, and attributes for simple NoSQL data storage
-    and querying of structured data in the cloud.
+  description: The Amazon SimpleDB API provides programmatic access to create and manage domains, items, and attributes for
+    simple NoSQL data storage and querying of structured data in the cloud.
   humanURL: https://aws.amazon.com/simpledb/
   baseURL: https://sdb.amazonaws.com
   tags:
@@ -42,6 +37,8 @@ apis:
     url: https://aws.amazon.com/simpledb/pricing/
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
+  - type: NaftikoCapability
+    url: capabilities/amazon-simpledb.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/simpledb/
@@ -71,8 +68,6 @@ common:
   url: rules/amazon-simpledb-spectral-rules.yml
 - type: Vocabulary
   url: vocabulary/amazon-simpledb-vocabulary.yaml
-- type: NaftikoCapability
-  url: capabilities/shared/amazon-simpledb.yaml
 - type: Features
   data:
   - name: Simple Data Storage
@@ -102,14 +97,14 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
