@@ -4,7 +4,7 @@ description: Amazon SimpleDB is a highly available NoSQL data store that offload
   provides simple and powerful data storage and querying capabilities to enable you to build web applications with structured
   data storage without the overhead of database administration.
 type: Index
-image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 tags:
 - AWS
 - Cloud Storage
