@@ -40,6 +40,14 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-simpledb.yaml
 common:
+- type: TrustCenter
+  url: security/amazon-simpledb-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/amazon-simpledb-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/amazon-simpledb-domain-security.yml
+- type: Authentication
+  url: authentication/amazon-simpledb-authentication.yml
 - type: Portal
   url: https://aws.amazon.com/simpledb/
 - type: Documentation
