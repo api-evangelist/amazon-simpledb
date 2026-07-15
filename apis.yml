@@ -40,6 +40,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-simpledb.yaml
 common:
+- type: AgenticAccess
+  url: agentic-access/amazon-simpledb-agentic-access.yml
 - type: TrustCenter
   url: security/amazon-simpledb-trust-center.yml
 - type: VulnerabilityDisclosure
