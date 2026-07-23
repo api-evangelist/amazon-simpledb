@@ -1,0 +1,337 @@
+openapi: 3.0.0
+info:
+  version: '2009-04-15'
+  x-release: v2
+  title: 'Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=ListDomains API'
+  description: Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information. </p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: sdb
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/sdb-2009-04-15.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://sdb.amazonaws.com
+  variables: {}
+  description: The general Amazon SimpleDB endpoint for US East (N. Virginia)
+- url: https://sdb.amazonaws.com
+  variables: {}
+  description: The general Amazon SimpleDB endpoint for US East (N. Virginia)
+- url: http://sdb.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-2
+  description: The Amazon SimpleDB multi-region endpoint
+- url: https://sdb.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-2
+  description: The Amazon SimpleDB multi-region endpoint
+- url: http://sdb.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon SimpleDB endpoint for China (Beijing) and China (Ningxia)
+- url: https://sdb.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon SimpleDB endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#Action=ListDomains'
+paths:
+  /#Action=ListDomains:
+    parameters:
+    - $ref: '#/components/parameters/AWSAccessKeyId'
+    - $ref: '#/components/parameters/Action'
+    - $ref: '#/components/parameters/SignatureMethod'
+    - $ref: '#/components/parameters/SignatureVersion'
+    - $ref: '#/components/parameters/Timestamp'
+    - $ref: '#/components/parameters/Version'
+    - $ref: '#/components/parameters/Signature'
+    get:
+      x-aws-operation-name: ListDomains
+      operationId: GET_ListDomains
+      description: ' The <code>ListDomains</code> operation lists all domains associated with the Access Key ID. It returns domain names up to the limit set by <a href="#MaxNumberOfDomains">MaxNumberOfDomains</a>. A <a href="#NextToken">NextToken</a> is returned if there are more than <code>MaxNumberOfDomains</code> domains. Calling <code>ListDomains</code> successive times with the <code>NextToken</code> provided by the operation returns up to <code>MaxNumberOfDomains</code> more domain names with each successive operation call. '
+      responses:
+        '200':
+          description: Success
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/ListDomainsResult'
+        '400':
+          description: InvalidNextToken
+          x-aws-exception: true
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/InvalidNextToken'
+      parameters:
+      - name: MaxNumberOfDomains
+        in: query
+        required: false
+        description: The maximum number of domain names you want returned. The range is 1 to 100. The default setting is 100.
+        schema:
+          type: integer
+      - name: NextToken
+        in: query
+        required: false
+        description: A string informing Amazon SimpleDB where to start the next list of domain names.
+        schema:
+          type: string
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - ListDomains
+      - name: Version
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - '2009-04-15'
+      summary: Amazon G E T_ List Domains
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#Action=ListDomains'
+    post:
+      x-aws-operation-name: ListDomains
+      operationId: POST_ListDomains
+      description: ' The <code>ListDomains</code> operation lists all domains associated with the Access Key ID. It returns domain names up to the limit set by <a href="#MaxNumberOfDomains">MaxNumberOfDomains</a>. A <a href="#NextToken">NextToken</a> is returned if there are more than <code>MaxNumberOfDomains</code> domains. Calling <code>ListDomains</code> successive times with the <code>NextToken</code> provided by the operation returns up to <code>MaxNumberOfDomains</code> more domain names with each successive operation call. '
+      responses:
+        '200':
+          description: Success
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/ListDomainsResult'
+        '400':
+          description: InvalidNextToken
+          x-aws-exception: true
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/InvalidNextToken'
+      requestBody:
+        content:
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/ListDomainsRequest'
+      parameters:
+      - name: MaxNumberOfDomains
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: NextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - ListDomains
+      - name: Version
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - '2009-04-15'
+      summary: Amazon P O S T_ List Domains
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#Action=ListDomains'
+components:
+  parameters:
+    AWSAccessKeyId:
+      name: AWSAccessKeyId
+      in: query
+      schema:
+        type: string
+      required: true
+    SignatureMethod:
+      name: SignatureMethod
+      in: query
+      schema:
+        type: string
+      required: true
+    SignatureVersion:
+      name: SignatureVersion
+      in: query
+      schema:
+        type: string
+      required: true
+    Signature:
+      name: Signature
+      in: query
+      schema:
+        type: string
+      required: true
+    Action:
+      name: Action
+      in: query
+      schema:
+        type: string
+      required: true
+    Timestamp:
+      name: Timestamp
+      in: query
+      schema:
+        type: string
+      required: true
+    Version:
+      name: Version
+      in: query
+      schema:
+        type: string
+      required: true
+  schemas:
+    ListDomainsResult:
+      type: object
+      properties:
+        DomainNames:
+          allOf:
+          - $ref: '#/components/schemas/DomainNameList'
+          - description: A list of domain names that match the expression.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: An opaque token indicating that there are more domains than the specified <code>MaxNumberOfDomains</code> still available.
+    Integer:
+      type: integer
+    String:
+      type: string
+    DomainNameList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/String'
+        - xml:
+            name: DomainName
+      xml:
+        wrapped: false
+    Float:
+      type: number
+      format: float
+    InvalidNextToken:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: 'The specified NextToken is not valid. '
+    ListDomainsRequest:
+      type: object
+      title: ListDomainsRequest
+      properties:
+        MaxNumberOfDomains:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The maximum number of domain names you want returned. The range is 1 to 100. The default setting is 100.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A string informing Amazon SimpleDB where to start the next list of domain names.
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v2
+      x-amazon-apigateway-authtype: awsSigv2
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/sdb/
+x-hasEquivalentPaths: true

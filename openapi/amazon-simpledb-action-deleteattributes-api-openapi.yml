@@ -1,0 +1,400 @@
+openapi: 3.0.0
+info:
+  version: '2009-04-15'
+  x-release: v2
+  title: 'Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DeleteAttributes API'
+  description: Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information. </p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: sdb
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/sdb-2009-04-15.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://sdb.amazonaws.com
+  variables: {}
+  description: The general Amazon SimpleDB endpoint for US East (N. Virginia)
+- url: https://sdb.amazonaws.com
+  variables: {}
+  description: The general Amazon SimpleDB endpoint for US East (N. Virginia)
+- url: http://sdb.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-2
+  description: The Amazon SimpleDB multi-region endpoint
+- url: https://sdb.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-2
+  description: The Amazon SimpleDB multi-region endpoint
+- url: http://sdb.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon SimpleDB endpoint for China (Beijing) and China (Ningxia)
+- url: https://sdb.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon SimpleDB endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#Action=DeleteAttributes'
+paths:
+  /#Action=DeleteAttributes:
+    parameters:
+    - $ref: '#/components/parameters/AWSAccessKeyId'
+    - $ref: '#/components/parameters/Action'
+    - $ref: '#/components/parameters/SignatureMethod'
+    - $ref: '#/components/parameters/SignatureVersion'
+    - $ref: '#/components/parameters/Timestamp'
+    - $ref: '#/components/parameters/Version'
+    - $ref: '#/components/parameters/Signature'
+    get:
+      x-aws-operation-name: DeleteAttributes
+      operationId: GET_DeleteAttributes
+      description: <p> Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted. </p> <note> If <code>DeleteAttributes</code> is called without being passed any attributes or values specified, all the attributes for the item are deleted. </note> <p> <code>DeleteAttributes</code> is an idempotent operation; running it multiple times on the same item or attribute does not result in an error response. </p> <p> Because Amazon SimpleDB makes multiple copies of item data and uses an eventual consistency update model, performing a <a>GetAttributes</a> or <a>Select</a> operation (read) immediately after a <code>DeleteAttributes</code> or <a>PutAttributes</a> operation (write) might not return updated item data. </p>
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: NoSuchDomain
+          x-aws-exception: true
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/NoSuchDomain'
+        '404':
+          description: AttributeDoesNotExist
+          x-aws-exception: true
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/AttributeDoesNotExist'
+      parameters:
+      - name: DomainName
+        in: query
+        required: true
+        description: The name of the domain in which to perform the operation.
+        schema:
+          type: string
+      - name: ItemName
+        in: query
+        required: true
+        description: The name of the item. Similar to rows on a spreadsheet, items represent individual objects that contain one or more value-attribute pairs.
+        schema:
+          type: string
+      - name: Attributes
+        in: query
+        required: false
+        description: A list of Attributes. Similar to columns on a spreadsheet, attributes represent categories of data that can be assigned to items.
+        schema:
+          type: array
+          items:
+            allOf:
+            - $ref: '#/components/schemas/DeletableAttribute'
+            - xml:
+                name: Attribute
+          xml:
+            wrapped: false
+      - name: Expected
+        in: query
+        required: false
+        description: The update condition which, if specified, determines whether the specified attributes will be deleted or not. The update condition must be satisfied in order for this request to be processed and the attributes to be deleted.
+        schema:
+          type: object
+          properties:
+            Name:
+              allOf:
+              - $ref: '#/components/schemas/String'
+              - description: The name of the attribute involved in the condition.
+            Value:
+              allOf:
+              - $ref: '#/components/schemas/String'
+              - description: The value of an attribute. This value can only be specified when the <code>Exists</code> parameter is equal to <code>true</code>.
+            Exists:
+              allOf:
+              - $ref: '#/components/schemas/Boolean'
+              - description: A value specifying whether or not the specified attribute must exist with the specified value in order for the update condition to be satisfied. Specify <code>true</code> if the attribute must exist for the update condition to be satisfied. Specify <code>false</code> if the attribute should not exist in order for the update condition to be satisfied.
+          description: ' Specifies the conditions under which data should be updated. If an update condition is specified for a request, the data will only be updated if the condition is satisfied. For example, if an attribute with a specific name and value exists, or if a specific attribute doesn''t exist. '
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - DeleteAttributes
+      - name: Version
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - '2009-04-15'
+      summary: Amazon G E T_ Delete Attributes
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#Action=DeleteAttributes'
+    post:
+      x-aws-operation-name: DeleteAttributes
+      operationId: POST_DeleteAttributes
+      description: <p> Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted. </p> <note> If <code>DeleteAttributes</code> is called without being passed any attributes or values specified, all the attributes for the item are deleted. </note> <p> <code>DeleteAttributes</code> is an idempotent operation; running it multiple times on the same item or attribute does not result in an error response. </p> <p> Because Amazon SimpleDB makes multiple copies of item data and uses an eventual consistency update model, performing a <a>GetAttributes</a> or <a>Select</a> operation (read) immediately after a <code>DeleteAttributes</code> or <a>PutAttributes</a> operation (write) might not return updated item data. </p>
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: NoSuchDomain
+          x-aws-exception: true
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/NoSuchDomain'
+        '404':
+          description: AttributeDoesNotExist
+          x-aws-exception: true
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/AttributeDoesNotExist'
+      requestBody:
+        content:
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/DeleteAttributesRequest'
+      parameters:
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - DeleteAttributes
+      - name: Version
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - '2009-04-15'
+      summary: Amazon P O S T_ Delete Attributes
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#Action=DeleteAttributes'
+components:
+  schemas:
+    DeletableAttribute:
+      type: object
+      required:
+      - Name
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the attribute.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The value of the attribute.
+      description: ''
+    DeleteAttributesRequest:
+      type: object
+      required:
+      - DomainName
+      - ItemName
+      title: DeleteAttributesRequest
+      properties:
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the domain in which to perform the operation.
+        ItemName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the item. Similar to rows on a spreadsheet, items represent individual objects that contain one or more value-attribute pairs.
+        Attributes:
+          allOf:
+          - $ref: '#/components/schemas/DeletableAttributeList'
+          - description: A list of Attributes. Similar to columns on a spreadsheet, attributes represent categories of data that can be assigned to items.
+        Expected:
+          allOf:
+          - $ref: '#/components/schemas/UpdateCondition'
+          - description: The update condition which, if specified, determines whether the specified attributes will be deleted or not. The update condition must be satisfied in order for this request to be processed and the attributes to be deleted.
+    UpdateCondition:
+      type: object
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the attribute involved in the condition.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The value of an attribute. This value can only be specified when the <code>Exists</code> parameter is equal to <code>true</code>.
+        Exists:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: A value specifying whether or not the specified attribute must exist with the specified value in order for the update condition to be satisfied. Specify <code>true</code> if the attribute must exist for the update condition to be satisfied. Specify <code>false</code> if the attribute should not exist in order for the update condition to be satisfied.
+      description: ' Specifies the conditions under which data should be updated. If an update condition is specified for a request, the data will only be updated if the condition is satisfied. For example, if an attribute with a specific name and value exists, or if a specific attribute doesn''t exist. '
+    AttributeDoesNotExist:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: The specified attribute does not exist.
+    Boolean:
+      type: boolean
+    String:
+      type: string
+    DeletableAttributeList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/DeletableAttribute'
+        - xml:
+            name: Attribute
+      xml:
+        wrapped: false
+    Float:
+      type: number
+      format: float
+    NoSuchDomain:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: The specified domain does not exist.
+  parameters:
+    Version:
+      name: Version
+      in: query
+      schema:
+        type: string
+      required: true
+    AWSAccessKeyId:
+      name: AWSAccessKeyId
+      in: query
+      schema:
+        type: string
+      required: true
+    SignatureMethod:
+      name: SignatureMethod
+      in: query
+      schema:
+        type: string
+      required: true
+    SignatureVersion:
+      name: SignatureVersion
+      in: query
+      schema:
+        type: string
+      required: true
+    Signature:
+      name: Signature
+      in: query
+      schema:
+        type: string
+      required: true
+    Timestamp:
+      name: Timestamp
+      in: query
+      schema:
+        type: string
+      required: true
+    Action:
+      name: Action
+      in: query
+      schema:
+        type: string
+      required: true
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v2
+      x-amazon-apigateway-authtype: awsSigv2
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/sdb/
+x-hasEquivalentPaths: true

@@ -1,0 +1,381 @@
+openapi: 3.0.0
+info:
+  version: '2009-04-15'
+  x-release: v2
+  title: 'Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=BatchPutAttributes API'
+  description: Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information. </p>
+  x-logo:
+    url: https://twitter.com/awscloud/profile_image?size=original
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: sdb
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/sdb-2009-04-15.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://sdb.amazonaws.com
+  variables: {}
+  description: The general Amazon SimpleDB endpoint for US East (N. Virginia)
+- url: https://sdb.amazonaws.com
+  variables: {}
+  description: The general Amazon SimpleDB endpoint for US East (N. Virginia)
+- url: http://sdb.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-2
+  description: The Amazon SimpleDB multi-region endpoint
+- url: https://sdb.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-2
+  description: The Amazon SimpleDB multi-region endpoint
+- url: http://sdb.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon SimpleDB endpoint for China (Beijing) and China (Ningxia)
+- url: https://sdb.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The Amazon SimpleDB endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: '#Action=BatchPutAttributes'
+paths:
+  /#Action=BatchPutAttributes:
+    parameters:
+    - $ref: '#/components/parameters/AWSAccessKeyId'
+    - $ref: '#/components/parameters/Action'
+    - $ref: '#/components/parameters/SignatureMethod'
+    - $ref: '#/components/parameters/SignatureVersion'
+    - $ref: '#/components/parameters/Timestamp'
+    - $ref: '#/components/parameters/Version'
+    - $ref: '#/components/parameters/Signature'
+    get:
+      x-aws-operation-name: BatchPutAttributes
+      operationId: GET_BatchPutAttributes
+      description: '<p> The <code>BatchPutAttributes</code> operation creates or replaces attributes within one or more items. By using this operation, the client can perform multiple <a>PutAttribute</a> operation with a single call. This helps yield savings in round trips and latencies, enabling Amazon SimpleDB to optimize requests and generally produce better throughput. </p> <p> The client may specify the item name with the <code>Item.X.ItemName</code> parameter. The client may specify new attributes using a combination of the <code>Item.X.Attribute.Y.Name</code> and <code>Item.X.Attribute.Y.Value</code> parameters. The client may specify the first attribute for the first item using the parameters <code>Item.0.Attribute.0.Name</code> and <code>Item.0.Attribute.0.Value</code>, and for the second attribute for the first item by the parameters <code>Item.0.Attribute.1.Name</code> and <code>Item.0.Attribute.1.Value</code>, and so on. </p> <p> Attributes are uniquely identified within an item by their name/value combination. For example, a single item can have the attributes <code>{ "first_name", "first_value" }</code> and <code>{ "first_name", "second_value" }</code>. However, it cannot have two attribute instances where both the <code>Item.X.Attribute.Y.Name</code> and <code>Item.X.Attribute.Y.Value</code> are the same. </p> <p> Optionally, the requester can supply the <code>Replace</code> parameter for each individual value. Setting this value to <code>true</code> will cause the new attribute values to replace the existing attribute values. For example, if an item <code>I</code> has the attributes <code>{ ''a'', ''1'' }, { ''b'', ''2''}</code> and <code>{ ''b'', ''3'' }</code> and the requester does a BatchPutAttributes of <code>{''I'', ''b'', ''4'' }</code> with the Replace parameter set to true, the final attributes of the item will be <code>{ ''a'', ''1'' }</code> and <code>{ ''b'', ''4'' }</code>, replacing the previous values of the ''b'' attribute with the new value. </p> <note> You cannot specify an empty string as an item or as an attribute name. The <code>BatchPutAttributes</code> operation succeeds or fails in its entirety. There are no partial puts. </note> <important> This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method. This operation does not support conditions using <code>Expected.X.Name</code>, <code>Expected.X.Value</code>, or <code>Expected.X.Exists</code>. </important> <p> You can execute multiple <code>BatchPutAttributes</code> operations and other operations in parallel. However, large numbers of concurrent <code>BatchPutAttributes</code> calls can result in Service Unavailable (503) responses. </p> <p> The following limitations are enforced for this operation: <ul> <li>256 attribute name-value pairs per item</li> <li>1 MB request size</li> <li>1 billion attributes per domain</li> <li>10 GB of total user data storage per domain</li> <li>25 item limit per <code>BatchPutAttributes</code> operation</li> </ul> </p>'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: NoSuchDomain
+          x-aws-exception: true
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/NoSuchDomain'
+        '409':
+          description: NumberSubmittedAttributesExceeded
+          x-aws-exception: true
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/NumberSubmittedAttributesExceeded'
+      parameters:
+      - name: DomainName
+        in: query
+        required: true
+        description: The name of the domain in which the attributes are being stored.
+        schema:
+          type: string
+      - name: Items
+        in: query
+        required: true
+        description: A list of items on which to perform the operation.
+        schema:
+          type: array
+          items:
+            allOf:
+            - $ref: '#/components/schemas/ReplaceableItem'
+            - xml:
+                name: Item
+          xml:
+            wrapped: false
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - BatchPutAttributes
+      - name: Version
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - '2009-04-15'
+      summary: Amazon G E T_ Batch Put Attributes
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#Action=BatchPutAttributes'
+    post:
+      x-aws-operation-name: BatchPutAttributes
+      operationId: POST_BatchPutAttributes
+      description: '<p> The <code>BatchPutAttributes</code> operation creates or replaces attributes within one or more items. By using this operation, the client can perform multiple <a>PutAttribute</a> operation with a single call. This helps yield savings in round trips and latencies, enabling Amazon SimpleDB to optimize requests and generally produce better throughput. </p> <p> The client may specify the item name with the <code>Item.X.ItemName</code> parameter. The client may specify new attributes using a combination of the <code>Item.X.Attribute.Y.Name</code> and <code>Item.X.Attribute.Y.Value</code> parameters. The client may specify the first attribute for the first item using the parameters <code>Item.0.Attribute.0.Name</code> and <code>Item.0.Attribute.0.Value</code>, and for the second attribute for the first item by the parameters <code>Item.0.Attribute.1.Name</code> and <code>Item.0.Attribute.1.Value</code>, and so on. </p> <p> Attributes are uniquely identified within an item by their name/value combination. For example, a single item can have the attributes <code>{ "first_name", "first_value" }</code> and <code>{ "first_name", "second_value" }</code>. However, it cannot have two attribute instances where both the <code>Item.X.Attribute.Y.Name</code> and <code>Item.X.Attribute.Y.Value</code> are the same. </p> <p> Optionally, the requester can supply the <code>Replace</code> parameter for each individual value. Setting this value to <code>true</code> will cause the new attribute values to replace the existing attribute values. For example, if an item <code>I</code> has the attributes <code>{ ''a'', ''1'' }, { ''b'', ''2''}</code> and <code>{ ''b'', ''3'' }</code> and the requester does a BatchPutAttributes of <code>{''I'', ''b'', ''4'' }</code> with the Replace parameter set to true, the final attributes of the item will be <code>{ ''a'', ''1'' }</code> and <code>{ ''b'', ''4'' }</code>, replacing the previous values of the ''b'' attribute with the new value. </p> <note> You cannot specify an empty string as an item or as an attribute name. The <code>BatchPutAttributes</code> operation succeeds or fails in its entirety. There are no partial puts. </note> <important> This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method. This operation does not support conditions using <code>Expected.X.Name</code>, <code>Expected.X.Value</code>, or <code>Expected.X.Exists</code>. </important> <p> You can execute multiple <code>BatchPutAttributes</code> operations and other operations in parallel. However, large numbers of concurrent <code>BatchPutAttributes</code> calls can result in Service Unavailable (503) responses. </p> <p> The following limitations are enforced for this operation: <ul> <li>256 attribute name-value pairs per item</li> <li>1 MB request size</li> <li>1 billion attributes per domain</li> <li>10 GB of total user data storage per domain</li> <li>25 item limit per <code>BatchPutAttributes</code> operation</li> </ul> </p>'
+      responses:
+        '200':
+          description: Success
+        '400':
+          description: NoSuchDomain
+          x-aws-exception: true
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/NoSuchDomain'
+        '409':
+          description: NumberSubmittedAttributesExceeded
+          x-aws-exception: true
+          content:
+            text/xml:
+              schema:
+                $ref: '#/components/schemas/NumberSubmittedAttributesExceeded'
+      requestBody:
+        content:
+          text/xml:
+            schema:
+              $ref: '#/components/schemas/BatchPutAttributesRequest'
+      parameters:
+      - name: Action
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - BatchPutAttributes
+      - name: Version
+        in: query
+        required: true
+        schema:
+          type: string
+          enum:
+          - '2009-04-15'
+      summary: Amazon P O S T_ Batch Put Attributes
+      x-microcks-operation:
+        delay: 0
+        dispatcher: FALLBACK
+      tags:
+      - '#Action=BatchPutAttributes'
+components:
+  parameters:
+    Version:
+      name: Version
+      in: query
+      schema:
+        type: string
+      required: true
+    AWSAccessKeyId:
+      name: AWSAccessKeyId
+      in: query
+      schema:
+        type: string
+      required: true
+    SignatureMethod:
+      name: SignatureMethod
+      in: query
+      schema:
+        type: string
+      required: true
+    SignatureVersion:
+      name: SignatureVersion
+      in: query
+      schema:
+        type: string
+      required: true
+    Signature:
+      name: Signature
+      in: query
+      schema:
+        type: string
+      required: true
+    Timestamp:
+      name: Timestamp
+      in: query
+      schema:
+        type: string
+      required: true
+    Action:
+      name: Action
+      in: query
+      schema:
+        type: string
+      required: true
+  schemas:
+    ReplaceableAttribute:
+      type: object
+      required:
+      - Name
+      - Value
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the replaceable attribute.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The value of the replaceable attribute.
+        Replace:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: A flag specifying whether or not to replace the attribute/value pair or to add a new attribute/value pair. The default setting is <code>false</code>.
+      description: ''
+    ReplaceableItem:
+      type: object
+      required:
+      - Name
+      - Attributes
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: ItemName
+            description: The name of the replaceable item.
+        Attributes:
+          allOf:
+          - $ref: '#/components/schemas/ReplaceableAttributeList'
+          - description: The list of attributes for a replaceable item.
+      description: ''
+    BatchPutAttributesRequest:
+      type: object
+      required:
+      - DomainName
+      - Items
+      title: BatchPutAttributesRequest
+      properties:
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the domain in which the attributes are being stored.
+        Items:
+          allOf:
+          - $ref: '#/components/schemas/ReplaceableItemList'
+          - description: A list of items on which to perform the operation.
+    NumberSubmittedAttributesExceeded:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: Too many attributes exist in a single call.
+    Boolean:
+      type: boolean
+    String:
+      type: string
+    Float:
+      type: number
+      format: float
+    ReplaceableItemList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/ReplaceableItem'
+        - xml:
+            name: Item
+      xml:
+        wrapped: false
+    NoSuchDomain:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: The specified domain does not exist.
+    ReplaceableAttributeList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/ReplaceableAttribute'
+        - xml:
+            name: Attribute
+      xml:
+        wrapped: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v2
+      x-amazon-apigateway-authtype: awsSigv2
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/sdb/
+x-hasEquivalentPaths: true
