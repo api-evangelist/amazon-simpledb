@@ -4,7 +4,20 @@ description: Amazon SimpleDB is a highly available NoSQL data store that offload
   provides simple and powerful data storage and querying capabilities to enable you to build web applications with structured
   data storage without the overhead of database administration.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-simpledb.png
 tags:
 - AWS
 - Cloud Storage
@@ -16,21 +29,207 @@ created: '2026-03-16'
 modified: '2026-05-19'
 specificationVersion: '0.19'
 apis:
-- aid: amazon-simpledb:amazon-simpledb-api
-  name: Amazon SimpleDB API
-  description: The Amazon SimpleDB API provides programmatic access to create and manage domains, items, and attributes for
-    simple NoSQL data storage and querying of structured data in the cloud.
+- aid: amazon-simpledb:amazon-simpledb-action-batchdeleteattributes-api
+  name: 'Amazon SimpleDB #Action=BatchDeleteAttributes API'
+  description: >-
+    The #Action=BatchDeleteAttributes API from Amazon SimpleDB — 1 operation(s) for #action=batchdeleteattributes.
   humanURL: https://aws.amazon.com/simpledb/
   baseURL: https://sdb.amazonaws.com
   tags:
-  - Data Storage
-  - Database
-  - NoSQL
+  - '#Action=BatchDeleteAttributes'
   properties:
+  - type: OpenAPI
+    url: openapi/amazon-simpledb-action-batchdeleteattributes-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simpledb/
+  - type: Pricing
+    url: https://aws.amazon.com/simpledb/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simpledb/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simpledb.yaml
+- aid: amazon-simpledb:amazon-simpledb-action-batchputattributes-api
+  name: 'Amazon SimpleDB #Action=BatchPutAttributes API'
+  description: >-
+    The #Action=BatchPutAttributes API from Amazon SimpleDB — 1 operation(s) for #action=batchputattributes.
+  humanURL: https://aws.amazon.com/simpledb/
+  baseURL: https://sdb.amazonaws.com
+  tags:
+  - '#Action=BatchPutAttributes'
+  properties:
   - type: OpenAPI
-    url: openapi/amazon-simpledb.yaml
+    url: openapi/amazon-simpledb-action-batchputattributes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simpledb/
+  - type: Pricing
+    url: https://aws.amazon.com/simpledb/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simpledb/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simpledb.yaml
+- aid: amazon-simpledb:amazon-simpledb-action-createdomain-api
+  name: 'Amazon SimpleDB #Action=CreateDomain API'
+  description: >-
+    The #Action=CreateDomain API from Amazon SimpleDB — 1 operation(s) for #action=createdomain.
+  humanURL: https://aws.amazon.com/simpledb/
+  baseURL: https://sdb.amazonaws.com
+  tags:
+  - '#Action=CreateDomain'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simpledb-action-createdomain-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simpledb/
+  - type: Pricing
+    url: https://aws.amazon.com/simpledb/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simpledb/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simpledb.yaml
+- aid: amazon-simpledb:amazon-simpledb-action-deleteattributes-api
+  name: 'Amazon SimpleDB #Action=DeleteAttributes API'
+  description: >-
+    The #Action=DeleteAttributes API from Amazon SimpleDB — 1 operation(s) for #action=deleteattributes.
+  humanURL: https://aws.amazon.com/simpledb/
+  baseURL: https://sdb.amazonaws.com
+  tags:
+  - '#Action=DeleteAttributes'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simpledb-action-deleteattributes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simpledb/
+  - type: Pricing
+    url: https://aws.amazon.com/simpledb/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simpledb/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simpledb.yaml
+- aid: amazon-simpledb:amazon-simpledb-action-deletedomain-api
+  name: 'Amazon SimpleDB #Action=DeleteDomain API'
+  description: >-
+    The #Action=DeleteDomain API from Amazon SimpleDB — 1 operation(s) for #action=deletedomain.
+  humanURL: https://aws.amazon.com/simpledb/
+  baseURL: https://sdb.amazonaws.com
+  tags:
+  - '#Action=DeleteDomain'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simpledb-action-deletedomain-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simpledb/
+  - type: Pricing
+    url: https://aws.amazon.com/simpledb/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simpledb/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simpledb.yaml
+- aid: amazon-simpledb:amazon-simpledb-action-domainmetadata-api
+  name: 'Amazon SimpleDB #Action=DomainMetadata API'
+  description: >-
+    The #Action=DomainMetadata API from Amazon SimpleDB — 1 operation(s) for #action=domainmetadata.
+  humanURL: https://aws.amazon.com/simpledb/
+  baseURL: https://sdb.amazonaws.com
+  tags:
+  - '#Action=DomainMetadata'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simpledb-action-domainmetadata-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simpledb/
+  - type: Pricing
+    url: https://aws.amazon.com/simpledb/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simpledb/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simpledb.yaml
+- aid: amazon-simpledb:amazon-simpledb-action-getattributes-api
+  name: 'Amazon SimpleDB #Action=GetAttributes API'
+  description: >-
+    The #Action=GetAttributes API from Amazon SimpleDB — 1 operation(s) for #action=getattributes.
+  humanURL: https://aws.amazon.com/simpledb/
+  baseURL: https://sdb.amazonaws.com
+  tags:
+  - '#Action=GetAttributes'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simpledb-action-getattributes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simpledb/
+  - type: Pricing
+    url: https://aws.amazon.com/simpledb/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simpledb/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simpledb.yaml
+- aid: amazon-simpledb:amazon-simpledb-action-listdomains-api
+  name: 'Amazon SimpleDB #Action=ListDomains API'
+  description: >-
+    The #Action=ListDomains API from Amazon SimpleDB — 1 operation(s) for #action=listdomains.
+  humanURL: https://aws.amazon.com/simpledb/
+  baseURL: https://sdb.amazonaws.com
+  tags:
+  - '#Action=ListDomains'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simpledb-action-listdomains-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simpledb/
+  - type: Pricing
+    url: https://aws.amazon.com/simpledb/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simpledb/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simpledb.yaml
+- aid: amazon-simpledb:amazon-simpledb-action-putattributes-api
+  name: 'Amazon SimpleDB #Action=PutAttributes API'
+  description: >-
+    The #Action=PutAttributes API from Amazon SimpleDB — 1 operation(s) for #action=putattributes.
+  humanURL: https://aws.amazon.com/simpledb/
+  baseURL: https://sdb.amazonaws.com
+  tags:
+  - '#Action=PutAttributes'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simpledb-action-putattributes-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simpledb/
+  - type: Pricing
+    url: https://aws.amazon.com/simpledb/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simpledb/faqs/
+  - type: X-NaftikoCapability
+    url: capabilities/amazon-simpledb.yaml
+- aid: amazon-simpledb:amazon-simpledb-action-select-api
+  name: 'Amazon SimpleDB #Action=Select API'
+  description: 'The #Action=Select API from Amazon SimpleDB — 1 operation(s) for #action=select.'
+  humanURL: https://aws.amazon.com/simpledb/
+  baseURL: https://sdb.amazonaws.com
+  tags:
+  - '#Action=Select'
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simpledb-action-select-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
   - type: GettingStarted
     url: https://aws.amazon.com/simpledb/
   - type: Pricing
@@ -40,6 +239,8 @@ apis:
   - type: X-NaftikoCapability
     url: capabilities/amazon-simpledb.yaml
 common:
+- type: PostmanWorkspace
+  url: https://www.postman.com/kinlaneapi/amazon-simpledb/overview
 - type: AgenticAccess
   url: agentic-access/amazon-simpledb-agentic-access.yml
 - type: TrustCenter
