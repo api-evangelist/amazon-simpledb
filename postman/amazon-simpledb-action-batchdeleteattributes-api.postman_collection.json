@@ -1,0 +1,373 @@
+{
+  "info": {
+    "_postman_id": "426a3bf2-ecd2-4af8-8cb0-efafd663fae7",
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes API",
+    "description": "Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href=\"http://aws.amazon.com/simpledb/\">http://aws.amazon.com/simpledb/</a> for more information. </p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:44:34.000Z",
+    "updatedAt": "2026-07-28T10:44:34.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-426a3bf2-ecd2-4af8-8cb0-efafd663fae7"
+  },
+  "item": [
+    {
+      "name": "#Action=BatchDeleteAttributes",
+      "item": [
+        {
+          "name": "Amazon G E T_ Batch Delete Attributes",
+          "id": "0dcbe94f-5c3c-4f24-97c2-20442ece2300",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/?DomainName=<string>&Items=[object Object]&Items=[object Object]&Action=BatchDeleteAttributes&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=BatchDeleteAttributes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "(Required) The name of the domain in which the attributes are being deleted.",
+                  "key": "DomainName",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) A list of items on which to perform the operation.",
+                  "key": "Items",
+                  "value": "[object Object]"
+                },
+                {
+                  "description": "(Required) A list of items on which to perform the operation.",
+                  "key": "Items",
+                  "value": "[object Object]"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "BatchDeleteAttributes"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Version",
+                  "value": "2009-04-15"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureMethod",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureVersion",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Signature",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "Action=BatchDeleteAttributes"
+            },
+            "description": "<p> Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies. This enables Amazon SimpleDB to optimize requests, which generally yields better throughput. </p> <note> <p> If you specify BatchDeleteAttributes without attributes or values, all the attributes for the item are deleted. </p> <p> BatchDeleteAttributes is an idempotent operation; running it multiple times on the same item or attribute doesn't result in an error. </p> <p> The BatchDeleteAttributes operation succeeds or fails in its entirety. There are no partial deletes. You can execute multiple BatchDeleteAttributes operations and other operations in parallel. However, large numbers of concurrent BatchDeleteAttributes calls can result in Service Unavailable (503) responses. </p> <p> This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method. </p> <p> This operation does not support conditions using Expected.X.Name, Expected.X.Value, or Expected.X.Exists. </p> </note> <p> The following limitations are enforced for this operation: <ul> <li>1 MB request size</li> <li>25 item limit per BatchDeleteAttributes operation</li> </ul> </p>"
+          },
+          "response": [
+            {
+              "id": "fe7a358f-8401-42d6-98c4-fa9837ac5953",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?DomainName=<string>&Items=[object Object]&Action=BatchDeleteAttributes&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=BatchDeleteAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the domain in which the attributes are being deleted.",
+                      "key": "DomainName",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) A list of items on which to perform the operation.",
+                      "key": "Items",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "BatchDeleteAttributes"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=BatchDeleteAttributes"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T10:44:34.000Z",
+              "updatedAt": "2026-07-28T10:44:34.000Z",
+              "uid": "35240-fe7a358f-8401-42d6-98c4-fa9837ac5953"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:34.000Z",
+          "updatedAt": "2026-07-28T10:44:34.000Z",
+          "uid": "35240-0dcbe94f-5c3c-4f24-97c2-20442ece2300"
+        },
+        {
+          "name": "Amazon P O S T_ Batch Delete Attributes",
+          "id": "b88860d6-659b-4ec5-a154-819c866e1939",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n  <Item>\n    <ItemName>(string)</ItemName>\n    <Attribute>\n      <Name>(string)</Name>\n      <Value>(string)</Value>\n    </Attribute>\n    <Attribute>\n      <Name>(string)</Name>\n      <Value>(string)</Value>\n    </Attribute>\n  </Item>\n  <Item>\n    <ItemName>(string)</ItemName>\n    <Attribute>\n      <Name>(string)</Name>\n      <Value>(string)</Value>\n    </Attribute>\n    <Attribute>\n      <Name>(string)</Name>\n      <Value>(string)</Value>\n    </Attribute>\n  </Item>\n</element>",
+              "options": {
+                "raw": {
+                  "headerFamily": "xml",
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/?Action=BatchDeleteAttributes&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=BatchDeleteAttributes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "BatchDeleteAttributes"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Version",
+                  "value": "2009-04-15"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureMethod",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureVersion",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Signature",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "Action=BatchDeleteAttributes"
+            },
+            "description": "<p> Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies. This enables Amazon SimpleDB to optimize requests, which generally yields better throughput. </p> <note> <p> If you specify BatchDeleteAttributes without attributes or values, all the attributes for the item are deleted. </p> <p> BatchDeleteAttributes is an idempotent operation; running it multiple times on the same item or attribute doesn't result in an error. </p> <p> The BatchDeleteAttributes operation succeeds or fails in its entirety. There are no partial deletes. You can execute multiple BatchDeleteAttributes operations and other operations in parallel. However, large numbers of concurrent BatchDeleteAttributes calls can result in Service Unavailable (503) responses. </p> <p> This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method. </p> <p> This operation does not support conditions using Expected.X.Name, Expected.X.Value, or Expected.X.Exists. </p> </note> <p> The following limitations are enforced for this operation: <ul> <li>1 MB request size</li> <li>25 item limit per BatchDeleteAttributes operation</li> </ul> </p>"
+          },
+          "response": [
+            {
+              "id": "01980ce3-4b95-4588-90e5-6c1265f48456",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n  <Item>\n    <ItemName>(string)</ItemName>\n    <Attribute>\n      <Name>(string)</Name>\n      <Value>(string)</Value>\n    </Attribute>\n    <Attribute>\n      <Name>(string)</Name>\n      <Value>(string)</Value>\n    </Attribute>\n  </Item>\n  <Item>\n    <ItemName>(string)</ItemName>\n    <Attribute>\n      <Name>(string)</Name>\n      <Value>(string)</Value>\n    </Attribute>\n    <Attribute>\n      <Name>(string)</Name>\n      <Value>(string)</Value>\n    </Attribute>\n  </Item>\n</element>",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "xml",
+                      "language": "xml"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?Action=BatchDeleteAttributes&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=BatchDeleteAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "BatchDeleteAttributes"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=BatchDeleteAttributes"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T10:44:34.000Z",
+              "updatedAt": "2026-07-28T10:44:34.000Z",
+              "uid": "35240-01980ce3-4b95-4588-90e5-6c1265f48456"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:34.000Z",
+          "updatedAt": "2026-07-28T10:44:34.000Z",
+          "uid": "35240-b88860d6-659b-4ec5-a154-819c866e1939"
+        }
+      ],
+      "id": "e668fdfc-0787-4773-ba4b-6454507bda22",
+      "createdAt": "2026-07-28T10:44:34.000Z",
+      "updatedAt": "2026-07-28T10:44:34.000Z",
+      "uid": "35240-e668fdfc-0787-4773-ba4b-6454507bda22"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://sdb.amazonaws.com"
+    }
+  ]
+}

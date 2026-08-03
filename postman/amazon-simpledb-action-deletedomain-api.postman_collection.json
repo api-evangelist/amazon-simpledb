@@ -1,0 +1,546 @@
+{
+  "info": {
+    "_postman_id": "e4deadf2-a72f-4010-bc53-dbf0c3ff0765",
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DeleteDomain API",
+    "description": "Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href=\"http://aws.amazon.com/simpledb/\">http://aws.amazon.com/simpledb/</a> for more information. </p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:44:41.000Z",
+    "updatedAt": "2026-07-28T10:44:42.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-e4deadf2-a72f-4010-bc53-dbf0c3ff0765"
+  },
+  "item": [
+    {
+      "name": "#Action=DeleteDomain",
+      "item": [
+        {
+          "name": "Amazon G E T_ Delete Domain",
+          "id": "067b774d-c81f-4141-96db-37ab83a482d1",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/?DomainName=<string>&Action=DeleteDomain&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DeleteDomain",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "(Required) The name of the domain to delete.",
+                  "key": "DomainName",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "DeleteDomain"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Version",
+                  "value": "2009-04-15"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureMethod",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureVersion",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Signature",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "Action=DeleteDomain"
+            },
+            "description": "<p> The <code>DeleteDomain</code> operation deletes a domain. Any items (and their attributes) in the domain are deleted as well. The <code>DeleteDomain</code> operation might take 10 or more seconds to complete. </p> <note> Running <code>DeleteDomain</code> on a domain that does not exist or running the function multiple times using the same domain name will not result in an error response. </note>"
+          },
+          "response": [
+            {
+              "id": "4d749ea6-66df-425c-8655-34a2fdc18679",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?DomainName=<string>&Action=DeleteDomain&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DeleteDomain",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the domain to delete.",
+                      "key": "DomainName",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "DeleteDomain"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=DeleteDomain"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T10:44:42.000Z",
+              "updatedAt": "2026-07-28T10:44:42.000Z",
+              "uid": "35240-4d749ea6-66df-425c-8655-34a2fdc18679"
+            },
+            {
+              "id": "6a510271-4c37-48e4-b9b2-4dd89eed6fbd",
+              "name": "MissingParameter",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?DomainName=<string>&Action=DeleteDomain&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DeleteDomain",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the domain to delete.",
+                      "key": "DomainName",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "DeleteDomain"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=DeleteDomain"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "createdAt": "2026-07-28T10:44:42.000Z",
+              "updatedAt": "2026-07-28T10:44:42.000Z",
+              "uid": "35240-6a510271-4c37-48e4-b9b2-4dd89eed6fbd"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:42.000Z",
+          "updatedAt": "2026-07-28T10:44:42.000Z",
+          "uid": "35240-067b774d-c81f-4141-96db-37ab83a482d1"
+        },
+        {
+          "name": "Amazon P O S T_ Delete Domain",
+          "id": "e864e373-5a2f-44b7-9e89-882425dec0f4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n</element>",
+              "options": {
+                "raw": {
+                  "headerFamily": "xml",
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/?Action=DeleteDomain&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DeleteDomain",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "DeleteDomain"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Version",
+                  "value": "2009-04-15"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureMethod",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureVersion",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Signature",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "Action=DeleteDomain"
+            },
+            "description": "<p> The <code>DeleteDomain</code> operation deletes a domain. Any items (and their attributes) in the domain are deleted as well. The <code>DeleteDomain</code> operation might take 10 or more seconds to complete. </p> <note> Running <code>DeleteDomain</code> on a domain that does not exist or running the function multiple times using the same domain name will not result in an error response. </note>"
+          },
+          "response": [
+            {
+              "id": "602c7337-0c95-4af0-844c-dacb2252d30d",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n</element>",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "xml",
+                      "language": "xml"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?Action=DeleteDomain&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DeleteDomain",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "DeleteDomain"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=DeleteDomain"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "text",
+              "header": [],
+              "cookie": [],
+              "responseTime": null,
+              "body": null,
+              "createdAt": "2026-07-28T10:44:42.000Z",
+              "updatedAt": "2026-07-28T10:44:42.000Z",
+              "uid": "35240-602c7337-0c95-4af0-844c-dacb2252d30d"
+            },
+            {
+              "id": "0ac3c071-14b5-4d75-b47a-ab253aee7da0",
+              "name": "MissingParameter",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/xml"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n</element>",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "xml",
+                      "language": "xml"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?Action=DeleteDomain&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DeleteDomain",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "DeleteDomain"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=DeleteDomain"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "createdAt": "2026-07-28T10:44:42.000Z",
+              "updatedAt": "2026-07-28T10:44:42.000Z",
+              "uid": "35240-0ac3c071-14b5-4d75-b47a-ab253aee7da0"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:42.000Z",
+          "updatedAt": "2026-07-28T10:44:42.000Z",
+          "uid": "35240-e864e373-5a2f-44b7-9e89-882425dec0f4"
+        }
+      ],
+      "id": "dc4f66a5-b2c7-41ea-b610-bda997e129f2",
+      "createdAt": "2026-07-28T10:44:42.000Z",
+      "updatedAt": "2026-07-28T10:44:42.000Z",
+      "uid": "35240-dc4f66a5-b2c7-41ea-b610-bda997e129f2"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://sdb.amazonaws.com"
+    }
+  ]
+}

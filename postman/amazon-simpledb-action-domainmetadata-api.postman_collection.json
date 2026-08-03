@@ -1,0 +1,564 @@
+{
+  "info": {
+    "_postman_id": "c08c3e4a-9837-4f2c-9fa5-8787b707b3f9",
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DomainMetadata API",
+    "description": "Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href=\"http://aws.amazon.com/simpledb/\">http://aws.amazon.com/simpledb/</a> for more information. </p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:44:47.000Z",
+    "updatedAt": "2026-07-28T10:44:47.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-c08c3e4a-9837-4f2c-9fa5-8787b707b3f9"
+  },
+  "item": [
+    {
+      "name": "#Action=DomainMetadata",
+      "item": [
+        {
+          "name": "Amazon G E T_ Domain Metadata",
+          "id": "32e6e30f-9f70-4390-aa05-bd9002cf37e3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/?DomainName=<string>&Action=DomainMetadata&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DomainMetadata",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "(Required) The name of the domain for which to display the metadata of.",
+                  "key": "DomainName",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "DomainMetadata"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Version",
+                  "value": "2009-04-15"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureMethod",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureVersion",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Signature",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "Action=DomainMetadata"
+            },
+            "description": " Returns information about the domain, including when the domain was created, the number of items and attributes in the domain, and the size of the attribute names and values. "
+          },
+          "response": [
+            {
+              "id": "c715ad2e-82de-4d93-9936-92fb2711f5a9",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?DomainName=<string>&Action=DomainMetadata&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DomainMetadata",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the domain for which to display the metadata of.",
+                      "key": "DomainName",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "DomainMetadata"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=DomainMetadata"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <ItemCount>(integer)</ItemCount>\n  <ItemNamesSizeBytes>(integer)</ItemNamesSizeBytes>\n  <AttributeNameCount>(integer)</AttributeNameCount>\n  <AttributeNamesSizeBytes>(integer)</AttributeNamesSizeBytes>\n  <AttributeValueCount>(integer)</AttributeValueCount>\n  <AttributeValuesSizeBytes>(integer)</AttributeValuesSizeBytes>\n  <Timestamp>(integer)</Timestamp>\n</element>",
+              "createdAt": "2026-07-28T10:44:48.000Z",
+              "updatedAt": "2026-07-28T10:44:48.000Z",
+              "uid": "35240-c715ad2e-82de-4d93-9936-92fb2711f5a9"
+            },
+            {
+              "id": "a9b05d1f-38da-4e75-b32c-5912d6cdb297",
+              "name": "NoSuchDomain",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?DomainName=<string>&Action=DomainMetadata&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DomainMetadata",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the domain for which to display the metadata of.",
+                      "key": "DomainName",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "DomainMetadata"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=DomainMetadata"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "createdAt": "2026-07-28T10:44:48.000Z",
+              "updatedAt": "2026-07-28T10:44:48.000Z",
+              "uid": "35240-a9b05d1f-38da-4e75-b32c-5912d6cdb297"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:47.000Z",
+          "updatedAt": "2026-07-28T10:44:47.000Z",
+          "uid": "35240-32e6e30f-9f70-4390-aa05-bd9002cf37e3"
+        },
+        {
+          "name": "Amazon P O S T_ Domain Metadata",
+          "id": "cc4ad6ea-0a5e-426f-bd99-29082b609605",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n</element>",
+              "options": {
+                "raw": {
+                  "headerFamily": "xml",
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/?Action=DomainMetadata&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DomainMetadata",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "DomainMetadata"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Version",
+                  "value": "2009-04-15"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureMethod",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureVersion",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Signature",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "Action=DomainMetadata"
+            },
+            "description": " Returns information about the domain, including when the domain was created, the number of items and attributes in the domain, and the size of the attribute names and values. "
+          },
+          "response": [
+            {
+              "id": "87a0c037-6ef8-4113-9b41-c4226b8bae60",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/xml"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n</element>",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "xml",
+                      "language": "xml"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?Action=DomainMetadata&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DomainMetadata",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "DomainMetadata"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=DomainMetadata"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <ItemCount>(integer)</ItemCount>\n  <ItemNamesSizeBytes>(integer)</ItemNamesSizeBytes>\n  <AttributeNameCount>(integer)</AttributeNameCount>\n  <AttributeNamesSizeBytes>(integer)</AttributeNamesSizeBytes>\n  <AttributeValueCount>(integer)</AttributeValueCount>\n  <AttributeValuesSizeBytes>(integer)</AttributeValuesSizeBytes>\n  <Timestamp>(integer)</Timestamp>\n</element>",
+              "createdAt": "2026-07-28T10:44:48.000Z",
+              "updatedAt": "2026-07-28T10:44:48.000Z",
+              "uid": "35240-87a0c037-6ef8-4113-9b41-c4226b8bae60"
+            },
+            {
+              "id": "d22bb05c-2c33-4968-856b-3962ee72a49a",
+              "name": "NoSuchDomain",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/xml"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n</element>",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "xml",
+                      "language": "xml"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?Action=DomainMetadata&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=DomainMetadata",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "DomainMetadata"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=DomainMetadata"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "createdAt": "2026-07-28T10:44:48.000Z",
+              "updatedAt": "2026-07-28T10:44:48.000Z",
+              "uid": "35240-d22bb05c-2c33-4968-856b-3962ee72a49a"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:47.000Z",
+          "updatedAt": "2026-07-28T10:44:47.000Z",
+          "uid": "35240-cc4ad6ea-0a5e-426f-bd99-29082b609605"
+        }
+      ],
+      "id": "5ca78646-382f-4b20-a569-635d2565a6a2",
+      "createdAt": "2026-07-28T10:44:47.000Z",
+      "updatedAt": "2026-07-28T10:44:47.000Z",
+      "uid": "35240-5ca78646-382f-4b20-a569-635d2565a6a2"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://sdb.amazonaws.com"
+    }
+  ]
+}

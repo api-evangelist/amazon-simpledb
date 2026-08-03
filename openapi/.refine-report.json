@@ -1,0 +1,32 @@
+{
+  "provider": "amazon-simpledb",
+  "sources": [
+    "amazon-simpledb-action-batchdeleteattributes-api-openapi.yml",
+    "amazon-simpledb-action-batchputattributes-api-openapi.yml",
+    "amazon-simpledb-action-createdomain-api-openapi.yml",
+    "amazon-simpledb-action-deleteattributes-api-openapi.yml",
+    "amazon-simpledb-action-deletedomain-api-openapi.yml",
+    "amazon-simpledb-action-domainmetadata-api-openapi.yml",
+    "amazon-simpledb-action-getattributes-api-openapi.yml",
+    "amazon-simpledb-action-listdomains-api-openapi.yml",
+    "amazon-simpledb-action-putattributes-api-openapi.yml",
+    "amazon-simpledb-action-select-api-openapi.yml"
+  ],
+  "outputs": [
+    "amazon-simpledb-action-batchdeleteattributes-api-openapi.yml",
+    "amazon-simpledb-action-batchputattributes-api-openapi.yml",
+    "amazon-simpledb-action-createdomain-api-openapi.yml",
+    "amazon-simpledb-action-deleteattributes-api-openapi.yml",
+    "amazon-simpledb-action-deletedomain-api-openapi.yml",
+    "amazon-simpledb-action-domainmetadata-api-openapi.yml",
+    "amazon-simpledb-action-getattributes-api-openapi.yml",
+    "amazon-simpledb-action-listdomains-api-openapi.yml",
+    "amazon-simpledb-action-putattributes-api-openapi.yml",
+    "amazon-simpledb-action-select-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}

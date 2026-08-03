@@ -1,0 +1,614 @@
+{
+  "info": {
+    "_postman_id": "0ab227b5-bf5a-4b31-9a10-5baf73dd4e29",
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=GetAttributes API",
+    "description": "Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href=\"http://aws.amazon.com/simpledb/\">http://aws.amazon.com/simpledb/</a> for more information. </p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:44:48.000Z",
+    "updatedAt": "2026-07-28T10:44:48.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-0ab227b5-bf5a-4b31-9a10-5baf73dd4e29"
+  },
+  "item": [
+    {
+      "name": "#Action=GetAttributes",
+      "item": [
+        {
+          "name": "Amazon G E T_ Get Attributes",
+          "id": "c4871fef-570f-4ec6-b963-2aa593a71ea7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/?DomainName=<string>&ItemName=<string>&AttributeNames=<string>&AttributeNames=<string>&ConsistentRead=<boolean>&Action=GetAttributes&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=GetAttributes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "(Required) The name of the domain in which to perform the operation.",
+                  "key": "DomainName",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) The name of the item.",
+                  "key": "ItemName",
+                  "value": "<string>"
+                },
+                {
+                  "description": "The names of the attributes.",
+                  "key": "AttributeNames",
+                  "value": "<string>"
+                },
+                {
+                  "description": "The names of the attributes.",
+                  "key": "AttributeNames",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.",
+                  "key": "ConsistentRead",
+                  "value": "<boolean>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "GetAttributes"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Version",
+                  "value": "2009-04-15"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureMethod",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureVersion",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Signature",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "Action=GetAttributes"
+            },
+            "description": "<p> Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to one or more attributes by specifying an attribute name parameter. </p> <p> If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system does not return an error as it cannot guarantee the item does not exist on other replicas. </p> <note> If GetAttributes is called without being passed any attribute names, all the attributes for the item are returned. </note>"
+          },
+          "response": [
+            {
+              "id": "b6b4bc74-8dbb-4722-828d-ec45140826d1",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?DomainName=<string>&ItemName=<string>&AttributeNames=<string>&ConsistentRead=<boolean>&Action=GetAttributes&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=GetAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the domain in which to perform the operation.",
+                      "key": "DomainName",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) The name of the item.",
+                      "key": "ItemName",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "The names of the attributes.",
+                      "key": "AttributeNames",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.",
+                      "key": "ConsistentRead",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "GetAttributes"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=GetAttributes"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <Attribute>\n    <Name>(string)</Name>\n    <AlternateNameEncoding>(string)</AlternateNameEncoding>\n    <Value>(string)</Value>\n    <AlternateValueEncoding>(string)</AlternateValueEncoding>\n  </Attribute>\n  <Attribute>\n    <Name>(string)</Name>\n    <AlternateNameEncoding>(string)</AlternateNameEncoding>\n    <Value>(string)</Value>\n    <AlternateValueEncoding>(string)</AlternateValueEncoding>\n  </Attribute>\n</element>",
+              "createdAt": "2026-07-28T10:44:49.000Z",
+              "updatedAt": "2026-07-28T10:44:49.000Z",
+              "uid": "35240-b6b4bc74-8dbb-4722-828d-ec45140826d1"
+            },
+            {
+              "id": "9f7c09af-4a15-4ae2-a075-ca3a1e9ef798",
+              "name": "NoSuchDomain",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?DomainName=<string>&ItemName=<string>&AttributeNames=<string>&ConsistentRead=<boolean>&Action=GetAttributes&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=GetAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The name of the domain in which to perform the operation.",
+                      "key": "DomainName",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) The name of the item.",
+                      "key": "ItemName",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "The names of the attributes.",
+                      "key": "AttributeNames",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.",
+                      "key": "ConsistentRead",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "GetAttributes"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=GetAttributes"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "createdAt": "2026-07-28T10:44:49.000Z",
+              "updatedAt": "2026-07-28T10:44:49.000Z",
+              "uid": "35240-9f7c09af-4a15-4ae2-a075-ca3a1e9ef798"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:49.000Z",
+          "updatedAt": "2026-07-28T10:44:49.000Z",
+          "uid": "35240-c4871fef-570f-4ec6-b963-2aa593a71ea7"
+        },
+        {
+          "name": "Amazon P O S T_ Get Attributes",
+          "id": "e591c971-38b8-444b-b741-c3d403d02188",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n  <ItemName>(string)</ItemName>\n  <AttributeName>(string)</AttributeName>\n  <AttributeName>(string)</AttributeName>\n  <ConsistentRead>(boolean)</ConsistentRead>\n</element>",
+              "options": {
+                "raw": {
+                  "headerFamily": "xml",
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/?Action=GetAttributes&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=GetAttributes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "GetAttributes"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Version",
+                  "value": "2009-04-15"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureMethod",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureVersion",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Signature",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "Action=GetAttributes"
+            },
+            "description": "<p> Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to one or more attributes by specifying an attribute name parameter. </p> <p> If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system does not return an error as it cannot guarantee the item does not exist on other replicas. </p> <note> If GetAttributes is called without being passed any attribute names, all the attributes for the item are returned. </note>"
+          },
+          "response": [
+            {
+              "id": "30ff692e-8a94-4c93-93cb-e597217f9770",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/xml"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n  <ItemName>(string)</ItemName>\n  <AttributeName>(string)</AttributeName>\n  <AttributeName>(string)</AttributeName>\n  <ConsistentRead>(boolean)</ConsistentRead>\n</element>",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "xml",
+                      "language": "xml"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?Action=GetAttributes&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=GetAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "GetAttributes"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=GetAttributes"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <Attribute>\n    <Name>(string)</Name>\n    <AlternateNameEncoding>(string)</AlternateNameEncoding>\n    <Value>(string)</Value>\n    <AlternateValueEncoding>(string)</AlternateValueEncoding>\n  </Attribute>\n  <Attribute>\n    <Name>(string)</Name>\n    <AlternateNameEncoding>(string)</AlternateNameEncoding>\n    <Value>(string)</Value>\n    <AlternateValueEncoding>(string)</AlternateValueEncoding>\n  </Attribute>\n</element>",
+              "createdAt": "2026-07-28T10:44:49.000Z",
+              "updatedAt": "2026-07-28T10:44:49.000Z",
+              "uid": "35240-30ff692e-8a94-4c93-93cb-e597217f9770"
+            },
+            {
+              "id": "b975064f-f45d-41d9-85d7-6667dbb96911",
+              "name": "NoSuchDomain",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/xml"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n  <ItemName>(string)</ItemName>\n  <AttributeName>(string)</AttributeName>\n  <AttributeName>(string)</AttributeName>\n  <ConsistentRead>(boolean)</ConsistentRead>\n</element>",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "xml",
+                      "language": "xml"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?Action=GetAttributes&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=GetAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "GetAttributes"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=GetAttributes"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "createdAt": "2026-07-28T10:44:49.000Z",
+              "updatedAt": "2026-07-28T10:44:49.000Z",
+              "uid": "35240-b975064f-f45d-41d9-85d7-6667dbb96911"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:49.000Z",
+          "updatedAt": "2026-07-28T10:44:49.000Z",
+          "uid": "35240-e591c971-38b8-444b-b741-c3d403d02188"
+        }
+      ],
+      "id": "1fb88f13-8718-4696-af09-36af4d6d612b",
+      "createdAt": "2026-07-28T10:44:49.000Z",
+      "updatedAt": "2026-07-28T10:44:49.000Z",
+      "uid": "35240-1fb88f13-8718-4696-af09-36af4d6d612b"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://sdb.amazonaws.com"
+    }
+  ]
+}

@@ -1,0 +1,803 @@
+{
+  "info": {
+    "_postman_id": "331cf78d-7a8b-45eb-a640-687d0a13df18",
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=Select API",
+    "description": "Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href=\"http://aws.amazon.com/simpledb/\">http://aws.amazon.com/simpledb/</a> for more information. </p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:45:01.000Z",
+    "updatedAt": "2026-07-28T10:45:01.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-331cf78d-7a8b-45eb-a640-687d0a13df18"
+  },
+  "item": [
+    {
+      "name": "#Action=Select",
+      "item": [
+        {
+          "name": "Amazon G E T_ Select",
+          "id": "cd237540-18ca-4652-a13c-a1597501e057",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/?SelectExpression=<string>&NextToken=<string>&ConsistentRead=<boolean>&Action=Select&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=Select",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "(Required) The expression used to query the domain.",
+                  "key": "SelectExpression",
+                  "value": "<string>"
+                },
+                {
+                  "description": "A string informing Amazon SimpleDB where to start the next list of <code>ItemNames</code>.",
+                  "key": "NextToken",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.",
+                  "key": "ConsistentRead",
+                  "value": "<boolean>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "Select"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Version",
+                  "value": "2009-04-15"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureMethod",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureVersion",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Signature",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "Action=Select"
+            },
+            "description": "<p> The <code>Select</code> operation returns a set of attributes for <code>ItemNames</code> that match the select expression. <code>Select</code> is similar to the standard SQL SELECT statement. </p> <p> The total size of the response cannot exceed 1 MB in total size. Amazon SimpleDB automatically adjusts the number of items returned per page to enforce this limit. For example, if the client asks to retrieve 2500 items, but each individual item is 10 kB in size, the system returns 100 items and an appropriate <code>NextToken</code> so the client can access the next page of results. </p> <p> For information on how to construct select expressions, see Using Select to Create Amazon SimpleDB Queries in the Developer Guide. </p>"
+          },
+          "response": [
+            {
+              "id": "c7b6e39d-21d8-4d65-9dbc-ac9dd912a5cc",
+              "name": "Success",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?SelectExpression=<string>&NextToken=<string>&ConsistentRead=<boolean>&Action=Select&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=Select",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The expression used to query the domain.",
+                      "key": "SelectExpression",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "A string informing Amazon SimpleDB where to start the next list of <code>ItemNames</code>.",
+                      "key": "NextToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.",
+                      "key": "ConsistentRead",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "Select"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=Select"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <Item>\n    <Name>(string)</Name>\n    <AlternateNameEncoding>(string)</AlternateNameEncoding>\n    <Attribute>\n      <Name>(string)</Name>\n      <AlternateNameEncoding>(string)</AlternateNameEncoding>\n      <Value>(string)</Value>\n      <AlternateValueEncoding>(string)</AlternateValueEncoding>\n    </Attribute>\n    <Attribute>\n      <Name>(string)</Name>\n      <AlternateNameEncoding>(string)</AlternateNameEncoding>\n      <Value>(string)</Value>\n      <AlternateValueEncoding>(string)</AlternateValueEncoding>\n    </Attribute>\n  </Item>\n  <Item>\n    <Name>(string)</Name>\n    <AlternateNameEncoding>(string)</AlternateNameEncoding>\n    <Attribute>\n      <Name>(string)</Name>\n      <AlternateNameEncoding>(string)</AlternateNameEncoding>\n      <Value>(string)</Value>\n      <AlternateValueEncoding>(string)</AlternateValueEncoding>\n    </Attribute>\n    <Attribute>\n      <Name>(string)</Name>\n      <AlternateNameEncoding>(string)</AlternateNameEncoding>\n      <Value>(string)</Value>\n      <AlternateValueEncoding>(string)</AlternateValueEncoding>\n    </Attribute>\n  </Item>\n  <NextToken>(string)</NextToken>\n</element>",
+              "createdAt": "2026-07-28T10:45:01.000Z",
+              "updatedAt": "2026-07-28T10:45:01.000Z",
+              "uid": "35240-c7b6e39d-21d8-4d65-9dbc-ac9dd912a5cc"
+            },
+            {
+              "id": "99879430-64c4-4fc8-a4d3-798daaf147be",
+              "name": "TooManyRequestedAttributes",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?SelectExpression=<string>&NextToken=<string>&ConsistentRead=<boolean>&Action=Select&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=Select",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The expression used to query the domain.",
+                      "key": "SelectExpression",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "A string informing Amazon SimpleDB where to start the next list of <code>ItemNames</code>.",
+                      "key": "NextToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.",
+                      "key": "ConsistentRead",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "Select"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=Select"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "createdAt": "2026-07-28T10:45:01.000Z",
+              "updatedAt": "2026-07-28T10:45:01.000Z",
+              "uid": "35240-99879430-64c4-4fc8-a4d3-798daaf147be"
+            },
+            {
+              "id": "b9aaa1ff-d445-40e2-9bea-ec7e79ade7e0",
+              "name": "RequestTimeout",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/?SelectExpression=<string>&NextToken=<string>&ConsistentRead=<boolean>&Action=Select&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=Select",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "(Required) The expression used to query the domain.",
+                      "key": "SelectExpression",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "A string informing Amazon SimpleDB where to start the next list of <code>ItemNames</code>.",
+                      "key": "NextToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.",
+                      "key": "ConsistentRead",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "Select"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=Select"
+                }
+              },
+              "status": "Request Timeout",
+              "code": 408,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "createdAt": "2026-07-28T10:45:01.000Z",
+              "updatedAt": "2026-07-28T10:45:01.000Z",
+              "uid": "35240-b9aaa1ff-d445-40e2-9bea-ec7e79ade7e0"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:01.000Z",
+          "updatedAt": "2026-07-28T10:45:01.000Z",
+          "uid": "35240-cd237540-18ca-4652-a13c-a1597501e057"
+        },
+        {
+          "name": "Amazon P O S T_ Select",
+          "id": "5df780f5-bf53-4ba6-95af-03dc181beb33",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <SelectExpression>(string)</SelectExpression>\n  <NextToken>(string)</NextToken>\n  <ConsistentRead>(boolean)</ConsistentRead>\n</element>",
+              "options": {
+                "raw": {
+                  "headerFamily": "xml",
+                  "language": "xml"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/?NextToken=<string>&Action=Select&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=Select",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ],
+              "query": [
+                {
+                  "description": "Pagination token",
+                  "key": "NextToken",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Action",
+                  "value": "Select"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Version",
+                  "value": "2009-04-15"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureMethod",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "SignatureVersion",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Timestamp",
+                  "value": "<string>"
+                },
+                {
+                  "description": "(Required) ",
+                  "key": "Signature",
+                  "value": "<string>"
+                }
+              ],
+              "hash": "Action=Select"
+            },
+            "description": "<p> The <code>Select</code> operation returns a set of attributes for <code>ItemNames</code> that match the select expression. <code>Select</code> is similar to the standard SQL SELECT statement. </p> <p> The total size of the response cannot exceed 1 MB in total size. Amazon SimpleDB automatically adjusts the number of items returned per page to enforce this limit. For example, if the client asks to retrieve 2500 items, but each individual item is 10 kB in size, the system returns 100 items and an appropriate <code>NextToken</code> so the client can access the next page of results. </p> <p> For information on how to construct select expressions, see Using Select to Create Amazon SimpleDB Queries in the Developer Guide. </p>"
+          },
+          "response": [
+            {
+              "id": "30b3f3ee-ac64-4533-891e-fddbfca090be",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/xml"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <SelectExpression>(string)</SelectExpression>\n  <NextToken>(string)</NextToken>\n  <ConsistentRead>(boolean)</ConsistentRead>\n</element>",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "xml",
+                      "language": "xml"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?NextToken=<string>&Action=Select&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=Select",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination token",
+                      "key": "NextToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "Select"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=Select"
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <Item>\n    <Name>(string)</Name>\n    <AlternateNameEncoding>(string)</AlternateNameEncoding>\n    <Attribute>\n      <Name>(string)</Name>\n      <AlternateNameEncoding>(string)</AlternateNameEncoding>\n      <Value>(string)</Value>\n      <AlternateValueEncoding>(string)</AlternateValueEncoding>\n    </Attribute>\n    <Attribute>\n      <Name>(string)</Name>\n      <AlternateNameEncoding>(string)</AlternateNameEncoding>\n      <Value>(string)</Value>\n      <AlternateValueEncoding>(string)</AlternateValueEncoding>\n    </Attribute>\n  </Item>\n  <Item>\n    <Name>(string)</Name>\n    <AlternateNameEncoding>(string)</AlternateNameEncoding>\n    <Attribute>\n      <Name>(string)</Name>\n      <AlternateNameEncoding>(string)</AlternateNameEncoding>\n      <Value>(string)</Value>\n      <AlternateValueEncoding>(string)</AlternateValueEncoding>\n    </Attribute>\n    <Attribute>\n      <Name>(string)</Name>\n      <AlternateNameEncoding>(string)</AlternateNameEncoding>\n      <Value>(string)</Value>\n      <AlternateValueEncoding>(string)</AlternateValueEncoding>\n    </Attribute>\n  </Item>\n  <NextToken>(string)</NextToken>\n</element>",
+              "createdAt": "2026-07-28T10:45:01.000Z",
+              "updatedAt": "2026-07-28T10:45:01.000Z",
+              "uid": "35240-30b3f3ee-ac64-4533-891e-fddbfca090be"
+            },
+            {
+              "id": "e25ecd1c-7cb8-489e-97c0-cea2a618fc38",
+              "name": "TooManyRequestedAttributes",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/xml"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <SelectExpression>(string)</SelectExpression>\n  <NextToken>(string)</NextToken>\n  <ConsistentRead>(boolean)</ConsistentRead>\n</element>",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "xml",
+                      "language": "xml"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?NextToken=<string>&Action=Select&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=Select",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination token",
+                      "key": "NextToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "Select"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=Select"
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "createdAt": "2026-07-28T10:45:01.000Z",
+              "updatedAt": "2026-07-28T10:45:01.000Z",
+              "uid": "35240-e25ecd1c-7cb8-489e-97c0-cea2a618fc38"
+            },
+            {
+              "id": "7bc3780c-2445-436d-ab89-5fcf1f060e27",
+              "name": "RequestTimeout",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Content-Type",
+                    "value": "text/xml"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <SelectExpression>(string)</SelectExpression>\n  <NextToken>(string)</NextToken>\n  <ConsistentRead>(boolean)</ConsistentRead>\n</element>",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "xml",
+                      "language": "xml"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/?NextToken=<string>&Action=Select&Version=2009-04-15&AWSAccessKeyId=<string>&SignatureMethod=<string>&SignatureVersion=<string>&Timestamp=<string>&Signature=<string>#Action=Select",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    ""
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination token",
+                      "key": "NextToken",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Action",
+                      "value": "Select"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Version",
+                      "value": "2009-04-15"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "(Required) ",
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "hash": "Action=Select"
+                }
+              },
+              "status": "Request Timeout",
+              "code": 408,
+              "_postman_previewlanguage": "xml",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "createdAt": "2026-07-28T10:45:01.000Z",
+              "updatedAt": "2026-07-28T10:45:01.000Z",
+              "uid": "35240-7bc3780c-2445-436d-ab89-5fcf1f060e27"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:01.000Z",
+          "updatedAt": "2026-07-28T10:45:01.000Z",
+          "uid": "35240-5df780f5-bf53-4ba6-95af-03dc181beb33"
+        }
+      ],
+      "id": "d6bbaae5-c273-435c-84c0-bf17c00c8058",
+      "createdAt": "2026-07-28T10:45:01.000Z",
+      "updatedAt": "2026-07-28T10:45:01.000Z",
+      "uid": "35240-d6bbaae5-c273-435c-84c0-bf17c00c8058"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://sdb.amazonaws.com"
+    }
+  ]
+}
