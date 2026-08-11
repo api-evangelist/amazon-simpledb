@@ -49,7 +49,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simpledb.yaml
+    url: openapi/_original/amazon-simpledb.yaml
 - aid: amazon-simpledb:amazon-simpledb-action-batchputattributes-api
   name: 'Amazon SimpleDB #Action=BatchPutAttributes API'
   description: >-
@@ -70,7 +70,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simpledb.yaml
+    url: openapi/_original/amazon-simpledb.yaml
 - aid: amazon-simpledb:amazon-simpledb-action-createdomain-api
   name: 'Amazon SimpleDB #Action=CreateDomain API'
   description: >-
@@ -91,7 +91,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simpledb.yaml
+    url: openapi/_original/amazon-simpledb.yaml
 - aid: amazon-simpledb:amazon-simpledb-action-deleteattributes-api
   name: 'Amazon SimpleDB #Action=DeleteAttributes API'
   description: >-
@@ -112,7 +112,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simpledb.yaml
+    url: openapi/_original/amazon-simpledb.yaml
 - aid: amazon-simpledb:amazon-simpledb-action-deletedomain-api
   name: 'Amazon SimpleDB #Action=DeleteDomain API'
   description: >-
@@ -133,7 +133,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simpledb.yaml
+    url: openapi/_original/amazon-simpledb.yaml
 - aid: amazon-simpledb:amazon-simpledb-action-domainmetadata-api
   name: 'Amazon SimpleDB #Action=DomainMetadata API'
   description: >-
@@ -154,7 +154,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simpledb.yaml
+    url: openapi/_original/amazon-simpledb.yaml
 - aid: amazon-simpledb:amazon-simpledb-action-getattributes-api
   name: 'Amazon SimpleDB #Action=GetAttributes API'
   description: >-
@@ -175,7 +175,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simpledb.yaml
+    url: openapi/_original/amazon-simpledb.yaml
 - aid: amazon-simpledb:amazon-simpledb-action-listdomains-api
   name: 'Amazon SimpleDB #Action=ListDomains API'
   description: >-
@@ -196,7 +196,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simpledb.yaml
+    url: openapi/_original/amazon-simpledb.yaml
 - aid: amazon-simpledb:amazon-simpledb-action-putattributes-api
   name: 'Amazon SimpleDB #Action=PutAttributes API'
   description: >-
@@ -217,7 +217,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simpledb.yaml
+    url: openapi/_original/amazon-simpledb.yaml
 - aid: amazon-simpledb:amazon-simpledb-action-select-api
   name: 'Amazon SimpleDB #Action=Select API'
   description: 'The #Action=Select API from Amazon SimpleDB — 1 operation(s) for #action=select.'
@@ -237,7 +237,7 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/simpledb/faqs/
   - type: X-NaftikoCapability
-    url: capabilities/amazon-simpledb.yaml
+    url: openapi/_original/amazon-simpledb.yaml
 common:
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-simpledb/overview
