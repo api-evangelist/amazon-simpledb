@@ -1,0 +1,134 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=BatchPutAttributes API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#Action=BatchPutAttributes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon G E T_ Batch Put Attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://sdb.amazonaws.com/#Action=BatchPutAttributes",
+            "params": [
+              {
+                "name": "AWSAccessKeyId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureMethod",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureVersion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Version",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "DomainName",
+                "value": "",
+                "type": "query",
+                "description": "The name of the domain in which the attributes are being stored."
+              },
+              {
+                "name": "Items",
+                "value": "",
+                "type": "query",
+                "description": "A list of items on which to perform the operation."
+              }
+            ]
+          },
+          "docs": "<p> The <code>BatchPutAttributes</code> operation creates or replaces attributes within one or more items. By using this operation, the client can perform multiple <a>PutAttribute</a> operation with a single call. This helps yield savings in round trips and latencies, enabling Amazon SimpleDB to optimize requests and generally produce better throughput. </p> <p> The client may specify the item name with the <code>Item.X.ItemName</code> parameter. The client may specify new attributes using a com"
+        },
+        {
+          "info": {
+            "name": "Amazon P O S T_ Batch Put Attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://sdb.amazonaws.com/#Action=BatchPutAttributes",
+            "params": [
+              {
+                "name": "AWSAccessKeyId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureMethod",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureVersion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Version",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Signature",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "<p> The <code>BatchPutAttributes</code> operation creates or replaces attributes within one or more items. By using this operation, the client can perform multiple <a>PutAttribute</a> operation with a single call. This helps yield savings in round trips and latencies, enabling Amazon SimpleDB to optimize requests and generally produce better throughput. </p> <p> The client may specify the item name with the <code>Item.X.ItemName</code> parameter. The client may specify new attributes using a com"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

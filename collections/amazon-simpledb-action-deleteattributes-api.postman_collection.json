@@ -1,0 +1,800 @@
+{
+  "item": [
+    {
+      "id": "f3bc9730-6bfb-4c26-ac09-87f060c4a051",
+      "name": "#Action=DeleteAttributes",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a1538e38-f814-430d-9115-5995a94bcbab",
+          "name": "Amazon G E T_ Delete Attributes",
+          "request": {
+            "name": "Amazon G E T_ Delete Attributes",
+            "description": {
+              "content": "<p> Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted. </p> <note> If <code>DeleteAttributes</code> is called without being passed any attributes or values specified, all the attributes for the item are deleted. </note> <p> <code>DeleteAttributes</code> is an idempotent operation; running it multiple times on the same item or attribute does not result in an error response. </p> <p> Because Amazon SimpleDB makes multiple copies of item data and uses an eventual consistency update model, performing a <a>GetAttributes</a> or <a>Select</a> operation (read) immediately after a <code>DeleteAttributes</code> or <a>PutAttributes</a> operation (write) might not return updated item data. </p>",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "Action=DeleteAttributes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "DomainName",
+                  "value": "<string>",
+                  "description": "(Required) The name of the domain in which to perform the operation."
+                },
+                {
+                  "disabled": false,
+                  "key": "ItemName",
+                  "value": "<string>",
+                  "description": "(Required) The name of the item. Similar to rows on a spreadsheet, items represent individual objects that contain one or more value-attribute pairs."
+                },
+                {
+                  "disabled": false,
+                  "key": "Attributes",
+                  "value": "{\"Name\":\"<string>\",\"Value\":\"<string>\"}",
+                  "description": "A list of Attributes. Similar to columns on a spreadsheet, attributes represent categories of data that can be assigned to items."
+                },
+                {
+                  "disabled": false,
+                  "key": "Attributes",
+                  "value": "{\"Name\":\"<string>\",\"Value\":\"<string>\"}",
+                  "description": "A list of Attributes. Similar to columns on a spreadsheet, attributes represent categories of data that can be assigned to items."
+                },
+                {
+                  "disabled": false,
+                  "key": "Name",
+                  "value": "<string>",
+                  "description": "The update condition which, if specified, determines whether the specified attributes will be deleted or not. The update condition must be satisfied in order for this request to be processed and the attributes to be deleted."
+                },
+                {
+                  "disabled": false,
+                  "key": "Value",
+                  "value": "<string>",
+                  "description": "The update condition which, if specified, determines whether the specified attributes will be deleted or not. The update condition must be satisfied in order for this request to be processed and the attributes to be deleted."
+                },
+                {
+                  "disabled": false,
+                  "key": "Exists",
+                  "value": "<boolean>",
+                  "description": "The update condition which, if specified, determines whether the specified attributes will be deleted or not. The update condition must be satisfied in order for this request to be processed and the attributes to be deleted."
+                },
+                {
+                  "disabled": false,
+                  "key": "Action",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "Version",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "SignatureMethod",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "SignatureVersion",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "Timestamp",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "Signature",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "c4976475-b098-4fef-bcf5-8d53a6b8904d",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "Action=DeleteAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "DomainName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ItemName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Attributes",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "Attributes",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "Name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Exists",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "Action",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "a6b12b6d-de73-4234-b556-3bb7fa8d3097",
+              "name": "NoSuchDomain",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "Action=DeleteAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "DomainName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ItemName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Attributes",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "Attributes",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "Name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Exists",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "Action",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            },
+            {
+              "id": "81cddb30-5d91-499d-95d2-bae0eee293d6",
+              "name": "AttributeDoesNotExist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "Action=DeleteAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "DomainName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "ItemName",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Attributes",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "Attributes",
+                      "value": "[object Object]"
+                    },
+                    {
+                      "key": "Name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Value",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Exists",
+                      "value": "<boolean>"
+                    },
+                    {
+                      "key": "Action",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4562bcb5-2720-45f3-807f-0c902da8131a",
+          "name": "Amazon P O S T_ Delete Attributes",
+          "request": {
+            "name": "Amazon P O S T_ Delete Attributes",
+            "description": {
+              "content": "<p> Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted. </p> <note> If <code>DeleteAttributes</code> is called without being passed any attributes or values specified, all the attributes for the item are deleted. </note> <p> <code>DeleteAttributes</code> is an idempotent operation; running it multiple times on the same item or attribute does not result in an error response. </p> <p> Because Amazon SimpleDB makes multiple copies of item data and uses an eventual consistency update model, performing a <a>GetAttributes</a> or <a>Select</a> operation (read) immediately after a <code>DeleteAttributes</code> or <a>PutAttributes</a> operation (write) might not return updated item data. </p>",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                ""
+              ],
+              "hash": "Action=DeleteAttributes",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "Action",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "Version",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "AWSAccessKeyId",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "SignatureMethod",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "SignatureVersion",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "Timestamp",
+                  "value": "<string>",
+                  "description": "(Required) "
+                },
+                {
+                  "disabled": false,
+                  "key": "Signature",
+                  "value": "<string>",
+                  "description": "(Required) "
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "text/xml"
+              },
+              {
+                "key": "Accept",
+                "value": "text/xml"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n  <ItemName>(string)</ItemName>\n  <Attribute>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n  </Attribute>\n  <Attribute>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n  </Attribute>\n  <Expected>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n    <Exists>(boolean)</Exists>\n  </Expected>\n</element>",
+              "options": {
+                "raw": {
+                  "language": "xml"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "33ba269c-5bd2-44b5-a6f1-93c2cfcc4c8e",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "Action=DeleteAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Action",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n  <ItemName>(string)</ItemName>\n  <Attribute>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n  </Attribute>\n  <Attribute>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n  </Attribute>\n  <Expected>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n    <Exists>(boolean)</Exists>\n  </Expected>\n</element>",
+                  "options": {
+                    "raw": {
+                      "language": "xml"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "3416c728-0db7-49e7-aecd-0a7e42c15179",
+              "name": "NoSuchDomain",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "Action=DeleteAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Action",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n  <ItemName>(string)</ItemName>\n  <Attribute>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n  </Attribute>\n  <Attribute>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n  </Attribute>\n  <Expected>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n    <Exists>(boolean)</Exists>\n  </Expected>\n</element>",
+                  "options": {
+                    "raw": {
+                      "language": "xml"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            },
+            {
+              "id": "f669b567-e5b5-4566-9ebc-4bee7c298ca8",
+              "name": "AttributeDoesNotExist",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    ""
+                  ],
+                  "hash": "Action=DeleteAttributes",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "Action",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Version",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "AWSAccessKeyId",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureMethod",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "SignatureVersion",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Timestamp",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "Signature",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "text/xml"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <DomainName>(string)</DomainName>\n  <ItemName>(string)</ItemName>\n  <Attribute>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n  </Attribute>\n  <Attribute>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n  </Attribute>\n  <Expected>\n    <Name>(string)</Name>\n    <Value>(string)</Value>\n    <Exists>(boolean)</Exists>\n  </Expected>\n</element>",
+                  "options": {
+                    "raw": {
+                      "language": "xml"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/xml"
+                }
+              ],
+              "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<element>\n  <BoxUsage>(number)</BoxUsage>\n</element>",
+              "cookie": [],
+              "_postman_previewlanguage": "xml"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "http://sdb.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "cdf04ce2-197c-4642-9b53-bb17a6e6679d",
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DeleteAttributes API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href=\"http://aws.amazon.com/simpledb/\">http://aws.amazon.com/simpledb/</a> for more information. </p>\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+      "type": "text/plain"
+    }
+  }
+}

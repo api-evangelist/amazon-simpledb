@@ -1,0 +1,128 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DomainMetadata API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#Action=DomainMetadata",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon G E T_ Domain Metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://sdb.amazonaws.com/#Action=DomainMetadata",
+            "params": [
+              {
+                "name": "AWSAccessKeyId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureMethod",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureVersion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Version",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "DomainName",
+                "value": "",
+                "type": "query",
+                "description": "The name of the domain for which to display the metadata of."
+              }
+            ]
+          },
+          "docs": " Returns information about the domain, including when the domain was created, the number of items and attributes in the domain, and the size of the attribute names and values. "
+        },
+        {
+          "info": {
+            "name": "Amazon P O S T_ Domain Metadata",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://sdb.amazonaws.com/#Action=DomainMetadata",
+            "params": [
+              {
+                "name": "AWSAccessKeyId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureMethod",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureVersion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Version",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Signature",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": " Returns information about the domain, including when the domain was created, the number of items and attributes in the domain, and the size of the attribute names and values. "
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

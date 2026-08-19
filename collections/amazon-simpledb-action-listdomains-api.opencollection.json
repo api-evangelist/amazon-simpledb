@@ -1,0 +1,146 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=ListDomains API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#Action=ListDomains",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon G E T_ List Domains",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://sdb.amazonaws.com/#Action=ListDomains",
+            "params": [
+              {
+                "name": "AWSAccessKeyId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureMethod",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureVersion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Version",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "MaxNumberOfDomains",
+                "value": "",
+                "type": "query",
+                "description": "The maximum number of domain names you want returned. The range is 1 to 100. The default setting is 100."
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "A string informing Amazon SimpleDB where to start the next list of domain names."
+              }
+            ]
+          },
+          "docs": " The <code>ListDomains</code> operation lists all domains associated with the Access Key ID. It returns domain names up to the limit set by <a href=\"#MaxNumberOfDomains\">MaxNumberOfDomains</a>. A <a href=\"#NextToken\">NextToken</a> is returned if there are more than <code>MaxNumberOfDomains</code> domains. Calling <code>ListDomains</code> successive times with the <code>NextToken</code> provided by the operation returns up to <code>MaxNumberOfDomains</code> more domain names with each successive "
+        },
+        {
+          "info": {
+            "name": "Amazon P O S T_ List Domains",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://sdb.amazonaws.com/#Action=ListDomains",
+            "params": [
+              {
+                "name": "AWSAccessKeyId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureMethod",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureVersion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Version",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "MaxNumberOfDomains",
+                "value": "",
+                "type": "query",
+                "description": "Pagination limit"
+              },
+              {
+                "name": "NextToken",
+                "value": "",
+                "type": "query",
+                "description": "Pagination token"
+              }
+            ]
+          },
+          "docs": " The <code>ListDomains</code> operation lists all domains associated with the Access Key ID. It returns domain names up to the limit set by <a href=\"#MaxNumberOfDomains\">MaxNumberOfDomains</a>. A <a href=\"#NextToken\">NextToken</a> is returned if there are more than <code>MaxNumberOfDomains</code> domains. Calling <code>ListDomains</code> successive times with the <code>NextToken</code> provided by the operation returns up to <code>MaxNumberOfDomains</code> more domain names with each successive "
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,146 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DeleteAttributes API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#Action=DeleteAttributes",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon G E T_ Delete Attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://sdb.amazonaws.com/#Action=DeleteAttributes",
+            "params": [
+              {
+                "name": "AWSAccessKeyId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureMethod",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureVersion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Version",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "DomainName",
+                "value": "",
+                "type": "query",
+                "description": "The name of the domain in which to perform the operation."
+              },
+              {
+                "name": "ItemName",
+                "value": "",
+                "type": "query",
+                "description": "The name of the item. Similar to rows on a spreadsheet, items represent individual objects that contain one or more value-attribute pairs."
+              },
+              {
+                "name": "Attributes",
+                "value": "",
+                "type": "query",
+                "description": "A list of Attributes. Similar to columns on a spreadsheet, attributes represent categories of data that can be assigned to items."
+              },
+              {
+                "name": "Expected",
+                "value": "",
+                "type": "query",
+                "description": "The update condition which, if specified, determines whether the specified attributes will be deleted or not. The update condition must be satisfied in order for this request to be processed and the attributes to be deleted."
+              }
+            ]
+          },
+          "docs": "<p> Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted. </p> <note> If <code>DeleteAttributes</code> is called without being passed any attributes or values specified, all the attributes for the item are deleted. </note> <p> <code>DeleteAttributes</code> is an idempotent operation; running it multiple times on the same item or attribute does not result in an error response. </p> <p> Because Amazon SimpleDB makes multiple copies "
+        },
+        {
+          "info": {
+            "name": "Amazon P O S T_ Delete Attributes",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://sdb.amazonaws.com/#Action=DeleteAttributes",
+            "params": [
+              {
+                "name": "AWSAccessKeyId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureMethod",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureVersion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Version",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Signature",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "<p> Deletes one or more attributes associated with an item. If all attributes of the item are deleted, the item is deleted. </p> <note> If <code>DeleteAttributes</code> is called without being passed any attributes or values specified, all the attributes for the item are deleted. </note> <p> <code>DeleteAttributes</code> is an idempotent operation; running it multiple times on the same item or attribute does not result in an error response. </p> <p> Because Amazon SimpleDB makes multiple copies "
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,128 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DeleteDomain API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "apikey",
+      "key": "Authorization",
+      "value": "{{Authorization}}",
+      "placement": "header"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "#Action=DeleteDomain",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Amazon G E T_ Delete Domain",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "http://sdb.amazonaws.com/#Action=DeleteDomain",
+            "params": [
+              {
+                "name": "AWSAccessKeyId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureMethod",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureVersion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Version",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Signature",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "DomainName",
+                "value": "",
+                "type": "query",
+                "description": "The name of the domain to delete."
+              }
+            ]
+          },
+          "docs": "<p> The <code>DeleteDomain</code> operation deletes a domain. Any items (and their attributes) in the domain are deleted as well. The <code>DeleteDomain</code> operation might take 10 or more seconds to complete. </p> <note> Running <code>DeleteDomain</code> on a domain that does not exist or running the function multiple times using the same domain name will not result in an error response. </note>"
+        },
+        {
+          "info": {
+            "name": "Amazon P O S T_ Delete Domain",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "http://sdb.amazonaws.com/#Action=DeleteDomain",
+            "params": [
+              {
+                "name": "AWSAccessKeyId",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Action",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureMethod",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "SignatureVersion",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Timestamp",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Version",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "Signature",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "<p> The <code>DeleteDomain</code> operation deletes a domain. Any items (and their attributes) in the domain are deleted as well. The <code>DeleteDomain</code> operation might take 10 or more seconds to complete. </p> <note> Running <code>DeleteDomain</code> on a domain that does not exist or running the function multiple times using the same domain name will not result in an error response. </note>"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
