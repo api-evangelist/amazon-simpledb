@@ -4,6 +4,18 @@ description: Amazon SimpleDB is a highly available NoSQL data store that offload
   provides simple and powerful data storage and querying capabilities to enable you to build web applications with structured
   data storage without the overhead of database administration.
 type: Index
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: freemium
   onboarding: self-serve
