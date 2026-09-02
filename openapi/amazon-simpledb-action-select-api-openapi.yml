@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v2
-  title: 'Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=Select API'
+  title: 'Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=Select #Action=Select #Action=Select API'
   description: Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information. </p>
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
@@ -272,12 +272,28 @@ components:
           - $ref: '#/components/schemas/String'
           - description: ''
       description: ''
-    TooManyRequestedAttributes:
+    ItemList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/Item'
+        - xml:
+            name: Item
+      xml:
+        wrapped: false
+    String:
+      type: string
+    SelectResult:
       type: object
       properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: Too many attributes requested.
+        Items:
+          allOf:
+          - $ref: '#/components/schemas/ItemList'
+          - description: A list of items that match the select expression.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: An opaque token indicating that more items than <code>MaxNumberOfItems</code> were matched, the response size exceeded 1 megabyte, or the execution time exceeded 5 seconds.
     SelectRequest:
       type: object
       required:
@@ -296,14 +312,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/Boolean'
           - description: Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.
-    RequestTimeout:
-      type: object
-      properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: A timeout occurred when attempting to query the specified domain with specified query expression.
-    String:
-      type: string
     Boolean:
       type: boolean
     Item:
@@ -325,26 +333,6 @@ components:
           - $ref: '#/components/schemas/AttributeList'
           - description: A list of attributes.
       description: ''
-    SelectResult:
-      type: object
-      properties:
-        Items:
-          allOf:
-          - $ref: '#/components/schemas/ItemList'
-          - description: A list of items that match the select expression.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: An opaque token indicating that more items than <code>MaxNumberOfItems</code> were matched, the response size exceeded 1 megabyte, or the execution time exceeded 5 seconds.
-    ItemList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/Item'
-        - xml:
-            name: Item
-      xml:
-        wrapped: false
     Float:
       type: number
       format: float
@@ -357,33 +345,27 @@ components:
             name: Attribute
       xml:
         wrapped: false
+    RequestTimeout:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: A timeout occurred when attempting to query the specified domain with specified query expression.
+    TooManyRequestedAttributes:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: Too many attributes requested.
   parameters:
-    AWSAccessKeyId:
-      name: AWSAccessKeyId
-      in: query
-      schema:
-        type: string
-      required: true
-    SignatureMethod:
-      name: SignatureMethod
+    Timestamp:
+      name: Timestamp
       in: query
       schema:
         type: string
       required: true
     SignatureVersion:
       name: SignatureVersion
-      in: query
-      schema:
-        type: string
-      required: true
-    Signature:
-      name: Signature
-      in: query
-      schema:
-        type: string
-      required: true
-    Timestamp:
-      name: Timestamp
       in: query
       schema:
         type: string
@@ -396,6 +378,24 @@ components:
       required: true
     Version:
       name: Version
+      in: query
+      schema:
+        type: string
+      required: true
+    Signature:
+      name: Signature
+      in: query
+      schema:
+        type: string
+      required: true
+    AWSAccessKeyId:
+      name: AWSAccessKeyId
+      in: query
+      schema:
+        type: string
+      required: true
+    SignatureMethod:
+      name: SignatureMethod
       in: query
       schema:
         type: string
