@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2009-04-15'
   x-release: v2
-  title: 'Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=GetAttributes #Action=Get Attributes #Action=Get Attributes API'
-  description: Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information. </p>
+  title: 'Amazon SimpleDB #Action=Get Attributes API'
+  description: Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/sdb-2009-04-15.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -129,7 +130,12 @@ paths:
     get:
       x-aws-operation-name: GetAttributes
       operationId: GET_GetAttributes
-      description: <p> Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to one or more attributes by specifying an attribute name parameter. </p> <p> If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system does not return an error as it cannot guarantee the item does not exist on other replicas. </p> <note> If GetAttributes is called without being passed any attribute names, all the attributes for the item are returned. </note>
+      description: 'Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to one or more attributes by specifying an attribute name parameter.
+
+
+        If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system does not return an error as it cannot guarantee the item does not exist on other replicas.
+
+        If GetAttributes is called without being passed any attribute names, all the attributes for the item are returned.'
       responses:
         '200':
           description: Success
@@ -199,7 +205,12 @@ paths:
     post:
       x-aws-operation-name: GetAttributes
       operationId: POST_GetAttributes
-      description: <p> Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to one or more attributes by specifying an attribute name parameter. </p> <p> If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system does not return an error as it cannot guarantee the item does not exist on other replicas. </p> <note> If GetAttributes is called without being passed any attribute names, all the attributes for the item are returned. </note>
+      description: 'Returns all of the attributes associated with the specified item. Optionally, the attributes returned can be limited to one or more attributes by specifying an attribute name parameter.
+
+
+        If the item does not exist on the replica that was accessed for this operation, an empty set is returned. The system does not return an error as it cannot guarantee the item does not exist on other replicas.
+
+        If GetAttributes is called without being passed any attribute names, all the attributes for the item are returned.'
       responses:
         '200':
           description: Success
@@ -242,6 +253,15 @@ paths:
       - '#Action=GetAttributes'
 components:
   schemas:
+    AttributeNameList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/String'
+        - xml:
+            name: AttributeName
+      xml:
+        wrapped: false
     Attribute:
       type: object
       required:
@@ -265,10 +285,14 @@ components:
           - $ref: '#/components/schemas/String'
           - description: ''
       description: ''
-    String:
-      type: string
     Boolean:
       type: boolean
+    NoSuchDomain:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: The specified domain does not exist.
     GetAttributesRequest:
       type: object
       required:
@@ -292,6 +316,15 @@ components:
           allOf:
           - $ref: '#/components/schemas/Boolean'
           - description: Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.
+    String:
+      type: string
+    GetAttributesResult:
+      type: object
+      properties:
+        Attributes:
+          allOf:
+          - $ref: '#/components/schemas/AttributeList'
+          - description: The list of attributes returned by the operation.
     Float:
       type: number
       format: float
@@ -304,43 +337,9 @@ components:
             name: Attribute
       xml:
         wrapped: false
-    AttributeNameList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/String'
-        - xml:
-            name: AttributeName
-      xml:
-        wrapped: false
-    NoSuchDomain:
-      type: object
-      properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: The specified domain does not exist.
-    GetAttributesResult:
-      type: object
-      properties:
-        Attributes:
-          allOf:
-          - $ref: '#/components/schemas/AttributeList'
-          - description: The list of attributes returned by the operation.
   parameters:
-    Timestamp:
-      name: Timestamp
-      in: query
-      schema:
-        type: string
-      required: true
     SignatureVersion:
       name: SignatureVersion
-      in: query
-      schema:
-        type: string
-      required: true
-    Action:
-      name: Action
       in: query
       schema:
         type: string
@@ -351,20 +350,32 @@ components:
       schema:
         type: string
       required: true
+    Timestamp:
+      name: Timestamp
+      in: query
+      schema:
+        type: string
+      required: true
     Signature:
       name: Signature
       in: query
       schema:
         type: string
       required: true
-    AWSAccessKeyId:
-      name: AWSAccessKeyId
+    SignatureMethod:
+      name: SignatureMethod
       in: query
       schema:
         type: string
       required: true
-    SignatureMethod:
-      name: SignatureMethod
+    Action:
+      name: Action
+      in: query
+      schema:
+        type: string
+      required: true
+    AWSAccessKeyId:
+      name: AWSAccessKeyId
       in: query
       schema:
         type: string

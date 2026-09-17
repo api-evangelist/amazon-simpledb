@@ -1,16 +1,7 @@
 {
   "provider": "amazon-simpledb",
   "sources": [
-    "amazon-simpledb-action-batchdeleteattributes-api-openapi.yml",
-    "amazon-simpledb-action-batchputattributes-api-openapi.yml",
-    "amazon-simpledb-action-createdomain-api-openapi.yml",
-    "amazon-simpledb-action-deleteattributes-api-openapi.yml",
-    "amazon-simpledb-action-deletedomain-api-openapi.yml",
-    "amazon-simpledb-action-domainmetadata-api-openapi.yml",
-    "amazon-simpledb-action-getattributes-api-openapi.yml",
-    "amazon-simpledb-action-listdomains-api-openapi.yml",
-    "amazon-simpledb-action-putattributes-api-openapi.yml",
-    "amazon-simpledb-action-select-api-openapi.yml"
+    "_original/amazon-simpledb.yaml"
   ],
   "outputs": [
     "amazon-simpledb-action-batchdeleteattributes-api-openapi.yml",
@@ -28,7 +19,50 @@
   "errors": [],
   "warnings": [],
   "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "amazon-simpledb.yaml: upgraded openapi 3.0.0 -> OpenAPI 3.2.0",
+    "amazon-simpledb.yaml: tagged paths GET /#Action=BatchDeleteAttributes -> #Action=BatchDeleteAttributes",
+    "amazon-simpledb.yaml: tagged paths POST /#Action=BatchDeleteAttributes -> #Action=BatchDeleteAttributes",
+    "amazon-simpledb.yaml: tagged paths GET /#Action=BatchPutAttributes -> #Action=BatchPutAttributes",
+    "amazon-simpledb.yaml: tagged paths POST /#Action=BatchPutAttributes -> #Action=BatchPutAttributes",
+    "amazon-simpledb.yaml: tagged paths GET /#Action=CreateDomain -> #Action=CreateDomain",
+    "amazon-simpledb.yaml: tagged paths POST /#Action=CreateDomain -> #Action=CreateDomain",
+    "amazon-simpledb.yaml: tagged paths GET /#Action=DeleteAttributes -> #Action=DeleteAttributes",
+    "amazon-simpledb.yaml: tagged paths POST /#Action=DeleteAttributes -> #Action=DeleteAttributes",
+    "amazon-simpledb.yaml: tagged paths GET /#Action=DeleteDomain -> #Action=DeleteDomain",
+    "amazon-simpledb.yaml: tagged paths POST /#Action=DeleteDomain -> #Action=DeleteDomain",
+    "amazon-simpledb.yaml: tagged paths GET /#Action=DomainMetadata -> #Action=DomainMetadata",
+    "amazon-simpledb.yaml: tagged paths POST /#Action=DomainMetadata -> #Action=DomainMetadata",
+    "amazon-simpledb.yaml: tagged paths GET /#Action=GetAttributes -> #Action=GetAttributes",
+    "amazon-simpledb.yaml: tagged paths POST /#Action=GetAttributes -> #Action=GetAttributes",
+    "amazon-simpledb.yaml: tagged paths GET /#Action=ListDomains -> #Action=ListDomains",
+    "amazon-simpledb.yaml: tagged paths POST /#Action=ListDomains -> #Action=ListDomains",
+    "amazon-simpledb.yaml: tagged paths GET /#Action=PutAttributes -> #Action=PutAttributes",
+    "amazon-simpledb.yaml: tagged paths POST /#Action=PutAttributes -> #Action=PutAttributes",
+    "amazon-simpledb.yaml: tagged paths GET /#Action=Select -> #Action=Select",
+    "amazon-simpledb.yaml: tagged paths POST /#Action=Select -> #Action=Select",
+    "amazon-simpledb.yaml: declared missing tag: #Action=BatchDeleteAttributes",
+    "amazon-simpledb.yaml: declared missing tag: #Action=BatchPutAttributes",
+    "amazon-simpledb.yaml: declared missing tag: #Action=CreateDomain",
+    "amazon-simpledb.yaml: declared missing tag: #Action=DeleteAttributes",
+    "amazon-simpledb.yaml: declared missing tag: #Action=DeleteDomain",
+    "amazon-simpledb.yaml: declared missing tag: #Action=DomainMetadata",
+    "amazon-simpledb.yaml: declared missing tag: #Action=GetAttributes",
+    "amazon-simpledb.yaml: declared missing tag: #Action=ListDomains",
+    "amazon-simpledb.yaml: declared missing tag: #Action=PutAttributes",
+    "amazon-simpledb.yaml: declared missing tag: #Action=Select",
     "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "amazon-simpledb-action-batchdeleteattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-simpledb-action-batchputattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-simpledb-action-createdomain-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-simpledb-action-deleteattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-simpledb-action-deletedomain-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-simpledb-action-domainmetadata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-simpledb-action-getattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-simpledb-action-listdomains-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-simpledb-action-putattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "amazon-simpledb-action-select-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

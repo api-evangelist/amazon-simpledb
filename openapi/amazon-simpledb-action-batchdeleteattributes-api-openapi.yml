@@ -1,9 +1,9 @@
 openapi: 3.2.0
 info:
-  version: 1.0.0
+  version: '2009-04-15'
   x-release: v2
-  title: 'Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=Batch Delete Attributes #Action=Batch Delete Attributes API'
-  description: Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud. By offloading the time and effort associated with building and operating a web-scale database, SimpleDB provides developers the freedom to focus on application development. <p> A traditional, clustered relational database requires a sizable upfront capital outlay, is complex to design, and often requires extensive and repetitive database administration. Amazon SimpleDB is dramatically simpler, requiring no schema, automatically indexing your data and providing a simple API for storage and access. This approach eliminates the administrative burden of data modeling, index maintenance, and performance tuning. Developers gain access to this functionality within Amazon's proven computing environment, are able to scale instantly, and pay only for what they use. </p> <p> Visit <a href="http://aws.amazon.com/simpledb/">http://aws.amazon.com/simpledb/</a> for more information. </p>
+  title: 'Amazon SimpleDB #Action=Batch Delete Attributes API'
+  description: Amazon SimpleDB is a web service providing the core database functions of data indexing and querying in the cloud.
   x-logo:
     url: https://twitter.com/awscloud/profile_image?size=original
     backgroundColor: '#FFFFFF'
@@ -23,6 +23,7 @@ info:
     url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/sdb-2009-04-15.normal.json
     converter:
       url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
     x-apisguru-driver: external
   x-apiClientRegistration:
     url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
@@ -129,7 +130,31 @@ paths:
     get:
       x-aws-operation-name: BatchDeleteAttributes
       operationId: GET_BatchDeleteAttributes
-      description: '<p> Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies. This enables Amazon SimpleDB to optimize requests, which generally yields better throughput. </p> <note> <p> If you specify BatchDeleteAttributes without attributes or values, all the attributes for the item are deleted. </p> <p> BatchDeleteAttributes is an idempotent operation; running it multiple times on the same item or attribute doesn''t result in an error. </p> <p> The BatchDeleteAttributes operation succeeds or fails in its entirety. There are no partial deletes. You can execute multiple BatchDeleteAttributes operations and other operations in parallel. However, large numbers of concurrent BatchDeleteAttributes calls can result in Service Unavailable (503) responses. </p> <p> This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method. </p> <p> This operation does not support conditions using Expected.X.Name, Expected.X.Value, or Expected.X.Exists. </p> </note> <p> The following limitations are enforced for this operation: <ul> <li>1 MB request size</li> <li>25 item limit per BatchDeleteAttributes operation</li> </ul> </p>'
+      description: 'Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies. This enables Amazon SimpleDB to optimize requests, which generally yields better throughput.
+
+
+        If you specify BatchDeleteAttributes without attributes or values, all the attributes for the item are deleted.
+
+
+        BatchDeleteAttributes is an idempotent operation; running it multiple times on the same item or attribute doesn''t result in an error.
+
+
+        The BatchDeleteAttributes operation succeeds or fails in its entirety. There are no partial deletes. You can execute multiple BatchDeleteAttributes operations and other operations in parallel. However, large numbers of concurrent BatchDeleteAttributes calls can result in Service Unavailable (503) responses.
+
+
+        This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method.
+
+
+        This operation does not support conditions using Expected.X.Name, Expected.X.Value, or Expected.X.Exists.
+
+
+        The following limitations are enforced for this operation:
+
+
+        1 MB request size
+
+
+        25 item limit per BatchDeleteAttributes operation'
       responses:
         '200':
           description: Success
@@ -176,7 +201,31 @@ paths:
     post:
       x-aws-operation-name: BatchDeleteAttributes
       operationId: POST_BatchDeleteAttributes
-      description: '<p> Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies. This enables Amazon SimpleDB to optimize requests, which generally yields better throughput. </p> <note> <p> If you specify BatchDeleteAttributes without attributes or values, all the attributes for the item are deleted. </p> <p> BatchDeleteAttributes is an idempotent operation; running it multiple times on the same item or attribute doesn''t result in an error. </p> <p> The BatchDeleteAttributes operation succeeds or fails in its entirety. There are no partial deletes. You can execute multiple BatchDeleteAttributes operations and other operations in parallel. However, large numbers of concurrent BatchDeleteAttributes calls can result in Service Unavailable (503) responses. </p> <p> This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method. </p> <p> This operation does not support conditions using Expected.X.Name, Expected.X.Value, or Expected.X.Exists. </p> </note> <p> The following limitations are enforced for this operation: <ul> <li>1 MB request size</li> <li>25 item limit per BatchDeleteAttributes operation</li> </ul> </p>'
+      description: 'Performs multiple DeleteAttributes operations in a single call, which reduces round trips and latencies. This enables Amazon SimpleDB to optimize requests, which generally yields better throughput.
+
+
+        If you specify BatchDeleteAttributes without attributes or values, all the attributes for the item are deleted.
+
+
+        BatchDeleteAttributes is an idempotent operation; running it multiple times on the same item or attribute doesn''t result in an error.
+
+
+        The BatchDeleteAttributes operation succeeds or fails in its entirety. There are no partial deletes. You can execute multiple BatchDeleteAttributes operations and other operations in parallel. However, large numbers of concurrent BatchDeleteAttributes calls can result in Service Unavailable (503) responses.
+
+
+        This operation is vulnerable to exceeding the maximum URL size when making a REST request using the HTTP GET method.
+
+
+        This operation does not support conditions using Expected.X.Name, Expected.X.Value, or Expected.X.Exists.
+
+
+        The following limitations are enforced for this operation:
+
+
+        1 MB request size
+
+
+        25 item limit per BatchDeleteAttributes operation'
       responses:
         '200':
           description: Success
@@ -208,6 +257,43 @@ paths:
       - '#Action=BatchDeleteAttributes'
 components:
   schemas:
+    DeletableItemList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/DeletableItem'
+        - xml:
+            name: Item
+      xml:
+        wrapped: false
+    DeletableItem:
+      type: object
+      required:
+      - Name
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - xml:
+              name: ItemName
+        Attributes:
+          $ref: '#/components/schemas/DeletableAttributeList'
+    String:
+      type: string
+    DeletableAttribute:
+      type: object
+      required:
+      - Name
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the attribute.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The value of the attribute.
+      description: ''
     BatchDeleteAttributesRequest:
       type: object
       required:
@@ -232,58 +318,9 @@ components:
             name: Attribute
       xml:
         wrapped: false
-    String:
-      type: string
-    DeletableItem:
-      type: object
-      required:
-      - Name
-      properties:
-        Name:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - xml:
-              name: ItemName
-        Attributes:
-          $ref: '#/components/schemas/DeletableAttributeList'
-    DeletableItemList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/DeletableItem'
-        - xml:
-            name: Item
-      xml:
-        wrapped: false
-    DeletableAttribute:
-      type: object
-      required:
-      - Name
-      properties:
-        Name:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The name of the attribute.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The value of the attribute.
-      description: ''
   parameters:
-    Timestamp:
-      name: Timestamp
-      in: query
-      schema:
-        type: string
-      required: true
     SignatureVersion:
       name: SignatureVersion
-      in: query
-      schema:
-        type: string
-      required: true
-    Action:
-      name: Action
       in: query
       schema:
         type: string
@@ -294,20 +331,32 @@ components:
       schema:
         type: string
       required: true
+    Timestamp:
+      name: Timestamp
+      in: query
+      schema:
+        type: string
+      required: true
+    Action:
+      name: Action
+      in: query
+      schema:
+        type: string
+      required: true
     Signature:
       name: Signature
       in: query
       schema:
         type: string
       required: true
-    AWSAccessKeyId:
-      name: AWSAccessKeyId
+    SignatureMethod:
+      name: SignatureMethod
       in: query
       schema:
         type: string
       required: true
-    SignatureMethod:
-      name: SignatureMethod
+    AWSAccessKeyId:
+      name: AWSAccessKeyId
       in: query
       schema:
         type: string
