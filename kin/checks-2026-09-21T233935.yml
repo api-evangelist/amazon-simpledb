@@ -2,16 +2,16 @@
 kin_checks:
   slug: amazon-simpledb
   schema_version: 0.22.0
-  scored_at: '2026-09-19'
-  run_ts: 2026-09-19T193153
+  scored_at: '2026-09-21'
+  run_ts: 2026-09-21T233935
   note: Actionable checks (missed + partial) in `checks`, plus the ids that did not
     apply in `na`. Everything else in rubric/scoring-0.22.0.yml was earned; counts
     below let you verify that.
   counts:
     total: 136
-    earned: 43
+    earned: 39
     partial: 13
-    missed: 54
+    missed: 58
     na: 26
   checks:
   - id: tags_present
@@ -30,6 +30,12 @@ kin_checks:
   - id: openapi_3_1
     status: missed
     detail: 0 of 1 openapi documents pass
+  - id: operations_summary_coverage
+    status: missed
+    detail: 0 of 1 openapi documents pass
+  - id: operations_description_coverage
+    status: missed
+    detail: 0 of 1 openapi documents pass
   - id: operations_tagged
     status: missed
     detail: 0 of 1 openapi documents pass
@@ -37,6 +43,9 @@ kin_checks:
     status: missed
     detail: 0 of 1 openapi documents pass
   - id: response_coverage
+    status: missed
+    detail: 0 of 1 openapi documents pass
+  - id: error_responses_documented
     status: missed
     detail: 0 of 1 openapi documents pass
   - id: examples_present
@@ -109,6 +118,8 @@ kin_checks:
   - id: mcp_server
     status: missed
   - id: idempotency
+    status: missed
+  - id: error_semantics
     status: missed
   - id: openapi_examples
     status: missed
