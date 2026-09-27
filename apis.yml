@@ -42,19 +42,16 @@ created: '2026-03-16'
 modified: '2026-09-15'
 specificationVersion: '0.23'
 apis:
-- name: Amazon SimpleDB API
-  description: The Amazon SimpleDB API — a single AWS Query API covering 10 actions (20 operations) for
-    domains, items, attributes and SELECT queries.
+- aid: amazon-simpledb:amazon-simpledb-amazon-simpledb-api
+  name: Amazon SimpleDB Amazon SimpleDB API
+  description: The Amazon SimpleDB API from Amazon SimpleDB — 10 operation(s) for amazon simpledb.
   humanURL: https://aws.amazon.com/simpledb/
   baseURL: https://sdb.amazonaws.com
   tags:
-  - Database
-  - NoSQL
-  - Cloud
-  - AWS
+  - Amazon SimpleDB
   properties:
   - type: OpenAPI
-    url: openapi/_original/amazon-simpledb.yaml
+    url: openapi/amazon-simpledb-amazon-simpledb-api-openapi.yml
   - type: Documentation
     url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
   - type: GettingStarted
@@ -65,7 +62,7 @@ apis:
     url: https://aws.amazon.com/simpledb/faqs/
 common:
 - type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/simpledb/
 - type: PostmanWorkspace
   url: https://www.postman.com/kinlaneapi/amazon-simpledb/overview
 - type: AgenticAccess
@@ -147,5 +144,5 @@ maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 kind: company
-x-parent: aws
+x-parent: amazon-web-services
 x-relationship: product
