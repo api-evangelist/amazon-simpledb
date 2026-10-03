@@ -6,9 +6,7 @@
   "outputs": [
     "amazon-simpledb-amazon-simpledb-api-openapi.yml"
   ],
-  "archived": [
-    "deleted 10 superseded output(s) from the previous generation"
-  ],
+  "archived": [],
   "errors": [],
   "warnings": [],
   "notes": [
@@ -35,19 +33,9 @@
     "amazon-simpledb.yaml: tagged paths GET /#Action=Select -> Amazon SimpleDB",
     "amazon-simpledb.yaml: tagged paths POST /#Action=Select -> Amazon SimpleDB",
     "amazon-simpledb.yaml: declared missing tag: Amazon SimpleDB",
-    "superseded outputs removed: amazon-simpledb-action-batchdeleteattributes-api-openapi.yml, amazon-simpledb-action-batchputattributes-api-openapi.yml, amazon-simpledb-action-createdomain-api-openapi.yml, amazon-simpledb-action-deleteattributes-api-openapi.yml, amazon-simpledb-action-deletedomain-api-openapi.yml \u2026",
-    "apis.yml register: written (+1 apis, 1 total)"
+    "apis.yml register: already-registered"
   ],
   "skipped": [
-    "amazon-simpledb-action-batchdeleteattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-simpledb-action-batchputattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-simpledb-action-createdomain-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-simpledb-action-deleteattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-simpledb-action-deletedomain-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-simpledb-action-domainmetadata-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-simpledb-action-getattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-simpledb-action-listdomains-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-simpledb-action-putattributes-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "amazon-simpledb-action-select-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+    "amazon-simpledb-amazon-simpledb-api-openapi.yml: previously refined output, superseded by openapi/_original/"
   ]
 }
