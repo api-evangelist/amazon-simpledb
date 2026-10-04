@@ -1501,130 +1501,21 @@ paths:
       - Amazon SimpleDB
 components:
   schemas:
-    Attribute:
-      type: object
-      required:
-      - Name
-      - Value
-      properties:
-        Name:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The name of the attribute.
-        AlternateNameEncoding:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: ''
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The value of the attribute.
-        AlternateValueEncoding:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: ''
-      description: ''
-    DeletableAttributeList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/DeletableAttribute'
-        - xml:
-            name: Attribute
-      xml:
-        wrapped: false
-    Float:
-      type: number
-      format: float
-    PutAttributesRequest:
+    BatchDeleteAttributesRequest:
       type: object
       required:
       - DomainName
-      - ItemName
-      - Attributes
-      title: PutAttributesRequest
+      - Items
+      title: BatchDeleteAttributesRequest
       properties:
         DomainName:
           allOf:
           - $ref: '#/components/schemas/String'
-          - description: The name of the domain in which to perform the operation.
-        ItemName:
+          - description: The name of the domain in which the attributes are being deleted.
+        Items:
           allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The name of the item.
-        Attributes:
-          allOf:
-          - $ref: '#/components/schemas/ReplaceableAttributeList'
-          - description: The list of attributes.
-        Expected:
-          allOf:
-          - $ref: '#/components/schemas/UpdateCondition'
-          - description: The update condition which, if specified, determines whether the specified attributes will be updated or not. The update condition must be satisfied in order for this request to be processed and the attributes to be updated.
-    ListDomainsRequest:
-      type: object
-      title: ListDomainsRequest
-      properties:
-        MaxNumberOfDomains:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: The maximum number of domain names you want returned. The range is 1 to 100. The default setting is 100.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: A string informing Amazon SimpleDB where to start the next list of domain names.
-    DomainNameList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/String'
-        - xml:
-            name: DomainName
-      xml:
-        wrapped: false
-    String:
-      type: string
-    SelectRequest:
-      type: object
-      required:
-      - SelectExpression
-      title: SelectRequest
-      properties:
-        SelectExpression:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The expression used to query the domain.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: A string informing Amazon SimpleDB where to start the next list of <code>ItemNames</code>.
-        ConsistentRead:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.
-    AttributeList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/Attribute'
-        - xml:
-            name: Attribute
-      xml:
-        wrapped: false
-    DeletableItemList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/DeletableItem'
-        - xml:
-            name: Item
-      xml:
-        wrapped: false
-    MissingParameter:
-      type: object
-      properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: The request must contain the specified missing parameter.
+          - $ref: '#/components/schemas/DeletableItemList'
+          - description: A list of items on which to perform the operation.
     DeletableAttribute:
       type: object
       required:
@@ -1639,27 +1530,6 @@ components:
           - $ref: '#/components/schemas/String'
           - description: The value of the attribute.
       description: ''
-    AttributeDoesNotExist:
-      type: object
-      properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: The specified attribute does not exist.
-    ReplaceableAttributeList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/ReplaceableAttribute'
-        - xml:
-            name: Attribute
-      xml:
-        wrapped: false
-    NumberItemAttributesExceeded:
-      type: object
-      properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: Too many attributes in this item.
     DeletableItem:
       type: object
       required:
@@ -1672,54 +1542,33 @@ components:
               name: ItemName
         Attributes:
           $ref: '#/components/schemas/DeletableAttributeList'
-    Boolean:
-      type: boolean
-    ReplaceableAttribute:
-      type: object
-      required:
-      - Name
-      - Value
-      properties:
-        Name:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The name of the replaceable attribute.
-        Value:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The value of the replaceable attribute.
-        Replace:
-          allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: A flag specifying whether or not to replace the attribute/value pair or to add a new attribute/value pair. The default setting is <code>false</code>.
-      description: ''
-    NumberDomainsExceeded:
-      type: object
-      properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: Too many domains exist per this account.
-    AttributeNameList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/String'
-        - xml:
-            name: AttributeName
-      xml:
-        wrapped: false
     RequestTimeout:
       type: object
       properties:
         BoxUsage:
           $ref: '#/components/schemas/Float'
       description: A timeout occurred when attempting to query the specified domain with specified query expression.
-    InvalidNextToken:
+    ListDomainsResult:
       type: object
       properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: 'The specified NextToken is not valid. '
+        DomainNames:
+          allOf:
+          - $ref: '#/components/schemas/DomainNameList'
+          - description: A list of domain names that match the expression.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: An opaque token indicating that there are more domains than the specified <code>MaxNumberOfDomains</code> still available.
+    DeleteDomainRequest:
+      type: object
+      required:
+      - DomainName
+      title: DeleteDomainRequest
+      properties:
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the domain to delete.
     DeleteAttributesRequest:
       type: object
       required:
@@ -1762,97 +1611,6 @@ components:
           - $ref: '#/components/schemas/AttributeList'
           - description: A list of attributes.
       description: ''
-    NumberSubmittedAttributesExceeded:
-      type: object
-      properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: Too many attributes exist in a single call.
-    TooManyRequestedAttributes:
-      type: object
-      properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: Too many attributes requested.
-    NoSuchDomain:
-      type: object
-      properties:
-        BoxUsage:
-          $ref: '#/components/schemas/Float'
-      description: The specified domain does not exist.
-    ListDomainsResult:
-      type: object
-      properties:
-        DomainNames:
-          allOf:
-          - $ref: '#/components/schemas/DomainNameList'
-          - description: A list of domain names that match the expression.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: An opaque token indicating that there are more domains than the specified <code>MaxNumberOfDomains</code> still available.
-    GetAttributesResult:
-      type: object
-      properties:
-        Attributes:
-          allOf:
-          - $ref: '#/components/schemas/AttributeList'
-          - description: The list of attributes returned by the operation.
-    ReplaceableItem:
-      type: object
-      required:
-      - Name
-      - Attributes
-      properties:
-        Name:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - xml:
-              name: ItemName
-            description: The name of the replaceable item.
-        Attributes:
-          allOf:
-          - $ref: '#/components/schemas/ReplaceableAttributeList'
-          - description: The list of attributes for a replaceable item.
-      description: ''
-    ReplaceableItemList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/ReplaceableItem'
-        - xml:
-            name: Item
-      xml:
-        wrapped: false
-    DomainMetadataRequest:
-      type: object
-      required:
-      - DomainName
-      title: DomainMetadataRequest
-      properties:
-        DomainName:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The name of the domain for which to display the metadata of.
-    CreateDomainRequest:
-      type: object
-      required:
-      - DomainName
-      title: CreateDomainRequest
-      properties:
-        DomainName:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: 'The name of the domain to create. The name can range between 3 and 255 characters and can contain the following characters: a-z, A-Z, 0-9, ''_'', ''-'', and ''.''.'
-    ItemList:
-      type: array
-      items:
-        allOf:
-        - $ref: '#/components/schemas/Item'
-        - xml:
-            name: Item
-      xml:
-        wrapped: false
     UpdateCondition:
       type: object
       properties:
@@ -1869,6 +1627,47 @@ components:
           - $ref: '#/components/schemas/Boolean'
           - description: A value specifying whether or not the specified attribute must exist with the specified value in order for the update condition to be satisfied. Specify <code>true</code> if the attribute must exist for the update condition to be satisfied. Specify <code>false</code> if the attribute should not exist in order for the update condition to be satisfied.
       description: ' Specifies the conditions under which data should be updated. If an update condition is specified for a request, the data will only be updated if the condition is satisfied. For example, if an attribute with a specific name and value exists, or if a specific attribute doesn''t exist. '
+    GetAttributesRequest:
+      type: object
+      required:
+      - DomainName
+      - ItemName
+      title: GetAttributesRequest
+      properties:
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the domain in which to perform the operation.
+        ItemName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the item.
+        AttributeNames:
+          allOf:
+          - $ref: '#/components/schemas/AttributeNameList'
+          - description: The names of the attributes.
+        ConsistentRead:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.
+    ItemList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/Item'
+        - xml:
+            name: Item
+      xml:
+        wrapped: false
+    ReplaceableAttributeList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/ReplaceableAttribute'
+        - xml:
+            name: Attribute
+      xml:
+        wrapped: false
     DomainMetadataResult:
       type: object
       properties:
@@ -1900,6 +1699,186 @@ components:
           allOf:
           - $ref: '#/components/schemas/Integer'
           - description: The data and time when metadata was calculated, in Epoch (UNIX) seconds.
+    Float:
+      type: number
+      format: float
+    AttributeDoesNotExist:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: The specified attribute does not exist.
+    ListDomainsRequest:
+      type: object
+      title: ListDomainsRequest
+      properties:
+        MaxNumberOfDomains:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The maximum number of domain names you want returned. The range is 1 to 100. The default setting is 100.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A string informing Amazon SimpleDB where to start the next list of domain names.
+    SelectRequest:
+      type: object
+      required:
+      - SelectExpression
+      title: SelectRequest
+      properties:
+        SelectExpression:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The expression used to query the domain.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: A string informing Amazon SimpleDB where to start the next list of <code>ItemNames</code>.
+        ConsistentRead:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.
+    SelectResult:
+      type: object
+      properties:
+        Items:
+          allOf:
+          - $ref: '#/components/schemas/ItemList'
+          - description: A list of items that match the select expression.
+        NextToken:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: An opaque token indicating that more items than <code>MaxNumberOfItems</code> were matched, the response size exceeded 1 megabyte, or the execution time exceeded 5 seconds.
+    MissingParameter:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: The request must contain the specified missing parameter.
+    InvalidNextToken:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: 'The specified NextToken is not valid. '
+    DeletableItemList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/DeletableItem'
+        - xml:
+            name: Item
+      xml:
+        wrapped: false
+    CreateDomainRequest:
+      type: object
+      required:
+      - DomainName
+      title: CreateDomainRequest
+      properties:
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: 'The name of the domain to create. The name can range between 3 and 255 characters and can contain the following characters: a-z, A-Z, 0-9, ''_'', ''-'', and ''.''.'
+    Long:
+      type: integer
+    DomainMetadataRequest:
+      type: object
+      required:
+      - DomainName
+      title: DomainMetadataRequest
+      properties:
+        DomainName:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the domain for which to display the metadata of.
+    ReplaceableItemList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/ReplaceableItem'
+        - xml:
+            name: Item
+      xml:
+        wrapped: false
+    Integer:
+      type: integer
+    Attribute:
+      type: object
+      required:
+      - Name
+      - Value
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the attribute.
+        AlternateNameEncoding:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: ''
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The value of the attribute.
+        AlternateValueEncoding:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: ''
+      description: ''
+    Boolean:
+      type: boolean
+    NumberSubmittedAttributesExceeded:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: Too many attributes exist in a single call.
+    NoSuchDomain:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: The specified domain does not exist.
+    AttributeList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/Attribute'
+        - xml:
+            name: Attribute
+      xml:
+        wrapped: false
+    NumberDomainsExceeded:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: Too many domains exist per this account.
+    TooManyRequestedAttributes:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: Too many attributes requested.
+    DeletableAttributeList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/DeletableAttribute'
+        - xml:
+            name: Attribute
+      xml:
+        wrapped: false
+    String:
+      type: string
+    GetAttributesResult:
+      type: object
+      properties:
+        Attributes:
+          allOf:
+          - $ref: '#/components/schemas/AttributeList'
+          - description: The list of attributes returned by the operation.
     BatchPutAttributesRequest:
       type: object
       required:
@@ -1915,24 +1894,73 @@ components:
           allOf:
           - $ref: '#/components/schemas/ReplaceableItemList'
           - description: A list of items on which to perform the operation.
-    Integer:
-      type: integer
-    DeleteDomainRequest:
+    AttributeNameList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/String'
+        - xml:
+            name: AttributeName
+      xml:
+        wrapped: false
+    ReplaceableItem:
       type: object
       required:
-      - DomainName
-      title: DeleteDomainRequest
+      - Name
+      - Attributes
       properties:
-        DomainName:
+        Name:
           allOf:
           - $ref: '#/components/schemas/String'
-          - description: The name of the domain to delete.
-    GetAttributesRequest:
+          - xml:
+              name: ItemName
+            description: The name of the replaceable item.
+        Attributes:
+          allOf:
+          - $ref: '#/components/schemas/ReplaceableAttributeList'
+          - description: The list of attributes for a replaceable item.
+      description: ''
+    DomainNameList:
+      type: array
+      items:
+        allOf:
+        - $ref: '#/components/schemas/String'
+        - xml:
+            name: DomainName
+      xml:
+        wrapped: false
+    NumberItemAttributesExceeded:
+      type: object
+      properties:
+        BoxUsage:
+          $ref: '#/components/schemas/Float'
+      description: Too many attributes in this item.
+    ReplaceableAttribute:
+      type: object
+      required:
+      - Name
+      - Value
+      properties:
+        Name:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The name of the replaceable attribute.
+        Value:
+          allOf:
+          - $ref: '#/components/schemas/String'
+          - description: The value of the replaceable attribute.
+        Replace:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: A flag specifying whether or not to replace the attribute/value pair or to add a new attribute/value pair. The default setting is <code>false</code>.
+      description: ''
+    PutAttributesRequest:
       type: object
       required:
       - DomainName
       - ItemName
-      title: GetAttributesRequest
+      - Attributes
+      title: PutAttributesRequest
       properties:
         DomainName:
           allOf:
@@ -1942,55 +1970,15 @@ components:
           allOf:
           - $ref: '#/components/schemas/String'
           - description: The name of the item.
-        AttributeNames:
+        Attributes:
           allOf:
-          - $ref: '#/components/schemas/AttributeNameList'
-          - description: The names of the attributes.
-        ConsistentRead:
+          - $ref: '#/components/schemas/ReplaceableAttributeList'
+          - description: The list of attributes.
+        Expected:
           allOf:
-          - $ref: '#/components/schemas/Boolean'
-          - description: Determines whether or not strong consistency should be enforced when data is read from SimpleDB. If <code>true</code>, any data previously written to SimpleDB will be returned. Otherwise, results will be consistent eventually, and the client may not see data that was written immediately before your read.
-    Long:
-      type: integer
-    BatchDeleteAttributesRequest:
-      type: object
-      required:
-      - DomainName
-      - Items
-      title: BatchDeleteAttributesRequest
-      properties:
-        DomainName:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: The name of the domain in which the attributes are being deleted.
-        Items:
-          allOf:
-          - $ref: '#/components/schemas/DeletableItemList'
-          - description: A list of items on which to perform the operation.
-    SelectResult:
-      type: object
-      properties:
-        Items:
-          allOf:
-          - $ref: '#/components/schemas/ItemList'
-          - description: A list of items that match the select expression.
-        NextToken:
-          allOf:
-          - $ref: '#/components/schemas/String'
-          - description: An opaque token indicating that more items than <code>MaxNumberOfItems</code> were matched, the response size exceeded 1 megabyte, or the execution time exceeded 5 seconds.
+          - $ref: '#/components/schemas/UpdateCondition'
+          - description: The update condition which, if specified, determines whether the specified attributes will be updated or not. The update condition must be satisfied in order for this request to be processed and the attributes to be updated.
   parameters:
-    SignatureVersion:
-      name: SignatureVersion
-      in: query
-      schema:
-        type: string
-      required: true
-    Signature:
-      name: Signature
-      in: query
-      schema:
-        type: string
-      required: true
     Action:
       name: Action
       in: query
@@ -2003,8 +1991,14 @@ components:
       schema:
         type: string
       required: true
-    SignatureMethod:
-      name: SignatureMethod
+    SignatureVersion:
+      name: SignatureVersion
+      in: query
+      schema:
+        type: string
+      required: true
+    Version:
+      name: Version
       in: query
       schema:
         type: string
@@ -2015,8 +2009,14 @@ components:
       schema:
         type: string
       required: true
-    Version:
-      name: Version
+    SignatureMethod:
+      name: SignatureMethod
+      in: query
+      schema:
+        type: string
+      required: true
+    Signature:
+      name: Signature
       in: query
       schema:
         type: string
