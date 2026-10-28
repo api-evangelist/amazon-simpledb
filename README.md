@@ -1,4 +1,4 @@
-# Amazon SimpleDB (amazon-simpledb)
+# Amazon SimpleDB
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,125 +64,256 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Amazon SimpleDB is a highly available NoSQL data store that offloads the work of database administration for web applications.
+Amazon SimpleDB is a highly available NoSQL data store that offloads the work of database administration. It provides simple and powerful data storage and querying capabilities to enable you to build web applications with structured data storage without the overhead of database administration.
 
-**URL:** [https://aws.amazon.com/simpledb/](https://aws.amazon.com/simpledb/)
+**Areas:** AWS · Cloud Storage · Data Storage · Database · NoSQL
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Amazon SimpleDB on APIs.io
 
-## Tags:
+Everything profiled for Amazon SimpleDB is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/amazon-simpledb/](https://apis.io/providers/amazon-simpledb/)** — or go straight to one of the APIs or properties below.
 
- - AWS, Cloud Storage, Data Storage, Database, NoSQL
+### APIs (1)
 
-## Timestamps
+- [Amazon SimpleDB Amazon SimpleDB API](https://apis.io/apis/amazon-simpledb/amazon-simpledb-amazon-simpledb-api/) — The Amazon SimpleDB API from Amazon SimpleDB — 10 operation(s) for amazon simpledb.
 
-- **Created:** 2026-03-16
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Amazon SimpleDB API
+#### Agentic access (1)
 
-Amazon SimpleDB is a highly available NoSQL data store that offloads the work of database administration for web applications.
+Which operations an agent can call, which act, and which need a human in the loop.
 
-**Human URL:** [https://aws.amazon.com/simpledb/](https://aws.amazon.com/simpledb/)
+- [Amazon Simpledb Agentic Access](https://apis.io/agentic-access/amazon-simpledb/amazon-simpledb-agentic-access/)
 
-#### Tags:
+#### JSON Schema (38)
 
- - Data Storage, Database, NoSQL
+The data models the API reads and writes.
 
-#### Properties
+- [Attribute](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-attribute/)
+- [AttributeDoesNotExist](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-attribute-does-not-exist/)
+- [BatchDeleteAttributesRequest](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-batch-delete-attributes-request/)
+- [BatchPutAttributesRequest](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-batch-put-attributes-request/)
+- [CreateDomainRequest](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-create-domain-request/)
+- [DeletableAttribute](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-deletable-attribute/)
+- [DeletableItem](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-deletable-item/)
+- [DeleteAttributesRequest](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-delete-attributes-request/)
+- [DeleteDomainRequest](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-delete-domain-request/)
+- [DomainMetadataRequest](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-domain-metadata-request/)
+- [DomainMetadataResult](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-domain-metadata-result/)
+- [DuplicateItemName](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-duplicate-item-name/)
+- [GetAttributesRequest](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-get-attributes-request/)
+- [GetAttributesResult](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-get-attributes-result/)
+- [InvalidNextToken](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-invalid-next-token/)
+- [InvalidNumberPredicates](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-invalid-number-predicates/)
+- [InvalidNumberValueTests](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-invalid-number-value-tests/)
+- [InvalidParameterValue](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-invalid-parameter-value/)
+- [InvalidQueryExpression](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-invalid-query-expression/)
+- [Item](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-item/)
+- [ListDomainsRequest](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-list-domains-request/)
+- [ListDomainsResult](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-list-domains-result/)
+- [MissingParameter](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-missing-parameter/)
+- [NoSuchDomain](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-no-such-domain/)
+- [NumberDomainAttributesExceeded](https://apis.io/schemas/amazon-simpledb/amazon-simpledb-number-domain-attributes-exceeded/)
+- …and 13 more published on APIs.io
 
+#### JSON Structure (38)
+
+Data models expressed in JSON Structure.
+
+- [Amazon Simpledb Attribute Does Not Exist Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-attribute-does-not-exist-structure/)
+- [Amazon Simpledb Attribute Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-attribute-structure/)
+- [Amazon Simpledb Batch Delete Attributes Request Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-batch-delete-attributes-request-structure/)
+- [Amazon Simpledb Batch Put Attributes Request Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-batch-put-attributes-request-structure/)
+- [Amazon Simpledb Create Domain Request Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-create-domain-request-structure/)
+- [Amazon Simpledb Deletable Attribute Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-deletable-attribute-structure/)
+- [Amazon Simpledb Deletable Item Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-deletable-item-structure/)
+- [Amazon Simpledb Delete Attributes Request Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-delete-attributes-request-structure/)
+- [Amazon Simpledb Delete Domain Request Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-delete-domain-request-structure/)
+- [Amazon Simpledb Domain Metadata Request Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-domain-metadata-request-structure/)
+- [Amazon Simpledb Domain Metadata Result Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-domain-metadata-result-structure/)
+- [Amazon Simpledb Duplicate Item Name Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-duplicate-item-name-structure/)
+- [Amazon Simpledb Get Attributes Request Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-get-attributes-request-structure/)
+- [Amazon Simpledb Get Attributes Result Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-get-attributes-result-structure/)
+- [Amazon Simpledb Invalid Next Token Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-invalid-next-token-structure/)
+- [Amazon Simpledb Invalid Number Predicates Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-invalid-number-predicates-structure/)
+- [Amazon Simpledb Invalid Number Value Tests Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-invalid-number-value-tests-structure/)
+- [Amazon Simpledb Invalid Parameter Value Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-invalid-parameter-value-structure/)
+- [Amazon Simpledb Invalid Query Expression Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-invalid-query-expression-structure/)
+- [Amazon Simpledb Item Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-item-structure/)
+- [Amazon Simpledb List Domains Request Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-list-domains-request-structure/)
+- [Amazon Simpledb List Domains Result Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-list-domains-result-structure/)
+- [Amazon Simpledb Missing Parameter Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-missing-parameter-structure/)
+- [Amazon Simpledb No Such Domain Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-no-such-domain-structure/)
+- [Amazon Simpledb Number Domain Attributes Exceeded Structure](https://apis.io/json-structure/amazon-simpledb/amazon-simpledb-number-domain-attributes-exceeded-structure/)
+- …and 13 more published on APIs.io
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Amazon Simpledb Context](https://apis.io/jsonld/amazon-simpledb/amazon-simpledb-context/)
+
+#### Vocabulary (1)
+
+The provider's domain terms, defined.
+
+- [Amazon Simpledb Vocabulary](https://apis.io/vocabularies/amazon-simpledb/amazon-simpledb-vocabulary/)
+
+#### Examples (38)
+
+Example requests and responses.
+
+- [Amazon Simpledb Attribute Does Not Exist Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-attribute-does-not-exist-example/)
+- [Amazon Simpledb Attribute Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-attribute-example/)
+- [Amazon Simpledb Batch Delete Attributes Request Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-batch-delete-attributes-request-example/)
+- [Amazon Simpledb Batch Put Attributes Request Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-batch-put-attributes-request-example/)
+- [Amazon Simpledb Create Domain Request Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-create-domain-request-example/)
+- [Amazon Simpledb Deletable Attribute Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-deletable-attribute-example/)
+- [Amazon Simpledb Deletable Item Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-deletable-item-example/)
+- [Amazon Simpledb Delete Attributes Request Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-delete-attributes-request-example/)
+- [Amazon Simpledb Delete Domain Request Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-delete-domain-request-example/)
+- [Amazon Simpledb Domain Metadata Request Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-domain-metadata-request-example/)
+- [Amazon Simpledb Domain Metadata Result Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-domain-metadata-result-example/)
+- [Amazon Simpledb Duplicate Item Name Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-duplicate-item-name-example/)
+- [Amazon Simpledb Get Attributes Request Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-get-attributes-request-example/)
+- [Amazon Simpledb Get Attributes Result Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-get-attributes-result-example/)
+- [Amazon Simpledb Invalid Next Token Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-invalid-next-token-example/)
+- [Amazon Simpledb Invalid Number Predicates Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-invalid-number-predicates-example/)
+- [Amazon Simpledb Invalid Number Value Tests Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-invalid-number-value-tests-example/)
+- [Amazon Simpledb Invalid Parameter Value Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-invalid-parameter-value-example/)
+- [Amazon Simpledb Invalid Query Expression Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-invalid-query-expression-example/)
+- [Amazon Simpledb Item Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-item-example/)
+- [Amazon Simpledb List Domains Request Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-list-domains-request-example/)
+- [Amazon Simpledb List Domains Result Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-list-domains-result-example/)
+- [Amazon Simpledb Missing Parameter Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-missing-parameter-example/)
+- [Amazon Simpledb No Such Domain Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-no-such-domain-example/)
+- [Amazon Simpledb Number Domain Attributes Exceeded Example](https://apis.io/examples/amazon-simpledb/amazon-simpledb-number-domain-attributes-exceeded-example/)
+- …and 13 more published on APIs.io
+
+#### Collections (20)
+
+Postman and Open Collection request collections.
+
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes API](https://apis.io/collections/amazon-simpledb/open-amazon-simpledb-action-batchdeleteattributes-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=BatchPutAttributes API](https://apis.io/collections/amazon-simpledb/open-amazon-simpledb-action-batchputattributes-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=CreateDomain API](https://apis.io/collections/amazon-simpledb/open-amazon-simpledb-action-createdomain-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DeleteAttributes API](https://apis.io/collections/amazon-simpledb/open-amazon-simpledb-action-deleteattributes-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DeleteDomain API](https://apis.io/collections/amazon-simpledb/open-amazon-simpledb-action-deletedomain-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DomainMetadata API](https://apis.io/collections/amazon-simpledb/open-amazon-simpledb-action-domainmetadata-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=GetAttributes API](https://apis.io/collections/amazon-simpledb/open-amazon-simpledb-action-getattributes-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=ListDomains API](https://apis.io/collections/amazon-simpledb/open-amazon-simpledb-action-listdomains-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=PutAttributes API](https://apis.io/collections/amazon-simpledb/open-amazon-simpledb-action-putattributes-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=Select API](https://apis.io/collections/amazon-simpledb/open-amazon-simpledb-action-select-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes API](https://apis.io/collections/amazon-simpledb/postman-amazon-simpledb-action-batchdeleteattributes-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=BatchPutAttributes API](https://apis.io/collections/amazon-simpledb/postman-amazon-simpledb-action-batchputattributes-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=CreateDomain API](https://apis.io/collections/amazon-simpledb/postman-amazon-simpledb-action-createdomain-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DeleteAttributes API](https://apis.io/collections/amazon-simpledb/postman-amazon-simpledb-action-deleteattributes-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DeleteDomain API](https://apis.io/collections/amazon-simpledb/postman-amazon-simpledb-action-deletedomain-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=DomainMetadata API](https://apis.io/collections/amazon-simpledb/postman-amazon-simpledb-action-domainmetadata-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=GetAttributes API](https://apis.io/collections/amazon-simpledb/postman-amazon-simpledb-action-getattributes-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=ListDomains API](https://apis.io/collections/amazon-simpledb/postman-amazon-simpledb-action-listdomains-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=PutAttributes API](https://apis.io/collections/amazon-simpledb/postman-amazon-simpledb-action-putattributes-api/)
+- [Amazon SimpleDB #Action=BatchDeleteAttributes #Action=BatchDeleteAttributes #Action=Select API](https://apis.io/collections/amazon-simpledb/postman-amazon-simpledb-action-select-api/)
+
+#### Governance rules (2)
+
+Spectral rulesets for the provider's contracts.
+
+- [Amazon SimpleDB — jsonschema rules](https://apis.io/rules/amazon-simpledb/amazon-simpledb-jsonschema-spectral-rules/)
+- [Amazon SimpleDB API Rules](https://apis.io/rules/amazon-simpledb/amazon-simpledb-spectral-rules/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Amazon Simpledb Authentication](https://apis.io/security/amazon-simpledb/amazon-simpledb-authentication/)
+- [Amazon Simpledb Domain Security](https://apis.io/security/amazon-simpledb/amazon-simpledb-domain-security/)
+- [Amazon Simpledb Trust Center](https://apis.io/security/amazon-simpledb/amazon-simpledb-trust-center/)
+- [Amazon Simpledb Vulnerability Disclosure](https://apis.io/security/amazon-simpledb/amazon-simpledb-vulnerability-disclosure/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Amazon Simpledb Plans Pricing](https://apis.io/plans/amazon-simpledb/amazon-simpledb-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Amazon Simpledb Rate Limits](https://apis.io/rate-limits/amazon-simpledb/amazon-simpledb-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Amazon Simpledb Finops](https://apis.io/finops/amazon-simpledb/amazon-simpledb-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aws.amazon.com/simpledb/)
 - [Documentation](https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html)
-- [OpenAPI](openapi/amazon-simpledb.yaml)
-- [GettingStarted](https://aws.amazon.com/simpledb/)
-- [Pricing](https://aws.amazon.com/simpledb/pricing/)
-- [FAQ](https://aws.amazon.com/simpledb/faqs/)
+- [Support](https://aws.amazon.com/premiumsupport/)
+- [Blog](https://aws.amazon.com/blogs/database/)
+- [Terms of service](https://aws.amazon.com/service-terms/)
+- [Privacy policy](https://aws.amazon.com/privacy/)
+- [GitHub](https://github.com/aws)
+- [Status](https://health.aws.amazon.com/health/status)
 
-## Common Properties
+## API Evangelist rating
 
-- [Portal](https://aws.amazon.com/simpledb/)
-- [TermsOfService](https://aws.amazon.com/service-terms/)
-- [PrivacyPolicy](https://aws.amazon.com/privacy/)
-- [GitHubOrganization](https://github.com/aws)
-- [StatusPage](https://health.aws.amazon.com/health/status)
+**Kin Score 52.6** — developing · rubric 0.25.0 · scored 2026-10-23
 
-## Features
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 59.5 |
+| Contract governance | 27.3 |
+| Operational transparency | 36.8 |
+| Developer ergonomics | 54.3 |
+| Access clarity | 53.9 |
 
-| Name | Description |
-|------|-------------|
-| Simple Data Storage | NoSQL data store with no database administration overhead. |
-| Select Query Language | Query data using a simple SELECT expression language. |
+**Agent readiness 25.3** — agent-aware
 
-## Use Cases
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | verified |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | distinct |
 
-| Name | Description |
-|------|-------------|
-| Web Application Data Storage | Store and query structured data for web applications. |
+**Regulatory alignment 35.3** — Horizontal (data, software, accessibility, platform)
 
-## Integrations
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/amazon-simpledb/](https://apis.io/providers/amazon-simpledb/).
 
-| Name | Description |
-|------|-------------|
-| Amazon S3 | Store metadata for S3 objects in SimpleDB. |
+## How this profile is made
 
-## Artifacts
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
 
-Machine-readable API specifications organized by format.
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Amazon SimpleDB: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
 
-### OpenAPI
+## Open an issue
 
-- [amazon-simpledb.yaml](openapi/amazon-simpledb.yaml)
-
-### JSON Schema
-
-- [amazon-simpledb-attribute-does-not-exist-schema.json](json-schema/amazon-simpledb-attribute-does-not-exist-schema.json)
-- [amazon-simpledb-attribute-schema.json](json-schema/amazon-simpledb-attribute-schema.json)
-- [amazon-simpledb-batch-delete-attributes-request-schema.json](json-schema/amazon-simpledb-batch-delete-attributes-request-schema.json)
-- [amazon-simpledb-batch-put-attributes-request-schema.json](json-schema/amazon-simpledb-batch-put-attributes-request-schema.json)
-- [amazon-simpledb-create-domain-request-schema.json](json-schema/amazon-simpledb-create-domain-request-schema.json)
-- ... and 33 more
-
-### JSON Structure
-
-- [amazon-simpledb-attribute-does-not-exist-structure.json](json-structure/amazon-simpledb-attribute-does-not-exist-structure.json)
-- [amazon-simpledb-attribute-structure.json](json-structure/amazon-simpledb-attribute-structure.json)
-- [amazon-simpledb-batch-delete-attributes-request-structure.json](json-structure/amazon-simpledb-batch-delete-attributes-request-structure.json)
-- [amazon-simpledb-batch-put-attributes-request-structure.json](json-structure/amazon-simpledb-batch-put-attributes-request-structure.json)
-- [amazon-simpledb-create-domain-request-structure.json](json-structure/amazon-simpledb-create-domain-request-structure.json)
-- ... and 33 more
-
-### JSON-LD
-
-- [amazon-simpledb-context.jsonld](json-ld/amazon-simpledb-context.jsonld)
-
-### Examples
-
-- [amazon-simpledb-attribute-does-not-exist-example.json](examples/amazon-simpledb-attribute-does-not-exist-example.json)
-- [amazon-simpledb-attribute-example.json](examples/amazon-simpledb-attribute-example.json)
-- [amazon-simpledb-batch-delete-attributes-request-example.json](examples/amazon-simpledb-batch-delete-attributes-request-example.json)
-- [amazon-simpledb-batch-put-attributes-request-example.json](examples/amazon-simpledb-batch-put-attributes-request-example.json)
-- [amazon-simpledb-create-domain-request-example.json](examples/amazon-simpledb-create-domain-request-example.json)
-- ... and 33 more
-
-## Capabilities
-
-Naftiko capabilities organized as shared per-API definitions.
-
-### Shared Per-API Definitions
-
-- [amazon-simpledb.yaml](capabilities/shared/amazon-simpledb.yaml) — Amazon SimpleDB operations for resource management
-
-## Vocabulary
-
-- [Amazon SimpleDB Vocabulary](vocabulary/amazon-simpledb-vocabulary.yaml) — Unified taxonomy mapping resources, actions, workflows, and personas
-
-## Rules
-
-- [Amazon SimpleDB Spectral Rules](rules/amazon-simpledb-spectral-rules.yml) — Rules enforcing Amazon SimpleDB API conventions
-
-## Maintainers
-
-**FN:** Kin Lane
-
-**Email:** kin@apievangelist.com
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/amazon-simpledb/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
