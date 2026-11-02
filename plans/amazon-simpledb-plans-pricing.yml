@@ -1,0 +1,92 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-10-28'
+method: searched
+source: https://aws.amazon.com/simpledb/pricing/
+sources:
+- https://aws.amazon.com/simpledb/pricing/
+provenance:
+  tool: engine/economics/harvest_pricing.py
+  run: 20261028T161713
+  grounding: every price_text was found verbatim in the fetched page text
+audience: developer-api
+pricing_basis: usage-other
+delivery:
+  delivery: managed
+  method: page
+  read: '2026-10-28'
+published: true
+note: 'Usage-based AWS pricing page. Actual per-hour, per-GB-month and data transfer rates are rendered
+  via dynamic pricing tokens (e.g. {priceOf!simpledb/simpledb!Database!Utilization!per!Hrs}) and are not
+  present as numbers in the page text; only $0.00 free-tier amounts are visible. Free tier: 25 SimpleDB
+  Machine Hours and 1 GB storage per month.'
+plan_count: 4
+currency: USD
+plans:
+- name: Machine Utilization
+  price_text: $0.00 for first 25 hours
+  price: 0.0
+  currency: USD
+  period: per-use
+  unit: machine hour
+  included_quota: 25 SimpleDB Machine Hours free each month
+  overage: per machine hour over 25 hours (rate not shown; dynamic pricing token)
+- name: Structured Data Storage
+  price_text: $0.00 for first GB-month
+  price: 0.0
+  currency: USD
+  period: month
+  unit: GB-month
+  included_quota: 1 GB of Storage free each month
+  overage: per GB-month thereafter (rate not shown; dynamic pricing token)
+- name: Data Transfer between SimpleDB and other AWS services in same Region
+  price_text: $0.00 per GB
+  price: 0.0
+  currency: USD
+  period: per-use
+  unit: GB
+  included_quota: Same-Region transfer to other AWS services
+- name: Domain export processing
+  price_text: no additional charge
+  period: none
+  included_quota: Export from SimpleDB to Amazon S3
+  overage: Standard data transfer rates apply when moving data to Amazon S3.
+x-canonical:
+  generated: '2026-11-01'
+  vocabulary: engine/economics/plans-canonical.yml
+  models:
+  - metered
+  units:
+  - compute
+  - data
+  plans:
+  - name: Machine Utilization
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - compute
+    periods:
+    - other
+  - name: Structured Data Storage
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - data
+    periods:
+    - month
+  - name: Data Transfer between SimpleDB and other AWS services in same Region
+    access: other
+    model: metered
+    model_how: derived
+    units:
+    - data
+    periods:
+    - other
+  - name: Domain export processing
+    access: other
+    model: metered
+    model_how: derived
+    units: []
+    periods:
+    - none
