@@ -51,7 +51,7 @@ plans:
   included_quota: Export from SimpleDB to Amazon S3
   overage: Standard data transfer rates apply when moving data to Amazon S3.
 x-canonical:
-  generated: '2026-11-01'
+  generated: '2026-11-02'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - metered

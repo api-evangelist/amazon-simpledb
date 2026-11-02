@@ -17,18 +17,21 @@ deliveryModel:
   generated: '2026-08-28'
   method: derived
 accessModel:
-  pricing: freemium
+  pricing: free
   onboarding: self-serve
   trial: false
   try_now: true
   public: false
-  label: Freemium · Self-serve signup
+  gated: none
+  gated_source:
+  - onboarding
+  label: Free · Self-serve signup
   confidence: medium
   source:
   - plans
   - authentication
   - security
-  generated: '2026-09-03'
+  generated: '2026-11-02'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-simpledb.png
 tags:
