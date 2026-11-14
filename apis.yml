@@ -1,9 +1,13 @@
 aid: amazon-simpledb
+
 name: Amazon SimpleDB
-description: Amazon SimpleDB is a highly available NoSQL data store that offloads the work of database
-  administration. It provides simple and powerful data storage and querying capabilities to enable you
-  to build web applications with structured data storage without the overhead of database administration.
+
+description: Amazon SimpleDB is a highly available NoSQL data store that offloads the work of database administration. It provides simple and
+  powerful data storage and querying capabilities to enable you to build web applications with structured data storage without the overhead of
+  database administration.
+
 type: Index
+
 deliveryModel:
   model: saas
   open_source: false
@@ -16,6 +20,7 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: free
   onboarding: self-serve
@@ -26,14 +31,16 @@ accessModel:
   gated_source:
   - onboarding
   label: Free · Self-serve signup
-  confidence: medium
+  confidence: high
   source:
   - plans
   - authentication
+  - rate-limits
   - security
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-simpledb.png
+
 tags:
 - Amazon Web Services
 - Cloud Storage
@@ -46,30 +53,68 @@ tags_raw:
 - Data Storage
 - Database
 - NoSQL
+
 url: https://raw.githubusercontent.com/api-evangelist/amazon-simpledb/refs/heads/main/apis.yml
+
 created: '2026-03-16'
+
 modified: '2026-09-15'
+
 specificationVersion: '0.23'
-apis:
-- aid: amazon-simpledb:amazon-simpledb-amazon-simpledb-api
-  name: Amazon SimpleDB Amazon SimpleDB API
-  description: The Amazon SimpleDB API from Amazon SimpleDB — 10 operation(s) for amazon simpledb.
-  humanURL: https://aws.amazon.com/simpledb/
-  baseURL: https://sdb.amazonaws.com
-  tags:
-  - Amazon SimpleDB
-  properties:
-  - type: OpenAPI
-    url: openapi/amazon-simpledb-amazon-simpledb-api-openapi.yml
-  - type: Documentation
-    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
-  - type: GettingStarted
-    url: https://aws.amazon.com/simpledb/
-  - type: Pricing
-    url: https://aws.amazon.com/simpledb/pricing/
-  - type: FAQ
-    url: https://aws.amazon.com/simpledb/faqs/
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
+kind: company
+
 common:
+- type: Spectral
+  url: rules/amazon-simpledb-spectral-rules.yml
+- type: Spectral
+  url: rules/amazon-simpledb-rules.yml
+- type: Spectral
+  url: rules/amazon-simpledb-jsonschema-spectral-rules.yml
+- type: JSONLD
+  url: json-ld/amazon-simpledb-context.jsonld
+- type: Vocabulary
+  url: vocabulary/amazon-simpledb-vocabulary.yml
+- type: DataModel
+  url: data-model/amazon-simpledb-data-model.yml
+- type: Conventions
+  url: conventions/amazon-simpledb-conventions.yml
+- type: Compliance
+  url: https://aws.amazon.com/compliance/
+- type: Lifecycle
+  url: lifecycle/amazon-simpledb-lifecycle.yml
+- type: ErrorCatalog
+  url: errors/amazon-simpledb-error-codes.yml
+- type: ErrorCatalog
+  url: errors/amazon-simpledb-problem-types.yml
+- type: Conformance
+  url: conformance/amazon-simpledb-conformance.yml
+- type: LLMsTxt
+  url: llms/amazon-simpledb-llms.txt
+- type: SecurityTxt
+  url: well-known/amazon-simpledb-security.txt
+- type: WellKnown
+  url: well-known/amazon-simpledb-well-known.yml
+- type: Hosts
+  url: hosts/amazon-simpledb-hosts.yml
+- type: Vendors
+  url: vendors/amazon-simpledb-vendors.yml
+- type: SDKs
+  url: packages/amazon-simpledb-packages.yml
+- type: Packages
+  url: packages/amazon-simpledb-packages.yml
+- type: Security
+  url: https://aws.amazon.com/security/?nc2=h_dsc_aa_sec
+- type: Sandbox
+  url: https://console.aws.amazon.com/console/home/?nc2=h_si&src=header-signin
+- type: Newsroom
+  url: https://aws.amazon.com/media/?nc2=h_sol_ind_med
+- type: GettingStarted
+  url: https://docs.aws.amazon.com/AmazonRDS/latest/gettingstartedguide/what-is-rds
 - type: Plans
   url: plans/amazon-simpledb-plans-pricing.yml
 - type: RateLimits
@@ -104,8 +149,6 @@ common:
   url: https://aws.amazon.com/blogs/database/
 - type: GitHubOrganization
   url: https://github.com/aws
-- type: Console
-  url: https://console.aws.amazon.com/simpledb/
 - type: Signup
   url: https://portal.aws.amazon.com/billing/signup
 - type: Login
@@ -146,6 +189,45 @@ common:
     description: Audit SimpleDB API calls via CloudTrail.
 - type: Integrations
   url: https://aws.amazon.com/partners/
+- type: UsageTerms
+  url: terms/amazon-simpledb-terms-of-service.yml
+- type: DataProcessing
+  url: privacy/amazon-simpledb-privacy-policy.yml
+- type: Attestations
+  url: compliance/amazon-simpledb-compliance.yml
+
+apis:
+- aid: amazon-simpledb:amazon-simpledb-amazon-simpledb-api
+  name: Amazon SimpleDB Amazon SimpleDB API
+  description: The Amazon SimpleDB API from Amazon SimpleDB — 10 operation(s) for amazon simpledb.
+  humanURL: https://aws.amazon.com/simpledb/
+  baseURL: https://sdb.amazonaws.com
+  tags:
+  - Amazon SimpleDB
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-simpledb-amazon-simpledb-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html
+  - type: GettingStarted
+    url: https://aws.amazon.com/simpledb/
+  - type: Pricing
+    url: https://aws.amazon.com/simpledb/pricing/
+  - type: FAQ
+    url: https://aws.amazon.com/simpledb/faqs/
+  - type: JSONSchema
+    url: json-schema/amazon-simpledb-domain-metadata-result-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-simpledb-delete-attributes-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-simpledb-get-attributes-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-simpledb-put-attributes-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-simpledb-select-request-schema.json
+  - type: JSONSchema
+    url: json-schema/amazon-simpledb-list-domains-request-schema.json
+
 integrations:
 - name: Partner Programs
 - name: Resources
@@ -155,9 +237,12 @@ integrations:
 - name: AWS Partner Central
 - name: Partner Paths
 - name: co-sell with AWS
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-kind: company
+
 x-parent: amazon-web-services
+
 x-relationship: product
+x-enrichment:
+  date: '2026-11-11'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v6

@@ -8,6 +8,12 @@ artifacts:
   authentication/amazon-simpledb-authentication.yml:
     method: derived
     evidence: declared in the artifact
+  certification/observations-2026-11-11.jsonl:
+    method: unknown
+    evidence: no authorship recorded
+  certification/status.yml:
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-simpledb-action-batchdeleteattributes-api.opencollection.json:
     method: unknown
     evidence: no authorship recorded
@@ -68,6 +74,24 @@ artifacts:
   collections/amazon-simpledb-action-select-api.postman_collection.json:
     method: unknown
     evidence: no authorship recorded
+  compliance/amazon-simpledb-compliance.yml:
+    method: harvested
+    evidence: declared in the artifact
+  conformance/amazon-simpledb-conformance.yml:
+    method: derived
+    evidence: declared in the artifact
+  conventions/amazon-simpledb-conventions.yml:
+    method: derived
+    evidence: declared in the artifact
+  data-model/amazon-simpledb-data-model.yml:
+    method: derived
+    evidence: declared in the artifact
+  errors/amazon-simpledb-error-codes.yml:
+    method: searched
+    evidence: declared in the artifact
+  errors/amazon-simpledb-problem-types.yml:
+    method: derived
+    evidence: declared in the artifact
   examples/amazon-simpledb-attribute-does-not-exist-example.json:
     method: unknown
     evidence: no authorship recorded
@@ -188,6 +212,9 @@ artifacts:
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
+  hosts/amazon-simpledb-hosts.yml:
+    method: derived
+    evidence: declared in the artifact
   integrations/_index.yml:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -428,7 +455,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -497,6 +524,21 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  lifecycle/amazon-simpledb-lifecycle.yml:
+    method: searched
+    evidence: declared in the artifact
+  llms/amazon-simpledb-llms-provenance.yml:
+    method: unknown
+    evidence: no authorship recorded
+  llms/amazon-simpledb-llms.txt:
+    method: unknown
+    evidence: no authorship recorded
+  mcp/amazon-simpledb-mcp.yml:
+    method: derived
+    evidence: declared in the artifact
   openapi/_original/amazon-simpledb.yaml:
     method: harvested
     evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
@@ -504,6 +546,12 @@ artifacts:
   openapi/amazon-simpledb-amazon-simpledb-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
+  packages/amazon-simpledb-packages.yml:
+    method: searched
+    evidence: declared in the artifact
+  patterns/amazon-simpledb-patterns.yml:
+    method: derived
+    evidence: declared in the artifact
   plans/amazon-simpledb-plans-pricing.yml:
     method: searched
     evidence: declared in the artifact
@@ -537,10 +585,16 @@ artifacts:
   postman/amazon-simpledb-action-select-api.postman_collection.json:
     method: unknown
     evidence: no authorship recorded
+  privacy/amazon-simpledb-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/amazon-simpledb-rate-limits.yml:
-    method: generated
+    method: searched
     evidence: declared in the artifact
   rules/amazon-simpledb-jsonschema-spectral-rules.yml:
+    method: generated
+    evidence: declared in the artifact
+  rules/amazon-simpledb-rules.yml:
     method: generated
     evidence: declared in the artifact
   rules/amazon-simpledb-spectral-rules.yml:
@@ -558,6 +612,24 @@ artifacts:
   sla/amazon-simpledb-sla.yml:
     method: generated
     evidence: declared in the artifact
+  terms/amazon-simpledb-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
+  vendors/amazon-simpledb-vendors.yml:
+    method: unknown
+    evidence: no authorship recorded
   vocabulary/amazon-simpledb-vocabulary.yaml:
+    method: unknown
+    evidence: no authorship recorded
+  vocabulary/amazon-simpledb-vocabulary.yml:
+    method: derived
+    evidence: declared in the artifact
+  well-known/amazon-simpledb-midway-auth-openid-configuration.json:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-simpledb-security.txt:
+    method: unknown
+    evidence: no authorship recorded
+  well-known/amazon-simpledb-well-known.yml:
     method: unknown
     evidence: no authorship recorded

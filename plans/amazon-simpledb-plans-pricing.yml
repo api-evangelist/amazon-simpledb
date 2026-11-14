@@ -2,6 +2,7 @@
 generated: '2026-10-28'
 method: searched
 source: https://aws.amazon.com/simpledb/pricing/
+name: Amazon SimpleDB API Plans
 sources:
 - https://aws.amazon.com/simpledb/pricing/
 provenance:
@@ -51,7 +52,7 @@ plans:
   included_quota: Export from SimpleDB to Amazon S3
   overage: Standard data transfer rates apply when moving data to Amazon S3.
 x-canonical:
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   vocabulary: engine/economics/plans-canonical.yml
   models:
   - metered
